@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Ritz slide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+
+
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+
+    
+    <style>
+        .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+            bottom: 80px;
+            z-index: 999 !important;
+            width: 100px !important;
+        }
+        .swiper-pagination-white .swiper-pagination-bullet-active{
+            background: #213859;
+        }
+        
+       @media all and (min-width:740px) and (max-width:1023px){ 
+           h1.slide_text{font-size: 4.5vw;}
+           h2.slide_subtext{font-size: 1.7vw;}
+           button.slide_button{font-size: 1.7vw;}
+        }
+        
+       @media all and (max-width:739px){ 
+           h1.slide_text{font-size: 8vw;}
+           h2.slide_subtext{font-size: 3.2vw;}
+           button.slide_button{font-size: 3.5vw;}
+           .scroll{display: none;}
+           .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+            bottom: 20px;}
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".scroll").click(function(){
+               var move= $("#content1").offset();
+                $('html,body').animate({scrollTop : move.top},1000);
+            });
+           });
+            </script>
+
+</head>
+
+<body>
+    <!--slide-->
+    <div id="slide">
+        <div class="swiper-container swiper1"> 
+           <div class="swiper-wrapper"> 
+
+               <div class="swiper-slide" style="background-image:url(./images/slide_img4.jpg)">
+                   <h1 class="slide_text">SWEET MOMENT</h1>
+                   <h2 class="slide_subtext">특별하고 달콤한 시간을 선사할 하루</h2>
+                   <button class="slide_button"><span><a href="Promotion_package.html">바로가기</a></span></button>     
+               </div> 
+
+               <div class="swiper-slide" style="background-image:url(./images/slide_img5.jpg)">
+                   <h1 class="slide_text">PERFECT CELEBRATION</h1>
+                   <h2 class="slide_subtext">롤스로이스와 프라이빗 버틀러 서비스가 제공되는 객실 식음 패키지</h2>
+                   <button class="slide_button"><a href="Promotion_package.html">바로가기</a></button>
+               </div> 
+
+               <div class="swiper-slide" style="background-image:url(./images/slide_img1.jpg)">
+                   <h1 class="slide_text">JOYFUL STAYCATION</h1>
+                   <h2 class="slide_subtext">THE RITZ HOTEL에서 즐거운 힐링의 시간을 경험해 보세요.</h2>
+                   <button class="slide_button"><a href="Promotion_package.html">바로가기</a></button>
+
+               </div> 
+
+                <div class="swiper-slide" style="background-image: url(./images/slide_img2.jpg)">
+                   <h1 class="slide_text">PARTY ALL DAY</h1>
+                   <h2 class="slide_subtext">시원한 바람과 함께 펼쳐지는 칵테일 파티</h2>
+                   <button class="slide_button"><a href="Promotion_package.html">바로가기</a></button>
+                </div>
+                <div class="swiper-slide" style="background-image:url(./images/slide_img3.jpg)">
+                     <h1 class="slide_text">HEALING DAY PROMOTION</h1>
+                       <h2 class="slide_subtext">편안하게 즐기는 우리만의 프라이빗한 공간</h2>
+                       <button class="slide_button"><a href="Promotion_package.html">바로가기</a></button>
+                </div> 
+             </div> 
+             <!-- Add Pagination --> 
+             <div class="swiper-pagination"></div>        
+             <div class="swiper-pagination swiper-pagination-white"></div> 
+         </div>
+    </div> 
+    
+    <div class="scroll">
+        <p class="scroll_click">SCROLL TO EXPLORE</p>
+        <p class="scroll_line"></p>
+    </div>
+
+ <script>
+     var swiper = new Swiper('.swiper1', {
+         speed:700,
+         initialSlide:2,
+         slidesPerView: 1,  
+         loop: true, 
+         effect:'colorfloor',
+         pagination: { 
+         el: '.swiper1 .swiper-pagination', 
+         clickable: true,
+         dynamicBullets:true,
+       }, 
+         autoplay:{
+             delay:3500,
+             dynamicBullets:false,
+         },
+       navigation: { 
+         nextEl: 'slide .swiper-button-next', 
+         prevEl: 'slide .swiper-button-prev', 
+       }, 
+        }); 
+       
+    </script>
+
+
+</body>
+</html>

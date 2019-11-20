@@ -1,0 +1,352 @@
+@charset "utf-8";
+@import url(reset.css);
+
+.maincon {
+    width: 100%;
+    position: relative;
+}
+.conarea {
+    position: relative;
+    max-width: 1400px;
+    height: 100%;
+    margin: 22px auto 0;
+}
+.txtimg {
+    position: absolute;
+    width: 100%; 
+
+    
+}
+.txtimg1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.txtimg2 {
+    position: absolute;
+    top: 870px;
+    left: 52%;
+    width: 800px;
+}
+.boxarea {
+    width: 100%;
+
+    padding-bottom: 0px;
+    position: relative;
+    
+}
+.box {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 430px;
+}
+.tit_ad {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 5%;
+    line-height: 30px;
+}
+
+.tit1 {
+    color: #fff;
+    position:relative;
+    background: rgba(0,0,0,0.4); 
+    line-height: 100PX; 
+    margin-top: 140px; 
+    font-size: 25PX; 
+    padding-left: 5%;
+}
+.tit2 {
+    color: #fff;
+    position:relative;
+    background: rgba(0,0,0,0.4); 
+    line-height: 100PX; 
+    margin-top: 140px; 
+    font-size: 25PX; 
+    padding-left: 5%;
+}
+.tit3 {
+    color: #fff;
+    position:relative;
+    background: rgba(0,0,0,0.4); 
+    line-height: 100PX; 
+    margin-top: 140px; 
+    font-size: 25PX; 
+    padding-left: 5%;
+}
+.tit4 {
+    color: #fff;
+    position:relative;
+    background: rgba(0,0,0,0.4); 
+    line-height: 100PX; 
+    margin-top: 140px; 
+    font-size: 25PX; 
+    padding-left: 5%;
+}
+.box1 {
+    position: relative;
+    top: 100px;
+    background: url(../images/main_content3/hotel_1.jpg) no-repeat 50% 50%;
+    
+}
+.box2 {
+    float: right;
+    background: url(../images/main_content3/hotel_2.jpg) no-repeat 50% 50%;
+    top: 0px;
+    
+}
+.box3 {
+    position: relative;
+    top: 100px;
+    background: url(../images/main_content3/hotel_3.jpg) no-repeat 50% 50%;
+    
+}
+.box4 {
+    float: right;
+    background: url(../images/main_content3/hotel_4.jpg) no-repeat 50% 50%;
+    top: 0px;
+    
+}
+.box_hover1 {
+    position: absolute;
+    width: 700px;
+    height: 430px;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+.box_hover2 {
+    position: absolute;
+    width: 700px;
+    height: 430px;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+.box_hover3 {
+    position: absolute;
+    width: 700px;
+    height: 430px;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+.box_hover4 {
+    position: absolute;
+    width: 700px;
+    height: 430px;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+.txt1 {
+    position: absolute;
+    bottom: 70px;
+    right: -32px;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    color: #fff;
+    font-weight: normal;
+}
+.txt2 {
+    position: absolute;
+    bottom: 50px;
+    right: -10px;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    color: #fff;
+    font-weight: normal;
+}
+.txt3 {
+    position: absolute;
+    bottom: 70px;
+    right: -32px;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    color: #fff;
+    font-weight: normal;
+}
+.txt4 {
+    position: absolute;
+    bottom: 50px;
+    right: -10px;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    color: #fff;
+    font-weight: normal;
+}
+
+
+@media all and (min-width:740px) and (max-width:1023px){
+    .maincon{top: 0px;}
+    #content3{height: auto;}
+    .boxarea{padding-bottom: 110px;}
+    .conarea {
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+        margin: 22px auto 0;
+    }
+    .box {
+        float: none;
+    }
+    .box1 {
+        position: relative;
+        width: 700px;
+        margin: 0 auto;
+
+    }
+    .box2 {
+        position: relative;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .box3 {
+        position: relative;
+        width: 700px;
+        margin: 0 auto;
+        display: none;
+    }
+    .box4 {
+        position: relative;
+        width: 700px;
+        margin: 0 auto;
+        display: none;
+    }
+    .tit1 {
+        width: 700px;
+        margin: 0 auto;
+        top: 140px;
+    }
+    .tit2 {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 100px;
+        top: 140px;
+    }
+    .tit3{ 
+        margin-top: 0;
+        top: 140px;
+    }
+    .tit4{ 
+        margin-top: 100px;
+        top: 140px;
+    }
+    .tit_ad {
+        width: 700px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 240px;
+    }
+    .box_hover1 {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box_hover2 {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .txt1 {
+    }
+    
+    .txt2 {
+    }
+
+    .txtimg1 {
+        top: -31px;
+        left: 15%;
+        
+    }
+    .txtimg2 {
+        bottom: -8%;
+        left: 3%;
+        display: none;
+    }
+}
+@media all and (max-width:739px){
+    #content3{height: auto; overflow-y: hidden;}
+    .maincon {
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0; 
+        
+        top: 0 !important;
+    }
+    .box {
+        width: 340px;
+        
+    }
+    .box1 {
+        width: 50%;
+        top: 0;
+        margin-top: 130px;
+        
+    }
+    .box2 {
+        width: 50%;
+        top: 0px;
+        margin-top: 130px;
+    }
+    .box3 {
+        width: 50%;
+        top: 0;
+    }
+    .box4 {
+        width: 50%;
+        top: 0px;
+    }
+    
+    .txtimg1 {
+        top: 0%;
+        left: 0%;
+    }
+    .txtimg2 {
+        bottom: -10%;
+        left: 0%;
+        display: none;
+        
+    }
+    .box3{display: none;}
+    .box4{display: none;}
+    .box_hover1{display: block !important;}
+    .ad1 {display: block !important;}
+    .box_hover2{display: block !important;}
+    .ad2 {display: block !important;}
+    .box_hover3{display: block !important;}
+    .ad3 {display: block !important;}
+    .box_hover4{display: block !important;}
+    .ad4 {display: block !important;}
+    .tit{background: none !important;}    
+    .tit_ad {
+        font-size: 13px;
+    }
+    .tit {
+        font-size: 20px;
+    }
+    .txt1{font-size: 10px; bottom: 30px; right: -30px;}
+    .txt2{font-size: 10px; bottom: 20px; right: -15px;}
+    .txt3{font-size: 10px; bottom: 65px; right: -10px;}
+    .txt4{font-size: 10px; bottom: 45px; right: 0px;}
+    
+}
+@media all and (max-width:400px){
+    .tit{font-size: 18px;}
+    .tit1{line-height: 50px;}
+    .tit2{line-height: 50px;}
+    .tit2{line-height: 50px;}
+    .tit_ad {font-size: 13px;}
+}

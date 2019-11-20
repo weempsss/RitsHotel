@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > GUIDE > LOCATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/guide_information_location.css">
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /*기본 레이아웃 구성*/
+        #wrap {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        footer {
+            z-index: 8;
+            position: relative;
+        }
+
+        header {
+            z-index: 9;
+        }
+
+        #company_keyimage {
+            position: relative;
+            background: url(images/Guide/guide_information.jpg) no-repeat center 0;
+            background-attachment: fixed;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .company_keytitle {
+            position: relative;
+            width: 100%;
+            top: 10px;
+            transition: 1s;
+        }
+
+        .company_line {
+            width: 1px;
+            height: 40px;
+            background: white;
+            margin-top: 150px;
+            position: absolute;
+            left: 50%;
+
+        }
+
+        h2.company_ment1 {
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 215px;
+            text-align: center;
+            font-size: 50px;
+            font-family: 'NanumSquareEB';
+        }
+
+        p.company_ment2 {
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 215px;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family: 'NanumSquareB';
+        }
+
+        p.company_ment3 {
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 245px;
+            width: 243px;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-family: 'NanumSquareB';
+            opacity: 0.8;
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+
+            $(window).scroll(function(e) {
+                e.preventDefault();
+                var i = 10;
+                var st = $(window).scrollTop() + i;
+                $(".company_keytitle").css({
+                    top: st
+                });
+                console.log($(window).scrollTop());
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!-- 콘텐츠구역 -->
+        <div id="company_keyimage">
+            <div class="company_keytitle">
+                <div class="company_line"></div>
+                <h2 class="company_ment1">LOCATION</h2>
+                <p class="company_ment2">위치안내</p>
+                <p class="company_ment3">HOME > GUIDE > LOCATION</p>
+            </div>
+        </div>
+        <div class="location_head" id="MyeongDong" style="padding-top: 100px">
+            <h1 class="location_title">MYEONG DONG</h1>
+            <iframe class="location_map" allowTransparency="true" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6325.36470408224!2d126.992592!3d37.56254700000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e3692e23e9%3A0x2655e85b6eacb4e4!2z7ISc7Jq47Yq567OE7IucIOykkeq1rCDtlYTrj5kgNDM!5e0!3m2!1sko!2skr!4v1571387322085!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;"></iframe>
+        </div>
+        <div class="location_box">
+            <div class="location_content">
+                <div class="location_content_title">
+                    <h2>Ritz Hotel </h2>
+                    <h2>MyeongDong</h2>
+                </div>
+                <div class="location_content_par">
+                    <p class="location_ad">서울특별시 중구 명동 삼일대로 362 릿츠호텔명동</p>
+                    <p class="location_tel">TEL. 02-6112-1000</p>
+                    <p class="location_fax">FAX. 02-6112-1920</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="location_head" id="Incheon" style="padding-top: 100px">
+            <h1 class="location_title">INCHEON</h1>
+            <iframe class="location_map" allowTransparency="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12671.512853619042!2d126.45101460626346!3d37.4399817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b9a68f93d1a83%3A0x9d8e1a5254fb6993!2z7JWE7Yq47YyM652865SU7IaMICjtjIzrnbzri6TsnbTsiqQg7Iuc7YuwKQ!5e0!3m2!1sko!2skr!4v1571629036935!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;"></iframe>
+        </div>
+        <div class="location_box">
+            <div class="location_content">
+                <div class="location_content_title">
+                    <h2>Ritz Hotel </h2>
+                    <h2>Incheon</h2>
+                </div>
+                <div class="location_content_par">
+                    <p class="location_ad">인천광역시 중구 은하수로 29번길36 릿츠호텔명동</p>
+                    <p class="location_tel">TEL. 032-752-5996</p>
+                    <p class="location_fax">FAX. 032-752-5920</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="location_head" id="Gangneung" style="padding-top: 100px">
+            <h1 class="location_title">GANGNEUNG</h1>
+            <iframe class="location_map" allowTransparency="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10604.858004702954!2d128.90399012261278!3d37.79371550038575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3561e6bcd38f917b%3A0x58e1ea47ee934b53!2z7JSo66eI7YGsIO2YuO2FlA!5e0!3m2!1sko!2skr!4v1571633924204!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;"></iframe>
+        </div>
+        <div class="location_box">
+            <div class="location_content">
+                <div class="location_content_title">
+                    <h2>Ritz Hotel </h2>
+                    <h2>GangNeung</h2>
+                </div>
+                <div class="location_content_par">
+                    <p class="location_ad">강원도 강릉시 초당동 해안로 406번길2 릿츠호텔강릉</p>
+                    <p class="location_tel">TEL. 033-650-7000</p>
+                    <p class="location_fax">FAX. 033-650-6920</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="location_head" id="Pusan" style="padding-top: 100px">
+            <h1 class="location_title">PUSAN</h1>
+            <iframe class="location_map" allowTransparency="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52196.54734789476!2d129.09143741417637!3d35.149532092823954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d42b126ec71%3A0x8fae28bce37ad7bd!2z7YyM652864uk7J207Iqk7Zi47YWUIOu2gOyCsCBQYXJhZGlzZSBIb3RlbCBCdXNhbg!5e0!3m2!1sko!2skr!4v1571634330206!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;"></iframe>
+        </div>
+        <div class="location_box">
+            <div class="location_content">
+                <div class="location_content_title">
+                    <h2>Ritz Hotel </h2>
+                    <h2>Pusan</h2>
+                </div>
+                <div class="location_content_par">
+                    <p class="location_ad">부산광역시 해운대구 중동 해운대해변로296 릿츠호텔부산</p>
+                    <p class="location_tel">TEL. 051-742-2121</p>
+                    <p class="location_fax">FAX. 051-742-2133</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+</body>
+</html>

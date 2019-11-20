@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > PROMOTION > EVENT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/Promotion_event.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+<!--
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <link href="css/aos.css" rel="stylesheet">
+-->
+    <style>
+        /*기본 레이아웃 구성*/      
+        #wrap{width: 100%; height: 100%; position: relative;} 
+        footer{z-index: 8; position: relative;}
+        header{z-index: 9;}        
+        
+        
+    </style>
+    <script>
+        $(function() {
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+            
+            $(window).scroll(function(e){
+                e.preventDefault();
+                var i = 230;  
+                var st = $(window).scrollTop()+i;
+                $(".event_keytitle").css({top: st});
+                console.log(st);
+            });
+        });
+    </script>
+    <style>
+        @media all and (min-width:740px) and (max-width:1023px){ 
+            .scale>img{height: auto;}
+            .main_event1{height: 400px;}
+            .main_event2{height: 400px;}
+            .main_event3{height: 400px;}
+        }
+        
+       @media all and (max-width:739px){ 
+           p.con1_another{font-size: 25px;}
+           p.another_ment1{font-size: 20px;}
+           p.another_ment2{font-size: 15px;}
+           p.another_ment3{font-size: 15px;}
+           .main_icon>li{width: 50%;}
+           li.icon3{margin-top: 20px;}
+           li.icon4{margin-top: 20px;}
+           i.fa-gift{font-size: 33px; margin-top: -7px;}
+           i.fa-camera{font-size: 25px;}
+           i.fa-users{font-size: 25px;}
+           i.fa-check-square{font-size: 25px;}
+           p.icon_ment{font-size: 14px;}
+           li.icon1>p.icon_ment{margin-top: 9px;}
+           #event_con1{padding-bottom: 155px;}
+           .con1_another_bottom2{padding: 35px;}
+           .scale>img{height: 250px;}
+           .event1{width: 100%; height: 500px; margin-left: 0; position: relative;}
+           .event2{display: none;}
+           .event3{width: 100%; margin-left: 0; margin-top: 130px; position: relative;}
+           .event4{display: none;}
+           .event5{width: 100%; margin-left: 0; margin-top: 130px; position: relative;}
+           .event6{display: none;}
+           .event1>.img_box{ font-size: 14px; width:155px; top: 10px;}
+           .event2>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .event3>.img_box{font-size: 14px; width:155px; top: 10px;}
+           .event4>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .event5>.img_box{font-size: 14px; width:155px; top: 10px;}
+           .event6>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .event_title1{font-size: 16px; padding-left: 10px;}
+           .event_title2{font-size: 14px; padding-left: 10px;}
+           .main_event1{height: 254px;}
+           .main_event2{height: 254px;}
+           .main_event3{height: 230px; margin-bottom: 220px;}
+           h2.event_ment1{font-size: 45px;}
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">       
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!-- KeyImage구역 -->
+        <div id="event_keyimage">
+            <div class="event_keytitle">
+                <div class="event_line"></div>
+                <h2 class="event_ment1">EVENT</h2>
+                <p class="event_ment2">이벤트</p>
+                <p class="event_ment3">HOME > PROMOTION > EVENT</p>
+            </div>
+        </div>
+        
+        <!--content1-->
+        <div id="event_con1">
+            <p class="con1_another">ANOTHER EVENT</p>
+            <div class="con1_img">
+                <img src="images/promotion_event/con1_img.jpg" alt="ANOTHER EVENT 이미지">
+            </div>
+            <div class="con1_bottom">
+                <div class="con1_another_bottom1">
+                    <p class="another_ment1">ONE SPECIAL MOMENT</p>
+                    <p class="another_ment2">경험과 추억에 집중하세요.</p>
+                    <p class="another_ment3">THE RITZ HOTEL만의 다양하고 특별한 이벤트들과 함께 여행에 즐거움을 더해보세요.</p>
+                </div>
+                <div class="con1_another_bottom2">
+                  <ul class="main_icon">
+                      <li class="icon1">
+                           <i class="fa fa-gift"></i>
+                           <p class="icon_ment">Special<br>Gift</p>
+                      </li>
+                      
+                      <li class="icon2">
+                           <i class="fa fa-camera"></i>
+                           <p class="icon_ment">Good<br>Memory</p>
+                      </li>
+                      
+                      <li class="icon3">
+                           <i class="fa fa-users"></i>
+                           <p class="icon_ment">Various<br>people</p>
+                      </li>
+                      
+                      <li class="icon4">
+                           <i class="fa fa-check-square"></i>
+                           <p class="icon_ment">reliable<br>choice</p>
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!--content2-->
+        <div id="event_con2">
+           <div class="main_event1">
+               <div class="event1">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_event/con2_event1.jpg" alt="롤스로이스 이벤트">
+                       </div>
+                   </div>
+                   <div class="img_box">Arrive in Style</div>
+                   <p class="event_title1">롤스로이스와 프라이빗 버틀러가 제공되는 객실 식음 서비스 </p>
+                   <p class="event_title2">프리미어룸 1박 + 2인 조식 + 롤스로이스 픽업 &amp; 샌딩</p>
+               </div>
+               
+               <div class="event2">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_event/con2_event2.jpg" alt="인피니티풀 이벤트">
+                       </div>
+                   </div>
+                   <div class="img_box">Enjoy Infinity Pool</div>
+                   <p class="event_title1">사계절 인티니티 풀 운영</p>
+                   <p class="event_title2">푸른 하늘 아래 야경을 감상하며 로맨틱한 스위밍을 즐길 수 있는 사계절 온수풀 연중 운영</p>
+               </div>
+           </div>
+          
+          <div class="main_event2">
+              <div class="event3">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_event/con2_event3.jpg" alt="생일 케이크 이벤트">
+                       </div>
+                   </div>
+                   <div class="img_box">Happy Birth Day</div>
+                   <p class="event_title1">1년 중 특별한 순간을 담는 날</p>
+                   <p class="event_title2">세상에 단 하나뿐인 나만의 스페셜 케이크</p>
+               </div>
+               
+               <div class="event4">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_event/con2_event4.jpg" alt="RITZ 스파 이벤트">
+                       </div>
+                   </div>
+                   <div class="img_box">Deep Relaxation</div>
+                   <p class="event_title1">피로로 지친 나를 위한 선물</p>
+                   <p class="event_title2">아로마 오일로 몸이 편안해지는 RITZ 스파 트리트먼트</p>
+               </div>
+          </div>        
+            
+          <div class="main_event3">
+              <div class="event5">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_event/con2_event5.jpg" alt="키즈케이션 이벤트">
+                       </div>
+                   </div>
+                   <div class="img_box">Kids at Home</div>
+                   <p class="event_title1">포근함과 따뜻함을 안겨주는 키즈케이션</p>
+                   <p class="event_title2">아이들을 위한 키즈 텐트 + 키즈 배스로브</p>
+               </div>
+               
+               <div class="event6">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_event/con2_event6.jpg" alt="오션뷰 이벤트">
+                       </div>
+                   </div>
+                   <div class="img_box">Ocean View</div>
+                   <p class="event_title1">에메랄드빛 바다가 한눈에 보이는 View</p>
+                   <p class="event_title2">Rooftop에서 펼쳐지는 환상적인 조식</p>
+               </div>
+          </div> 
+        </div>
+        
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+
+
+</body></html>

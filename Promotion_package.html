@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > PROMOTION > PACKAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/Promotion_package.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+<!--
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <link href="css/aos.css" rel="stylesheet">
+-->
+    <style>
+        /*기본 레이아웃 구성*/      
+        #wrap{width: 100%; height: 100%; position: relative;} 
+        footer{z-index: 8; position: relative;}
+        header{z-index: 9;}        
+        
+        
+    </style>
+    <script>
+        $(function() {
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+            
+            $(window).scroll(function(e){
+                e.preventDefault();
+                var i = 230;  
+                var st = $(window).scrollTop()+i;
+                $(".package_keytitle").css({top: st});
+            });
+        });
+    </script>
+    <style>
+        @media all and (min-width:740px) and (max-width:1023px){ 
+            .scale>img{height: auto;}
+            .main_package1{height: 400px;}
+            .main_package2{height: 400px;}
+            .main_package3{height: 400px;}
+        }
+        
+       @media all and (max-width:739px){ 
+           p.con1_another{font-size: 25px;}
+           p.another_ment1{font-size: 20px;}
+           p.another_ment2{font-size: 15px;}
+           p.another_ment3{font-size: 15px;}
+           .main_icon>li{width: 50%;}
+           li.icon3{margin-top: 20px;}
+           li.icon4{margin-top: 20px;}
+           i.fa-gift{font-size: 33px; margin-top: -7px;}
+           i.fa-camera{font-size: 25px;}
+           i.fa-users{font-size: 25px;}
+           i.fa-check-square{font-size: 25px;}
+           p.icon_ment{font-size: 14px;}
+           li.icon1>p.icon_ment{margin-top: 9px;}
+           #package_con1{padding-bottom: 155px;}
+           .con1_another_bottom2{padding: 35px;}
+           .scale>img{height: 250px}
+           .package1{width: 100%; margin-left: 0; height: 500px; position: relative;}
+           .package2{display: none;}
+           .package3{width: 100%; margin-left: 0; margin-top: 130px; position: relative;}
+           .package4{display: none;}
+           .package5{width: 100%; margin-left: 0; margin-top: 130px; position: relative;}
+           .package6{display: none;}
+           .package1>.img_box{ font-size: 14px; width:155px; top: 10px;}
+           .package2>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .package3>.img_box{font-size: 14px; width:155px; top: 10px;}
+           .package4>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .package5>.img_box{font-size: 14px; width:155px; top: 10px;}
+           .package6>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .package_title1{font-size: 16px; padding-left: 10px;}
+           .package_title2{font-size: 14px; padding-left: 10px;}
+           .main_package1{height: 254px;}
+           .main_package2{height: 254px;}
+           .main_package3{height: 230px; margin-bottom: 220px;}
+           h2.package_ment1{font-size: 45px;}
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">       
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!-- KeyImage구역 -->
+        <div id="package_keyimage">
+            <div class="package_keytitle">
+                <div class="package_line"></div>
+                <h2 class="package_ment1">PACKAGE</h2>
+                <p class="package_ment2">패키지</p>
+                <p class="package_ment3">HOME > PROMOTION > PACKAGE</p>
+            </div>
+        </div>
+        
+        <!--content1-->
+        <div id="package_con1">
+            <p class="con1_another">SPECIAL PACKAGE</p>
+            <div class="con1_img">
+                <img src="images/promotion_package/con1_img.jpg" alt="">
+            </div>
+            <div class="con1_bottom">
+                <div class="con1_another_bottom1">
+                    <p class="another_ment1">SMART OFFERS</p>
+                    <p class="another_ment2">소중한 시간이 더 특별하게 빛날 수 있도록</p>
+                    <p class="another_ment3">THE RITZ HOTEL에서 마련한 특별한 가격, 섬세한 서비스의 호텔 패키지를 만나보세요.</p>
+                </div>
+                <div class="con1_another_bottom2">
+                  <ul class="main_icon">
+                      <li class="icon1">
+                           <i class="fa fa-gift"></i>
+                           <p class="icon_ment">Special<br>Gift</p>
+                      </li>
+                      
+                      <li class="icon2">
+                           <i class="fa fa-camera"></i>
+                           <p class="icon_ment">Good<br>Memory</p>
+                      </li>
+                      
+                      <li class="icon3">
+                           <i class="fa fa-users"></i>
+                           <p class="icon_ment">Various<br>people</p>
+                      </li>
+                      
+                      <li class="icon4">
+                           <i class="fa fa-check-square"></i>
+                           <p class="icon_ment">reliable<br>choice</p>
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!--content2-->
+        <div id="package_con2">
+           <div class="main_package1">
+               <div class="package1">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_package/con2_package1.jpg" alt="플라워 디너 패키지">
+                       </div>
+                   </div>
+                   <div class="img_box">Sweet Moment</div>
+                   <p class="package_title1">가족과 함께하는 향긋한 플라워 디너</p>
+                   <p class="package_title2">FAMILY 객실 + 플라워 디너세트</p>
+               </div>
+               
+               <div class="package2">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_package/con2_package2.jpg" alt="라운지&바 패키지">
+                       </div>
+                   </div>
+                   <div class="img_box">Private wine bar</div>
+                   <p class="package_title1">페닌슐라 라운지 &amp; 바에서 다양하게 즐기는 Grey Goose!</p>
+                   <p class="package_title2">Premium 1박 (2인 기준) + 라운지바 2인</p>
+               </div>
+           </div>
+          
+          <div class="main_package2">
+              <div class="package3">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_package/con2_package3.jpg" alt="조식 패키지">
+                       </div>
+                   </div>
+                   <div class="img_box">Bed &amp; Breakfast</div>
+                   <p class="package_title1">상쾌한 아침 든든한 한끼</p>
+                   <p class="package_title2">메인or이그제큐티브 타워｜조식 2인+얼리버드10% (30일전)</p>
+               </div>
+               
+               <div class="package4">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_package/con2_package4.jpg" alt="스파 패키지">
+                       </div>
+                   </div>
+                   <div class="img_box">Comfortable Spa</div>
+                   <p class="package_title1">몸과 마음이 편안해지는 스파</p>
+                   <p class="package_title2">Deluxe룸 1박 + 라운지 2인 + EIR Spa 홀바디 트리트먼트 2인</p>
+               </div>
+          </div>        
+            
+          <div class="main_package3">
+              <div class="package5">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_package/con2_package5.jpg" alt="비즈니스 패키지">
+                       </div>
+                   </div>
+                   <div class="img_box">Happy Business</div>
+                   <p class="package_title1">좋은공간에서 성공적인 비즈니스</p>
+                   <p class="package_title2">객실1박｜라운지1인, 미니바</p>
+               </div>
+               
+               <div class="package6">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_package/con2_package6.jpg" alt="">
+                       </div>
+                   </div>
+                   <div class="img_box">The Romantic Day</div>
+                   <p class="package_title1">둘이서 함께 보내는 로맨틱한 순간</p>
+                   <p class="package_title2">조식+델리카한스 케익+웰컴커티시+1단계 업그레이드 혜택</p>
+               </div>
+          </div> 
+        </div>
+        
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+
+
+</body></html>

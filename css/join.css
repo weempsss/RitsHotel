@@ -1,0 +1,1971 @@
+@charset "utf-8";
+
+
+/* .Base */
+.Base {
+    width: 100%;
+}
+
+/* .Base > .content */
+.Base > .content {
+    position: relative;
+    top: -60px;
+    width: 60%;
+    background: white;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.Base > .content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .Base > .content > .step */
+.Base > .content > .step {
+    width: 100%;
+}
+
+.Base > .content > .step > ul {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.Base > .content > .step > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.Base > .content > .step > ul > li {
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+.Base > .content > .step > ul > li:nth-child(even) {
+    top: 46%;
+    width: 14px;
+    height: 14px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: #213859;
+    color: white;
+    font-size: 14px;
+}
+
+.Base > .content > .step > ul > li:nth-child(2) {
+    position: absolute;
+    left: 27%;
+}
+
+.Base > .content > .step > ul > li:nth-child(4) {
+    position: absolute;
+    left: 73%;
+}
+
+.Base > .content > .step > ul > li:nth-child(even) > .fa-angle-right {
+    position: absolute;
+    top: 0%;
+    LEFT: 40%;
+}
+
+.Base > .content > .step > ul > li:nth-child(odd) {
+    width: 33.3%;
+}
+
+
+.Base > .content > .step > ul > li:nth-child(odd) > p {
+    width: 28.5%;
+    height: auto;
+    border-radius: 50%;
+    background: #f7f7f7;
+    font-weight: normal;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 0.7vw;
+}
+
+.Base > .content > .step > ul > li:nth-child(1) > p {
+    position: relative;
+    background: #213859;
+    left: 0;
+}
+
+.Base > .content > .step > ul > li:nth-child(3) > p {
+    position: relative;
+    left: 36%;
+}
+
+.Base > .content > .step > ul > li:nth-child(5) > p {
+    position: relative;
+    left: 70%;
+}
+
+
+.Base > .content > .step > ul > li > .step_txt1 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.67vw;
+}
+
+.Base > .content > .step > ul > li > .step_txt2 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.67vw;
+}
+
+.Base > .content > .step > ul > li > .step_txt3 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.67vw;
+}
+
+.Base > .content > .step > ul > li:nth-child(1) > .step_txt1 {
+    color: white;
+    background: #213859;
+}
+
+.Base > .content > .step > ul > hr {
+    position: absolute;
+    width: 98%;
+    top: 50%;
+    border: #ededed 1px dashed;
+}
+
+
+/* .Base > .content > .leftway */
+.Base > .content > .leftway {
+    width: 48%;
+    height: 360px;
+    background-color: #eeeeee;
+    float: left;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.Base > .content > .leftway::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.Base > .content > .leftway > ul {
+    text-align: center;
+    margin-top: 85px;
+}
+
+.Base > .content > .leftway > ul > li > p:nth-child(1) {
+    font-size: 22px;
+    font-family: "NanumSquareEB";
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Base > .content > .leftway > ul > li > p:nth-child(2) {
+    font-size: 12px;
+    text-align: center;
+    font-family: "NanumSquareB";
+    color: #6f6f6f;
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+.Base > .content > .leftway > ul > li:nth-child(2) > input {
+    margin-top: 15px;
+    font-family: "NanumSquareB";
+    width: 70%;
+    text-indent: 10px;
+    line-height: 30px;
+}
+
+.Base > .content > .leftway > ul > li:nth-child(3) .btn {
+    font-family: "NanumSquareB";
+    width: 45%;
+    background: #897365;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+/* .Base > .content > .rightway */
+.Base > .content > .rightway {
+    background-color: #eee;
+    float: right;
+    width: 48%;
+    margin: 0 auto;
+    height: 360px;
+    position: relative;
+}
+
+.Base > .content > .rightway:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.Base > .content > .rightway > ul {
+    margin: 0 auto;
+    padding: 35px 0;
+    width: 80%;
+}
+
+.Base > .content > .rightway > ul > li > p:nth-child(1) {
+    font-size: 22px;
+    font-family: "NanumSquareEB";
+    text-align: center;
+}
+
+.Base > .content > .rightway > ul > li > p:nth-child(2) {
+    font-size: 0.9vw;
+    font-family: "NanumSquareB";
+    color: #6f6f6f;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Base > .content > .rightway > ul > li:nth-child(n + 2) {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    font-family: "NanumSquare";
+    line-height: 40px;
+    margin-top: 15px;
+}
+
+.Base > .content > .rightway > ul > li:nth-child(2) {
+    background: #3a5691;
+    color: white;
+    margin-top: 30px;
+}
+
+.Base > .content > .rightway > ul > li:nth-child(3) {
+    background: #dddddd;
+}
+
+.Base > .content > .rightway > ul > li:nth-child(4) {
+    background: #1ec800;
+    color: white;
+}
+
+.Base > .content > .rightway > ul > li:nth-child(5) {
+    background: #fae100;
+}
+
+.Base > .content > .rightway > ul > li > a {
+    text-align: center;
+    letter-spacing: 0.4px;
+    margin-left: 20%;
+}
+
+.Base > .content > .rightway > ul > li > .fa-angle-right {
+    position: absolute;
+}
+
+.Base > .content > .rightway > ul > li > img {
+    position: absolute;
+    top: 14%;
+    margin-left: 7.5%;
+    width:  30px;
+}
+
+.fa-angle-right {
+    position: absolute;
+    top: 28%;
+    LEFT: 94%;
+}
+
+/* .Base2 */
+.Base2 {
+    display: none
+    ;
+}
+
+/* .Base2 > .content2 */
+.Base2 > .content2 {
+    position: relative;
+    top: -60px;
+    width: 60%;
+    background: white;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 9%;
+    margin: 0 auto;
+}
+
+.Base2 > .content2::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .Base2 > .content2 > .step2 */
+.Base2 > .content2 > .step2 {
+    width: 100%;
+}
+
+.Base2 > .content2 > .step2 > ul {
+    width: 100%;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    position: relative;
+}
+
+.Base2 > .content2 > .step2 > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.Base2 > .content2 > .step2 > ul > li {
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(even) {
+    top: 46%;
+    width: 14px;
+    height: 14px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: #213859;
+    color: white;
+    font-size: 14px;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(2) {
+    position: absolute;
+    left: 27%;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(4) {
+    position: absolute;
+    left: 73%;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(even) > .fa-angle-right {
+    position: absolute;
+    top: 0%;
+    LEFT: 40%;
+}
+
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(odd) {
+    width: 33.3%;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(odd) > p {
+    width: 28.5%;
+    height: auto;
+    border-radius: 50%;
+    background: #f7f7f7;
+    font-weight: normal;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 0.7vw;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(1) > p {
+    position: relative;
+    left: 0;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(3) > p {
+    position: relative;
+    background: #213859;
+    left: 36%;
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(5) > p {
+    position: relative;
+    left: 70%;
+}
+
+
+.Base2 > .content2 > .step2 > ul > li > .step2_txt1 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.7vw;
+    padding-top: 7%
+}
+
+.Base2 > .content2 > .step2 > ul > li > .step2_txt2 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.7vw;
+    padding-top: 7%
+}
+
+.Base2 > .content2 > .step2 > ul > li > .step2_txt3 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.7vw;
+    padding-top: 7%
+}
+
+.Base2 > .content2 > .step2 > ul > li:nth-child(3) > .step2_txt2 {
+    color: white;
+    background: #213859;
+}
+
+.Base2 > .content2 > .step2 > ul > hr {
+    position: absolute;
+    width: 98%;
+    top: 50%;
+    border: #ededed 1px dashed;
+}
+
+
+/* Base 공통값 */
+.Base2 .TitleTextSpace {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 6.5%;
+    padding-bottom: 3%;
+}
+
+.Base2 .Line-HighSpace {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-top: 1px solid #e8e8e8;
+}
+
+.Base2 .Line-HighSpace2 {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-top: 1px solid #e8e8e8;
+}
+/* hr*/
+
+.Base2 .Surport_P {
+    font-size: 14px;
+    margin-top: 0.9%;
+    color: #897365;
+    font-weight: bold;
+}
+
+.Base2 .Surport_P2 {
+    font-size: 14px;
+    margin-top: 0.9%;
+    color: #897365;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+.Base2 .Line-HighSpace > input {
+    margin-left: 7%;
+    margin-right: 0.3%;
+}
+
+.Base2 .Line-HighSpace2 > input {
+    margin-left: 7%;
+    margin-right: 0.3%;
+}
+
+.Base2 strong {
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+
+/* .Base2 > .FirstLine */
+.Base2 > .FirstLine {
+    position: relative;
+    top: -40px;
+    width: 60%;
+    background: white;
+    margin: 0 auto;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace > p {
+    margin-left: 7%;
+    font-weight: bold;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace > .fa-angle-down {
+    position: absolute;
+    right: 7%;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.Base2 > .FirstLine .InsideText {
+    display: none
+    ;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText {
+    font-size: 14px;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText .Small_Title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText .Big_Title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText ul li {
+    margin-left: 3%;
+    margin-top: 0.5%;
+}
+
+
+.Base2 > .FirstLine > ul > .Line-HighSpace2 > p {
+    margin-left: 7%;
+    font-weight: bold;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace2 > .fa-angle-down {
+    position: absolute;
+    right: 7%;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.Base2 > .FirstLine .InsideText2 {
+    display: none
+    ;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 {
+    font-size: 14px;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 .Small_Title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 .Big_Title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 ul li {
+    margin-left: 3%;
+    margin-top: 0.5%;
+}
+
+/* .Base2 > .SecondLine */
+.Base2 > .SecondLine {
+    position: relative;
+    top: -20px;
+    width: 60%;
+    background: white;
+    margin: 0 auto;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .fa-angle-down {
+    position: absolute;
+    right: 7%;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.Base2 > .SecondLine > ul > .TitleTextSpace > .Surport_P {
+    font-size: 0.7vw;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info {
+    display: none
+    ;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset {
+    width: 100%;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > .SecondAddMiddle {
+    border-left: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > .SecondAddMiddle2 {
+    border-left: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > th {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #eaeaea;
+    font-size: 14px;
+    text-align: center;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > td {
+    font-size: 14px;
+    padding: 5%;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > td > .SecondAddText {
+    font-size: 1vw;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > .SecondUnderMiddle {
+    width: 80%;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    font-size: 0.9vw;
+    color: #666;
+    border-bottom: 1px solid black;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .fa-angle-down {
+    position: absolute;
+    right: 7%;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 {
+    display: none
+    ;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset {
+    width: 100%;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > .SecondAddMiddle {
+    border-left: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > .SecondAddMiddle2 {
+    border-left: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > th {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #eaeaea;
+    font-size: 14px;
+    text-align: center;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > td {
+    font-size: 14px;
+    padding: 5%;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > td > .SecondAddText {
+    font-size: 1vw;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > .SecondUnderMiddle {
+    width: 80%;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    font-size: 0.9vw;
+    color: #666;
+    border-bottom: 1px solid black;
+}
+
+/* .Base2 > .ThirdLine */
+.Base2 > .ThirdLine {
+    position: relative;
+    top: 0;
+    width: 60%;
+    background: white;
+    margin: 0 auto;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .fa-angle-down {
+    position: absolute;
+    right: 7%;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 {
+    display: none
+    ;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > .ThirdHigh {
+    width: 86%;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #666666;
+    margin-top: 2%;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset {
+    width: 100%;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table {
+    width: 86%;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+    margin-top: 1.5%
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table > tbody > tr {
+    text-align: center;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table > tbody > tr > th {
+    font-size: 14px;
+    background: #f1f1f1;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #c6c4c2;
+    border-right: 1px solid #c6c4c2;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table > tbody > tr > .exception {
+    border-right: none;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table > tbody > tr > td {
+    font-size: 12px;
+    height: 60px;
+    line-height: 60px;
+    color: #666666;
+    text-align: left;
+    padding-left: 3%;
+    border-bottom: 1px solid #c6c4c2;
+}
+
+.Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > .ThirdUnder {
+    width: 86%;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #666666;
+    margin-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #333;
+}
+
+
+
+/* .Base2 > .MiddleTextSpace */
+.Base2 > .MiddleTextSpace {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0.85vw;
+    _text-align: center;
+    padding-top: 2%;
+}
+
+.Base2 > .MiddleTextSpace > p {
+    margin-top: 0.5%;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* .Base2 > .ForthLine */
+.Base2 > .ForthLine {
+    position: relative;
+    top: 20px;
+    width: 60%;
+    background: white;
+    margin: 0 auto;
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+.Base2 > .ForthLine > ul > li {
+    font-size: 20px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 7%;
+}
+
+.Base2 > .ForthLine > ul > li > strong {
+    font-size: 20px;
+}
+
+/* .Base2 > .LastLine */
+.Base2 > .LastLine {
+    position: relative;
+    top: 40px;
+    width: 80%;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 4%;
+    font-size: 16px;
+    padding-top: 2%;
+}
+
+.Base2 > .LastLine strong {
+    font-size: 18px;
+    margin-left: 7px;
+}
+
+.Base2 > .LastLine > filedset {
+    width: 100%;
+}
+
+.Base2 > .LastLine > filedset > table {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.Base2 > .LastLine > filedset > table > tbody .TRoot > input {
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox2 > td {
+    padding-top: 1%;
+}
+
+.Base2 > .LastLine > filedset > table .LastUnderBox2 > td {
+    font-size: 13px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox3 > td {
+    padding-top: 3%;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox4 > td {
+    padding-top: 3%;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox4 > td > input {
+    width: 98%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td {
+    padding-top: 2%;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td > input {
+    width: 98%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td > .FillBtn {
+    width: 100%;
+    height: 40px;
+    background: #897365;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8vw;
+    border: none;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox6 > td {
+    padding-top: 1.2%;
+    font-size: 14px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td {
+    position: relative;
+    padding-top: 2.8%;
+    padding-bottom: 7%;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #YearSel {
+    width: 98%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #YearSel > option {
+    height: 20px;
+    max-height: 100px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #MonthSel {
+    width: 98%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #DaySel {
+    width: 98%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+/* .Base2 > .ButtonSpace */
+.Base2 > .ButtonSpace {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.Base2 > .ButtonSpace > .ClearBtn {
+    width: 15%;
+    height: 50px;
+    background: #897365;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+
+/* .Base3 */
+.Base3 {
+    display: none
+}
+
+/* .Base3 > .content3 */
+.Base3 > .content3 {
+    position: relative;
+    top: -60px;
+    width: 60%;
+    background: white;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 9%;
+    margin: 0 auto;
+}
+
+.Base3 > .content3::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .Base3 > .content3 > .step3 */
+.Base3 > .content3 > .step3 {
+    width: 100%;
+}
+
+.Base3 > .content3 > .step3 > ul {
+    width: 100%;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    position: relative;
+}
+
+.Base3 > .content3 > .step3 > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.Base3 > .content3 > .step3 > ul > li {
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(even) {
+    top: 46%;
+    width: 14px;
+    height: 14px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: #213859;
+    color: white;
+    font-size: 14px;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(2) {
+    position: absolute;
+    left: 27%;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(4) {
+    position: absolute;
+    left: 73%;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(even) > .fa-angle-right {
+    position: absolute;
+    top: 0%;
+    LEFT: 40%;
+}
+
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(odd) {
+    width: 33.3%;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(odd) > p {
+    width: 28.5%;
+    height: auto;
+    border-radius: 50%;
+    background: #f7f7f7;
+    font-weight: normal;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 0.7vw;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(1) > p {
+    position: relative;
+    left: 0;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(3) > p {
+    position: relative;
+    left: 36%;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(5) > p {
+    position: relative;
+    background: #213859;
+    left: 70%;
+}
+
+
+.Base3 > .content3 > .step3 > ul > li > .step3_txt1 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.7vw;
+    padding-top: 70px;
+}
+
+.Base3 > .content3 > .step3 > ul > li > .step3_txt2 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.7vw;
+    padding-top: 70px;
+}
+
+.Base3 > .content3 > .step3 > ul > li > .step3_txt3 {
+    font-family: "NanumSquareB";
+    color: #213859;
+    font-size: 0.7vw;
+    padding-top: 70px;
+}
+
+.Base3 > .content3 > .step3 > ul > li:nth-child(5) > .step3_txt3 {
+    color: white;
+    background: #213859;
+}
+
+.Base3 > .content3 > .step3 > ul > hr {
+    position: absolute;
+    width: 98%;
+    top: 50%;
+    border: #ededed 1px dashed;
+}
+
+/* .Base3 > .content3 > .step3 > .Base3MiddlePosition */
+.Base3 > .content3 > .step3 > .Base3MiddlePosition {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+}
+
+.Base3 > .content3 > .step3 > .Base3MiddlePosition > p {
+    margin-bottom: 1%;
+}
+
+/* .Base3 > .content3 > .step3 > .Base3UnderPosition */
+.Base3 > .content3 > .step3 > .Base3UnderPosition {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+/* .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway */
+.Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway img {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway > .FinalText {
+    position: relative;
+    font-size: 0.9vw;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+.Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway > .MoveLogin > a {
+    background: #897365;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 10%;
+    display: inline-block;
+    font-family: "NanumSquareB";
+    font-size: 16px;
+    border: none;
+}
+
+
+/* 기타 css */
+
+
+/* ------------------ 미디어쿼리 -------------------- */
+@media all and (min-width:740px) and (max-width:1023px) {
+    .Base > .content {
+        width: 80%;
+    }
+    
+    
+
+    .Base2 > .content2 {
+        width: 80%;
+    }
+
+    .Base2 > .FirstLine {
+        width: 80%;
+    }
+
+    .Base2 > .SecondLine {
+        width: 80%;
+    }
+
+    .Base2 > .ThirdLine {
+        width: 80%;
+    }
+
+    .Base2 > .MiddleTextSpace {
+        width: 80%;
+    }
+
+    .Base2 > .ForthLine {
+        width: 80%;
+    }
+
+    .Base2 > .ForthLine > ul > li {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .Base2 > .LastLine {
+        width: 80%;
+    }
+
+    .Base2 > .LastLine > filedset > table {
+        width: 80%;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox1 > .TRoot > input {
+        height: 35px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox2 > .TRoot > input {
+        height: 35px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox3 > .TRoot > input {
+        height: 35px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox4 > .TRoot > input {
+        height: 35px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > .TRoot > input {
+        height: 35px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td > .FillBtn {
+        height: 35px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > .TRoot > input {
+        height: 35px;
+    }
+
+    .Base2 > .MiddleTextSpace {
+        font-size: 0.4vw;
+    }
+
+    .Base2 > .MiddleTextSpace > p {
+        margin-top: 0.5%;
+        font-weight: bold;
+        color: #333;
+        letter-spacing: 1px;
+    }
+
+    .Base2 > .ButtonSpace {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .Base2 > .ButtonSpace > .ClearBtn {
+        width: 20%;
+    }
+
+    .Base3 > .content3 {
+        width: 80%;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3MiddlePosition {
+        font-size: 16px;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway {
+        width: 65%;
+    }
+}
+
+@media all and (min-width:500px) and (max-width:739px) {
+    .Base > .content {
+        width: 100%;
+    }
+
+    .Base2 > .content2 {
+        width: 100%;
+    }
+
+    .Base2 > .FirstLine {
+        width: 100%;
+    }
+
+    .Base2 > .SecondLine {
+        width: 100%;
+    }
+
+    .Base2 > .SecondLine > ul > .TitleTextSpace > .Surport_P {
+        font-size: 6px;
+    }
+
+    .Base2 > .ThirdLine {
+        width: 100%;
+    }
+
+    .Base2 > .MiddleTextSpace {
+        width: 80%;
+    }
+
+    .Base2 > .ForthLine {
+        width: 100%;
+    }
+
+    .Base2 > .ForthLine > ul > li {
+        font-size: 1.8vw;
+    }
+
+    .Base2 > .ForthLine > ul > li > input {
+        margin-left: 5%;
+    }
+
+    .Base2 > .LastLine {
+        width: 100%;
+    }
+
+    .Base2 > .LastLine > filedset > table {
+        width: 95%;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > tr > .TRoot {
+        height: 40px;
+    }
+
+    .Base2 > .LastLine > filedset > table .LastUnderBox2 > td {
+        font-size: 1.8vw;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td {
+        font-size: 1.8vw;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox6 > td {
+        font-size: 1.8vw;
+    }
+
+    .Base2 > .content2 > .step2 > ul > li > .step2_txt > a {
+        font-size: 3px;
+    }
+
+    .Base2 > .ButtonSpace > .ClearBtn {
+        width: 50%;
+    }
+
+    .Base2 > .MiddleTextSpace > p {
+        font-size: 1.8vw;
+    }
+
+    .Base2 > .ForthLine > ul > li {
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    .Base3 > .content3 {
+        width: 100%;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3MiddlePosition > p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway {
+        width: 80%;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway img {
+        margin-top: 10%;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway > .FinalText {
+        font-size: 1.8vw;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway > .MoveLogin > a {
+        font-size: 2.5vw;
+    }
+
+}
+
+@media all and (max-width:499px) {
+
+    .Base > .content {
+        width: 100%;
+        top: -20px;
+        margin-bottom: 4%;
+    }
+    
+    .Base > .content > .step > ul { width: 97%;}
+
+    .Base > .content > .step > ul > li:nth-child(even) {
+        width: 3%;
+        top:45.5%;
+        height: 10px;
+        line-height: 10px;
+        border-radius: 100px;
+    }
+    
+    .Base > .content > .step > ul > li:nth-child(2) {
+    position: absolute;
+    left: 28%;
+}
+    .Base > .content > .step > ul > li:nth-child(4) {
+    position: absolute;
+    left: 74%;
+}
+    
+    .Base > .content > .step > ul > li:nth-child(even) > .fa-angle-right {
+        top:1%;
+        font-size: 8px;
+    }
+
+    .Base > .content > .step > ul > li:nth-child(odd) > p {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    font-weight: normal;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 10px;
+    }
+
+
+    .Base > .content > .step > ul > li > .step_txt1 {
+        font-size: 16px;
+    }
+
+    .Base > .content > .step > ul > li > .step_txt2 {
+        font-size: 16px;
+    }
+
+    .Base > .content > .step > ul > li > .step_txt3 {
+        font-size: 16px;
+    }
+
+    /* .Base > .content > .leftway */
+    .Base > .content > .leftway { width: 48%; height: 230px; background-color: #eeeeee; float: left; margin: 0 auto; margin-top: 3%;
+    }
+
+    .Base > .content > .leftway::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .Base > .content > .leftway > ul {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .Base > .content > .leftway > ul > li > p:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .Base > .content > .leftway > ul > li > p:nth-child(2) {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 7.2px;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+    
+    .Base > .content > .leftway > ul > li:nth-child(2) > input {
+        margin-top: 15px;
+        font-size: 8px;
+        width: 80%;
+    }
+
+    .Base > .content > .leftway > ul > li:nth-child(3) .btn {
+        width: 50%;
+        font-size: 8px;
+        line-height: 25px;
+        height: 25px;
+        background: #897365;
+    }
+
+    /* .Base > .content > .rightway */
+    .Base > .content > .rightway {
+        height: 230px;
+        margin-top: 3%;
+    }
+
+    .Base > .content > .rightway > ul > li > p:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .Base > .content > .rightway > ul > li > p:nth-child(2) {
+        font-size: 7.2px;
+    }
+
+    .Base > .content > .rightway > ul > li:nth-child(n + 2) {
+        font-size: 6px;
+        line-height: 25px;
+        margin-top: 5px;
+    }
+
+    .Base > .content > .rightway > ul > li:nth-child(2) {
+        margin-top: 10px;
+    }
+
+    .Base > .content > .rightway > ul > li > a {
+        margin-left: 19%;
+        font-size: 6px;
+    }
+
+    .Base > .content > .rightway > ul > li > img {
+        position: absolute;
+        top: 22%;
+        width: 10%;
+        margin-left: 4%;
+    }
+
+    .fa-angle-right {
+        position: absolute;
+        top: 35%;
+        LEFT: 94%;
+    }
+
+    /* .Base2 > .content2 > .step2 */
+
+    .Base2 > .content2 {
+        width: 100%;
+    }
+    
+    .Base2 > .content2 > .step2 > ul { width: 97%;}
+    
+    .Base2 > .content2 > .step2 > ul > li:nth-child(even) {
+        width: 3%;
+        top:45.5%;
+        height: 10px;
+        line-height: 10px;
+        border-radius: 80px;
+    }
+    
+    .Base2 > .content2 > .step2 > ul > li:nth-child(2) {
+    position: absolute;
+    left: 28%;
+}
+    .Base2 > .content2 > .step2 > ul > li:nth-child(4) {
+    position: absolute;
+    left: 74%;
+}
+    
+    .Base2 > .content2 > .step2 > ul > li:nth-child(even) > .fa-angle-right {
+        top:1%;
+        font-size: 8px;
+    }
+
+    .Base2 > .content2 > .step2 > ul > li:nth-child(odd) > p {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    font-weight: normal;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 10px;
+    }
+
+
+    .Base2 > .content2 > .step2 > ul > li > .step2_txt1 {
+        font-size: 16px;
+    }
+
+    .Base2 > .content2 > .step2 > ul > li > .step2_txt2 {
+        font-size: 16px;
+    }
+
+    .Base2 > .content2 > .step2 > ul > li > .step2_txt3 {
+        font-size: 16px;
+    }
+
+    .Base2 .TitleTextSpace {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 3%;
+    }
+
+    .Base2 .Line-HighSpace {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .Base2 .Line-HighSpace2 {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .Base2 .Surport_P {
+        font-size: 10px;
+    }
+
+    .Base2 .Surport_P2 {
+        font-size: 9px;
+    }
+
+    .Base2 strong {
+        font-size: 14px
+    }
+
+
+    .Base2 > .FirstLine { width: 100%; top:-60px;}
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace > .fa-angle-down {
+        font-size: 20px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText {
+        font-size: 10px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText .Small_Title {
+        font-size: 12px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace > .InsideText .Big_Title {
+        font-size: 16px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace2 > .fa-angle-down {
+        font-size: 20px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 {
+        font-size: 10px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 .Small_Title {
+        font-size: 12px;
+    }
+
+    .Base2 > .FirstLine > ul > .Line-HighSpace2 > .InsideText2 .Big_Title {
+        font-size: 16px;
+    }
+
+    .Base2 > .SecondLine {
+        top: -35px;
+        width: 100%;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace > .fa-angle-down {
+        font-size: 20px;
+    }
+
+    .Base2 > .SecondLine > ul > .TitleTextSpace > .Surport_P {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > th {
+        height: 30px;
+        line-height: 30px;
+        font-size: 10px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > td {
+        font-size: 8px;
+        padding: 3%;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > filedset > table > tbody > tr > td > .SecondAddText {
+        font-size: 10px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace > .Inside-Info > .SecondUnderMiddle {
+        width: 80%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 7px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .fa-angle-down {
+        font-size: 20px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset {
+        width: 100%;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > th {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 10px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > td {
+        font-size: 8px;
+        padding: 3%;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > filedset > table > tbody > tr > td > .SecondAddText {
+        font-size: 10px;
+    }
+
+    .Base2 > .SecondLine > ul > .Line-HighSpace2 > .Inside-Info2 > .SecondUnderMiddle {
+        width: 80%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 7px;
+    }
+    
+    .Base2 > .ThirdLine { width: 100%; }
+
+    .Base2 > .ThirdLine > ul > .Line-HighSpace > .fa-angle-down {
+        font-size: 20px;
+    }
+
+    .Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > .ThirdHigh {
+        width: 86%;
+        font-size: 9px;
+    }
+
+    .Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table > tbody > tr > th {
+        font-size: 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > filedset > table > tbody > tr > td {
+        font-size: 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .Base2 > .ThirdLine > ul > .Line-HighSpace > .Inside-Info3 > .ThirdUnder {
+        font-size: 7px;
+    }
+
+
+    .Base2 > .MiddleTextSpace {
+        width: 90%;
+    }
+    
+    .Base2 > .MiddleTextSpace > p {
+        font-size: 12px;
+        margin-top: 1%;
+    }
+    
+    .Base2 > .ForthLine { width: 100%; }
+
+    .Base2 > .ForthLine > ul > li {
+        margin-left: 0;
+        font-size: 10px;
+        text-align: center;
+        margin-left: 3%;
+    }
+    .Base2 > .ForthLine > ul > li > input { 
+    margin-left: 3%;}
+    
+    .Base2 > .ForthLine > ul > li > strong { display: block; text-align: right; margin-top: 4%; margin-right: 6%; font-size: 12px;}
+    
+    
+
+    .Base2 > .LastLine {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .Base2 > .LastLine strong {
+        font-size: 12px;
+    }
+
+    .Base2 > .LastLine > filedset {
+        width: 100%;
+    }
+
+    .Base2 > .LastLine > filedset > table {
+        width: 90%;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody .TRoot > input {
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox2 > td {
+        padding-top: 1%;
+        font-size: 10px;
+    }
+
+    .Base2 > .LastLine > filedset > table .LastUnderBox2 > td {
+        font-size: 12px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox4 > td > input {
+        height: 25px;
+    }
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td { font-size: 10px;}
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td > input {
+        height: 25px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td > .FillBtn {
+        height: 25px;
+        font-size: 9px;
+        background: #897365;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox6 > td {
+        padding-top: 1.2%;
+        font-size: 10px;
+    }
+
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #YearSel {
+        font-size: 10px;
+        height: 25px;
+        background:white;
+        
+    }
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #MonthSel {
+        font-size: 10px;
+        height: 25px;
+        background:white;
+        
+    }
+    .Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #DaySel {
+        font-size: 10px;
+        height: 25px;
+        background:white;
+        
+    }
+    
+    .Base2 > .ButtonSpace { width: 100%;}
+    
+.Base2 > .ButtonSpace > .ClearBtn {
+    width: 26%;
+    height: 30px;
+    font-size: 13px;
+    background: #897365;
+}
+    
+    .Base2 > .ButtonSpace > .Surport_P2 { margin-top: 3%;}
+
+    .Base3 > .content3 { width: 100%;}
+
+    .Base3 > .content3 > .step3 > ul { width: 97%;}
+    
+    .Base3 > .content3 > .step3 > ul > li:nth-child(even) {
+        width: 3%;
+        top:45.5%;
+        height: 10px;
+        line-height: 10px;
+        border-radius: 80px;
+    }
+    
+    .Base3 > .content3 > .step3 > ul > li:nth-child(2) {
+    position: absolute;
+    left: 28%;
+}
+    .Base3 > .content3 > .step3 > ul > li:nth-child(4) {
+    position: absolute;
+    left: 74%;
+}
+    
+    .Base3 > .content3 > .step3 > ul > li:nth-child(even) > .fa-angle-right {
+        top:1%;
+        font-size: 8px;
+    }
+
+    .Base3 > .content3 > .step3 > ul > li:nth-child(odd) > p {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    font-weight: normal;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 10px;
+    }
+
+
+    .Base3 > .content3 > .step3 > ul > li > .step3_txt1 {
+        
+        font-size: 16px;
+    }
+
+    .Base3 > .content3 > .step3 > ul > li > .step3_txt2 {
+        
+        font-size: 16px;
+    }
+
+    .Base3 > .content3 > .step3 > ul > li > .step3_txt3 {
+        
+        font-size: 16px;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3MiddlePosition {
+        margin-top: 12%;
+    }
+    
+    .Base3 > .content3 > .step3 > .Base3MiddlePosition > p {
+        font-size: 11px;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway {
+        width: 100%;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway img {
+        margin-top: 8%;
+    }
+
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway > .FinalText {
+        font-size: 12px;
+    }
+    
+    .Base3 > .content3 > .step3 > .Base3UnderPosition > .Base3Middleway > .MoveLogin > a {
+        font-size: 11px;
+        width: 40%;
+        height: 40px;
+        line-height: 40px;
+        background:#897365;
+    }
+    
+    
+
+}
+
+/* find 
+.Base3 > .content > .step > ul > li:nth-child(odd) > p
+.fa-angle-right
+.Base > .content > .leftway > ul > li > p:nth-child(1)
+.Base > .content > .leftway > ul > li > p:nth-child(1)
+display: none
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox6 > td
+.Base2 > .LastLine > filedset > table > tbody .TRoot > input
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox2 > td
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox7 > td > #YearSel
+media
+.Base2 > .MiddleTextSpace
+zzz
+.Base > .content > .leftway > ul > li > p:nth-child(2)
+.Base > .content > .leftway > ul > li > p:nth-child(1)
+.Base > .content > .leftway > ul > li > p:nth-child(2)
+.Base2 > .LastLine > filedset > table > tbody > .LastUnderBox5 > td
+.Base2 .Surport_P2
+SecondUnderMiddle
+even
+.Base > .content > .leftway > ul > li > p:nth-child(2)
+.Base2 > .MiddleTextSpace > p
+.Base2 > .LastLine strong
+.Base2 > .LastLine strong
+ClearBtn
+top
+.Base2 > .ForthLine > ul > li
+.Base2 > .MiddleTextSpace > p
+*/

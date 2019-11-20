@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > PROMOTION > WEDDING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/Promotion_wedding.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+<!--
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <link href="css/aos.css" rel="stylesheet">
+-->
+    <style>
+        /*기본 레이아웃 구성*/      
+        #wrap{width: 100%; height: 100%; position: relative;} 
+        footer{z-index: 8; position: relative;}
+        header{z-index: 9;}        
+        
+        
+    </style>
+    <script>
+        $(function() {
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+            
+            $(window).scroll(function(e){
+                e.preventDefault();
+                var i = 230;  
+                var st = $(window).scrollTop()+i;
+                $(".wedding_keytitle").css({top: st});
+
+            });
+        });
+    </script>
+    <style>
+        @media all and (min-width:740px) and (max-width:1023px){ 
+            .scale>img{height: auto;}
+            .main_wedding1{height: 400px;}
+            .main_wedding2{height: 400px;}
+            .main_wedding3{height: 400px;}
+        }
+        
+       @media all and (max-width:739px){ 
+           p.con1_another{font-size: 25px;}
+           p.another_ment1{font-size: 20px;}
+           p.another_ment2{font-size: 15px;}
+           p.another_ment3{font-size: 15px;}
+           .main_icon>li{width: 50%;}
+           li.icon3{margin-top: 20px;}
+           li.icon4{margin-top: 20px;}
+           i.fa-gift{font-size: 33px; margin-top: -7px;}
+           i.fa-camera{font-size: 25px;}
+           i.fa-users{font-size: 25px;}
+           i.fa-check-square{font-size: 25px;}
+           p.icon_ment{font-size: 14px;}
+           li.icon1>p.icon_ment{margin-top: 9px;}
+           #wedding_con1{padding-bottom: 155px;}
+           .con1_another_bottom2{padding: 35px;}
+           .scale>img{height: 250px;}
+           .wedding1{width: 100%; height: 500px; margin-left: 0; position: relative;}
+           .wedding2{display: none;}
+           .wedding3{width: 100%; margin-left: 0; margin-top: 130px; position: relative;}
+           .wedding4{display: none;}
+           .wedding5{width: 100%; margin-left: 0; margin-top: 130px;  position: relative;}
+           .wedding6{display: none;}
+           .wedding1>.img_box{ font-size: 14px; width:155px; top: 10px;}
+           .wedding2>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .wedding3>.img_box{font-size: 14px; width:155px; top: 10px;}
+           .wedding4>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .wedding5>.img_box{font-size: 14px; width:155px; top: 10px;}
+           .wedding6>.img_box{font-size: 12px; width:140px; top: 10px;}
+           .wedding_title1{font-size: 16px; padding-left: 10px;}
+           .wedding_title2{font-size: 14px; padding-left: 10px;}
+           .main_wedding1{height: 254px;}
+           .main_wedding2{height: 254px;}
+           .main_wedding3{height: 230px; margin-bottom: 220px;}
+           h2.wedding_ment1{font-size: 45px;}
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">       
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!-- KeyImage구역 -->
+        <div id="wedding_keyimage">
+            <div class="wedding_keytitle">
+                <div class="wedding_line"></div>
+                <h2 class="wedding_ment1">WEDDING</h2>
+                <p class="wedding_ment2">웨딩</p>
+                <p class="wedding_ment3">HOME > PROMOTION > WEDDING</p>
+            </div>
+        </div>
+        
+        <!--content1-->
+        <div id="wedding_con1">
+            <p class="con1_another">SWEET WEDDING</p>
+            <div class="con1_img">
+                <img src="images/promotion_wedding/con1_img.jpg" alt="ANOTHER wedding 이미지">
+            </div>
+            <div class="con1_bottom">
+                <div class="con1_another_bottom1">
+                    <p class="another_ment1">THE ONLY MEMORY</p>
+                    <p class="another_ment2">단 한번 뿐인 기억을 남겨보세요.</p>
+                    <p class="another_ment3">THE RITZ HOTEL에서 당신이 꿈꾸던 최상의 결혼식을 만들어 드립니다.</p>
+                </div>
+                <div class="con1_another_bottom2">
+                  <ul class="main_icon">
+                      <li class="icon1">
+                           <i class="fa fa-gift"></i>
+                           <p class="icon_ment">Special<br>Gift</p>
+                      </li>
+                      
+                      <li class="icon2">
+                           <i class="fa fa-camera"></i>
+                           <p class="icon_ment">Good<br>Memory</p>
+                      </li>
+                      
+                      <li class="icon3">
+                           <i class="fa fa-users"></i>
+                           <p class="icon_ment">Various<br>people</p>
+                      </li>
+                      
+                      <li class="icon4">
+                           <i class="fa fa-check-square"></i>
+                           <p class="icon_ment">reliable<br>choice</p>
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!--content2-->
+        <div id="wedding_con2">
+           <div class="main_wedding1">
+               <div class="wedding1">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_wedding/con2_wedding1.jpg" alt="크리스탈룸">
+                       </div>
+                   </div>
+                   <div class="img_box">Crystal Room</div>
+                   <p class="wedding_title1">눈부신 샹들리에가 한눈에 들어오는 크리스탈룸</p>
+                   <p class="wedding_title2">다채로운 연출을 통해 세련되면서도 화려한 웨딩을 선보입니다.</p>
+               </div>
+               
+               <div class="wedding2">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_wedding/con2_wedding2.jpg" alt="시그니엘룸">
+                       </div>
+                   </div>
+                   <div class="img_box">Signiel Room</div>
+                   <p class="wedding_title1">우아하고 격조 높은 시그니엘룸</p>
+                   <p class="wedding_title2">하늘 아래 가장 높은 웨딩홀로서 일생동안 잊지 못할 소중한 순간을 선사합니다.</p>
+               </div>
+           </div>
+          
+          <div class="main_wedding2">
+              <div class="wedding3">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_wedding/con2_wedding3.jpg" alt="벨뷰룸">
+                       </div>
+                   </div>
+                   <div class="img_box">Bellevue Room</div>
+                   <p class="wedding_title1">서울 시내 전망과 밝고 모던한 인테리어가 어우러진 벨뷰룸</p>
+                   <p class="wedding_title2">일생에 한 번 뿐인 기억을 로맨틱하게 만들어 드립니다.</p>
+               </div>
+               
+               <div class="wedding4">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_wedding/con2_wedding4.jpg" alt="에메랄드룸">
+                       </div>
+                   </div>
+                   <div class="img_box">Emerald Room</div>
+                   <p class="wedding_title1">유리로 된 돔 형식의 천정에 향긋한 웨딩 꽃 장식 더해진 에메랄드룸</p>
+                   <p class="wedding_title2">여유롭고 오붓한 느낌의 결혼식을 즐기실 수 있습니다.</p>
+               </div>
+          </div>        
+            
+          <div class="main_wedding3">
+              <div class="wedding5">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_wedding/con2_wedding5.jpg" alt="사파이어룸">
+                       </div>
+                   </div>
+                   <div class="img_box">Sapphire Room</div>
+                   <p class="wedding_title1">세련된 공간미가 돋보이는 스타일리시한 사파이어룸</p>
+                   <p class="wedding_title2">단 한번뿐인 소중한 웨딩에 아름다운 주인공으로 만들어 드립니다.</p>
+               </div>
+               
+               <div class="wedding6">
+                   <div class="img">
+                       <div class="scale">
+                           <img src="images/promotion_wedding/con2_wedding6.jpg" alt="아테네룸">
+                       </div>
+                   </div>
+                   <div class="img_box">Athens Room</div>
+                   <p class="wedding_title1">유럽의 대성당을 연상시키는 아테네룸</p>
+                   <p class="wedding_title2">고풍스러운 분위기는 특별한 웨딩을 꿈꾸는 신랑신부에게 최고의 추억을 선사합니다.</p>
+               </div>
+          </div> 
+        </div>
+        
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+
+
+</body></html>

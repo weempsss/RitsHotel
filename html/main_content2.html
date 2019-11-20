@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>RITZ HOTEL main_content2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <style>
+        /*defult setting*/
+        html, body { 
+       position: relative; 
+       height: 100%; 
+        } 
+        .main_content2 #slide{height: 100%; position: relative; margin: 0; 
+               padding: 0;}
+        .main_content2 .swiper-container { 
+               width: 100%; 
+               height: 100%; 
+               margin-left: auto; 
+               margin-right: auto; 
+             } 
+        .main_content2 .swiper-slide { 
+       text-align: center; 
+       background-size: cover;
+       /* Center slide text vertically */ 
+       display: -webkit-box; 
+       display: -ms-flexbox; 
+       display: -webkit-flex; 
+       display: flex; 
+       -webkit-box-pack: center; 
+       -ms-flex-pack: center; 
+       -webkit-justify-content: center; 
+       justify-content: center; 
+       -webkit-box-align: center; 
+       -ms-flex-align: center; 
+       -webkit-align-items: center; 
+       align-items: center; 
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+     } 
+        .main_content2 img {
+            max-width: none !important;
+        }
+
+        /*cont2*/
+        .main_content2 {
+            background: url(images/main_content2/backimg.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .cont2_bgBox {
+            width: 100%;
+            height: 65%;
+            position: absolute;
+            background: #251E1E;
+            top: 17%;
+        }
+
+        .bg_txt {
+            font-size: 3vw;
+            position: absolute;
+            top: 260px;
+            left: 1000px;
+        }
+
+        .main_content2 .swiper2 {
+            position: relative;
+            top: 0%;
+        }
+        .bg_title{font-size: 1.3vw; color: #c3c3c3; letter-spacing: 0.03vw}
+        .bg_title strong{font-size: 2vw; color: #c3c3c3; font-weight: bold; line-height: 3vw;}
+        .slide_Box{position: relative;}
+        .con2_Stxt1{position: absolute; left: 990px; top: 400px; z-index: 99; width: 100%; text-align: left; }
+        .con2_Stitle{font-size: 2.5vw; color: #f9f9f9; font-weight: bold; transition: 0.5s;}
+        .con2_Stxt{font-size: 0.9vw; color: #f9f9f9; line-height: 1.5vw; letter-spacing: 0.05vw; width: 100%; transition: 0.5s;}
+        .y_txt{position: absolute; left: -70px; background: #3e3e3e;  color: #fff; writing-mode: vertical-lr; 
+            bottom: -220px; transform: rotate(180deg); padding: 15px 0 15px; line-height: 4vw; text-align: center; transition: 0.5s;}
+        
+        /*버튼효과*/
+        button.slide_button2{
+            color: white;
+            border: 2px solid white;
+            width: 180px;
+            font-size: 16px;
+            height: 45px;
+            background: none;  
+            margin-top: 50px;
+            margin-left: 40%;
+            font-family: 'NanumSquareB';
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 2px;
+            background: none;
+          box-shadow: inset 0 0 0 0 #897356;
+          transition: all 1.5s;
+            -webkit-transition:all 1.5s;
+            -moz-transform:all 1.5s;
+            -ms-transform:all 1.5s;
+            -o-transform:all 1.5s;
+        }
+        button.slide_button2:hover {
+          box-shadow: inset 100vmax 0 0 0 #897356;
+          border:none;
+          width: 180px;
+          height: 45px;
+          transition: all 3.5s;
+            -webkit-transition:all 3.5s;
+            -moz-transform:all 3.5s;
+            -ms-transform:all 3.5s;
+            -o-transform:all 3.5s;
+          color: white;
+
+        }
+         @media screen and (max-width:1650px) and (min-width: 1385px){
+             .cont2_bgBox{top: 17%;}
+             .bg_txt{left: 990px; top: 230px;}
+             .bg_title{font-size: 34px;}
+             .bg_title strong{font-size: 36px;}
+             .main_content2 .swiper2{top: -4%;}
+             .slide_Box img{position: absolute; left: 0;}
+             button.slide_button2{margin-left: 15%;}
+             .con2_Stitle{font-size: 56px;}
+             .con2_Stxt{font-size: 18px; line-height: 30px}  
+        }
+        @media screen and (max-width:1384px) and (min-width: 1350px){
+             .cont2_bgBox{top: 17%;}
+             .bg_txt{left: 990px; top: 230px;}
+             .bg_title{font-size: 24px;}
+             .bg_title strong{font-size: 30px;}
+             .main_content2 .swiper2{top: -4%;}
+             .slide_Box img{position: absolute; left: 0;}
+             button.slide_button2{margin-left: 13%;}
+             .con2_Stitle{font-size: 48px;}
+             .con2_Stxt{font-size: 12px; line-height: 30px}  
+        }
+        @media screen and (max-width:1349px) and (min-width: 1250px){
+             .cont2_bgBox{top: 13%;}
+             .bg_txt{left: 990px; top: 230px;}
+             .bg_title{font-size: 24px;}
+             .bg_title strong{font-size: 30px;}
+             .main_content2 .swiper2{top: -4%;}
+             .slide_Box img{position: absolute; left: 0;}
+             button.slide_button2{margin-left: 0%;}
+             .con2_Stitle{font-size: 48px;}
+             .con2_Stxt{font-size: 12px; line-height: 30px}  
+        }
+        @media screen and (max-width:1249px) and (min-width: 950px){
+            
+            .cont2_bgBox{top: 13%;}
+             .bg_txt{left: 36%; top: 160px; z-index: 9;}
+            .bg_txt br{display: none;}
+             .bg_title{font-size: 24px;}
+             .bg_title strong{font-size: 30px;}
+             .main_content2 .swiper2{top: -4%;}
+            .slide_Box img{position: relative;}
+             button.slide_button2{margin-left: 0%;}
+             .con2_Stxt1{background: rgba(0,0,0,0.5); padding-top: 3%; padding-bottom: 3%; 
+                         left: 15%;  top: 300px; }
+             .con2_Stxt{font-size: 21px; line-height: 30px; }
+             .con2_Stitle{font-size: 48px; transition: 0.5s;}
+            .y_txt{bottom: 308px; writing-mode: horizontal-tb; transform: rotate(0deg); padding: 5px 30px 5px; left: -90px; font-size: 20px;}
+            
+        }
+        @media screen and (max-width:949px) and (min-width: 565px){
+            
+            .cont2_bgBox{top: 12%;}
+             .bg_txt{left: 28%; top: 160px; z-index: 9;}
+            .bg_txt br{display: none;}
+             .bg_title{font-size: 18px;}
+             .bg_title strong{font-size: 28px;}
+             .main_content2 .swiper2{top: -3%;}
+            .slide_Box img{position: relative;}
+             button.slide_button2{margin-left: 27%;}
+             .con2_Stxt1{background: rgba(0,0,0,0.5); padding-top: 3%; padding-bottom: 3%;}
+             .con2_Stxt{font-size: 15px; line-height: 30px; text-align: center; width: 80%; margin-left: -3%;}
+             .con2_Stitle{font-size: 38px; text-align: center; width: 75%;}
+             .con2_Stxt1{left: 15%;  top: 300px;}
+            .y_txt{bottom: 280px; writing-mode: horizontal-tb; transform: rotate(0deg); padding: 5px 30px 5px; left: -15%; font-size: 14px; }
+            
+        }
+        @media screen and (max-width:564px){
+            
+            #content2 {height: auto;}
+            .main_content2 {padding-top: 100px; padding-bottom: 100px; background: #251E1E}
+            .cont2_bgBox{top: 0%;}
+             .bg_txt{left: 16%; top: 55px; z-index: 9;}
+            .bg_txt br{display: none;}
+             .bg_title{font-size: 18px;}
+             .bg_title strong{font-size: 28px;}
+             .main_content2 .swiper2{top: -3%;}
+            .slide_Box img{position: relative;}
+             button.slide_button2{margin-left: 0%; margin: 0 auto; display: block; font-size: 12px;}
+             .con2_Stxt1{background: rgba(0,0,0,0.5); padding-top: 3%; padding-bottom: 3%; left: 0%;}
+             .con2_Stxt{font-size: 12px; line-height: 30px; text-align: center; width: 100%; margin-left: 0%;}
+             .con2_Stitle{font-size: 38px; text-align: center; width: 100%;}
+             .con2_Stxt1{left: 0%;  top: 40px; z-index: 9}
+            .y_txt{bottom: 203px; writing-mode: horizontal-tb; transform: rotate(0deg); padding: 5px 30px 5px; left: 0%; font-size: 14px; }
+            
+        }
+        
+       
+ 
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="main_content2">
+        <div class="cont2_bgBox"></div>
+        <div class="bg_txt">
+            <p class="bg_title">Luxury<br>
+                <strong>PROMOTION</strong></p>
+        </div>
+        <div class="swiper-container swiper2">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide_Box"><img src="images/main_content2/event1.jpg" alt="Main_c2_image">
+                <div class="con2_Stxt1">
+                <p class="con2_Stitle">EVENT</p><br>
+                <p class="con2_Stxt">롤스로이스와 프라이빗 버틀러 서비스가 제공되는<br>최고급 혜택을 누려보세요.</p>
+                <button class="slide_button2"><a href="Promotion_event.html">more</a></button>
+                <div class="y_txt"><strong>01</strong>.EVENT RITZ HOTEL</div>
+                </div>
+                </div>
+                <div class="swiper-slide slide_Box"><img src="images/main_content2/wedding1.jpg"
+                 alt="Main_c2_image">
+                <div class="con2_Stxt1">
+                <p class="con2_Stitle">PACKAGE</p><br>
+                <p class="con2_Stxt">가족과 함께하는 향긋한 플라워 디너<br>행복한 만찬을 즐겨보세요.</p>
+                <button class="slide_button2"><a href="Promotion_event.html">more</a></button>
+                <div class="y_txt"><strong>02</strong>.PACKAGE RITZ HOTEL</div>
+                </div>
+                </div>
+                <div class="swiper-slide slide_Box"><img src="images/main_content2/package1.jpg" alt="Main_c2_image">
+                <div class="con2_Stxt1">
+                <p class="con2_Stitle">WEDDING</p><br>
+                <p class="con2_Stxt">THE RITZ HOTEL과 함께하는 웨딩 피로연<br>최고급 와인 파티로 마지막을 장식하세요.</p>
+                <button class="slide_button2"><a href="Promotion_event.html">more</a></button>
+                <div class="y_txt"><strong>03</strong>.WEDDING RITZ HOTEL</div>
+                </div>
+                </div>
+                <div class="swiper-slide slide_Box"><img src="images/main_content2/package2.jpg" alt="Main_c2_image">
+                <div class="con2_Stxt1">
+                <p class="con2_Stitle">EVENT</p><br>
+                <p class="con2_Stxt">도심의 야경을 한눈에 볼 수 있는 인피니티풀<br>시원한 바람 맞으면서 이용해보세요.</p>
+                <button class="slide_button2"><a href="Promotion_event.html">more</a></button>
+                <div class="y_txt"><strong>04</strong>.EVENT RITZ HOTEL</div>
+                </div>
+                </div>
+                <div class="swiper-slide slide_Box"><img src="images/main_content2/event2.jpg" alt="Main_c2_image">
+                <div class="con2_Stxt1">
+                <p class="con2_Stitle">PACKAGE</p><br>
+                <p class="con2_Stxt">와인바에서 화이트 와인 주문시<br>프리미엄 큐브치즈와 크래커를 무료로 제공합니다.</p>
+                <button class="slide_button2"><a href="Promotion_event.html">more</a></button>
+                <div class="y_txt"><strong>05</strong>.PACKAGE RITZ HOTEL</div>
+                </div>
+                </div>
+                <div class="swiper-slide slide_Box"><img src="images/main_content2/wedding2.jpg" alt="Main_c2_image">
+                <div class="con2_Stxt1">
+                <p class="con2_Stitle">WEDDING</p><br>
+                <p class="con2_Stxt">THE RITZ에서 펼쳐지는 우아하고 격조높은 결혼식<br>미쉐린 3스타 세프가 요리하는 파리지앵 메뉴를 즐겨보세요.</p>
+                <button class="slide_button2"><a href="Promotion_event.html">more</a></button>
+                <div class="y_txt"><strong>06</strong>.WEDDING RITZ HOTEL</div>
+                </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        $(function() {
+            if ($(window).width() > 1650) {
+                var swiper = new Swiper('.swiper2', {
+                    speed : 1000,
+                    slidesPerView: 2,
+                    loop: true,
+                    spaceBetween: 1000,
+                    
+                    autoplay: {
+                        delay: 9999999999999,
+                        disableOnInteraction: false,
+                      },
+
+                    
+                });
+            };
+            if ($(window).width() < 1650) {
+                var swiper = new Swiper('.swiper2', {
+                    speed : 1000,
+                    slidesPerView: 1,
+                    loop: true,
+                    spaceBetween: 0,
+                    
+                    autoplay: {
+                        delay: 9999999999999,
+                        disableOnInteraction: false,
+                      },
+                    
+                });
+                return false;
+            };
+            $(window).resize(function() {
+                if ($(window).width() >= 1650) {
+                    var swiper = new Swiper('.swiper2', {
+                        speed : 1000,
+                        slidesPerView: 2,
+                        loop: true,
+                        spaceBetween: 1000,
+
+                        autoplay: {
+                        delay: 9999999999999,
+                        disableOnInteraction: false,
+                      },
+
+                    
+                        
+                    });
+                    return false;
+                }
+                if ($(window).width() < 1650) {
+                    var swiper = new Swiper('.swiper2', {
+                        speed : 1000,
+                        slidesPerView: 1,
+                        loop: true,
+                        spaceBetween: 0,
+
+                        autoplay: {
+                        delay: 9999999999999,
+                        disableOnInteraction: false,
+                      },
+
+                    
+                    });
+                    return false;
+                }
+            });
+        });
+    </script>
+</body></html>

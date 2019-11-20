@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > PREVIEW > CONVENIENCE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <style>
+        /*기본 레이아웃 구성*/      
+        #wrap{width: 100%; height: auto; background: #eee; position: relative;} 
+        footer{z-index: 8; position: relative;}
+        header{z-index: 10;}        
+        #Preview_keyimage{
+            position: relative; 
+            /*키이미지 설정*/
+            height: 500px;
+            overflow: hidden;
+            background: url(images/Preview/convenience/convenience_bg.jpg) no-repeat;
+            background-size: cover; background-attachment: fixed;
+            background-position: 100% -500px;
+        }
+        .Preview_keytitle{position: relative; width: 100%; top: 30%; transition: 1s; background: rgba(0,0,0,0.3); padding-top: 50px; padding-bottom: 50px;}
+        .Preview_line{
+            width: 1px;
+            height: 50px;
+            background: white;
+            position: relative;
+            left: 50%;
+            bottom: 20px;
+        }
+        h2.Preview_ment1{
+            color: white;
+            position: relative;
+            text-align: center;
+            font-size: 50px;
+            font-family:'NanumSquareEB'; 
+        }
+        p.Preview_ment2{
+            color: white;
+            position: relative;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family:'NanumSquareB'; 
+        }
+        p.Preview_ment3{
+            color: white;
+            position: relative;
+            top: 20px;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-family:'NanumSquareB';
+            opacity: 0.8;
+        }
+        
+        /*편의시설 제목단*/
+        .Services_maintit{text-align: center; font-family: NanumSquareEB; margin-top: 80px; font-size: 35px;}
+        .Services_subtit{text-align: center; font-size: 16px; margin-bottom: 50px; color: #9d9d9d; letter-spacing: 0.5px;}
+        
+        /*편의시설 1번 7:3배열*/
+        .Services_1{position: relative; width: 100%; overflow: hidden;}
+        .Services_1::after{content: ''; display: block; clear: both; }
+        .Services_1 .Services_MainImag{float: left; width: 66.69%;}
+        .Services_1 .Services_MainImag img{vertical-align: bottom;}
+        .Services_1 .Services_MainTxtbox{float: left; width: 33.31%; position: relative;}
+        .Services_nav{color: #897365; font-size: 1.1vw; position: relative; width: 90%; margin: 10% 0% 0% 10%;}
+        .Services_nav .Services_box{width: 100%; height: 1px; background: #897365; position: relative; top: 10px;}
+        .Services_nav .Services_borderBox{width: 10%; height: 6px; background: #897365; position: absolute; top: -3px;}
+        .Services_MainTxtbox h4{margin-top: 5%; color: #897365; font-size: 1.6vw; margin-left: 10%;}
+        .Services_MainTxtbox .Services_SubTxt{margin-top: 5%; font-size: 0.9vw; width: 75%; margin-left: 10%; line-height: 1.5vw;}
+        .Services_MainTxtbox .Services_ListTit{font-size: 1.4vw; width: 80%; margin: 10% auto 0px auto; color: #897365}
+        .Services_MainTxtbox .Services_List{margin-top: 8%; width: 100%;}
+        .Services_MainTxtbox .Services_List li{margin: 0 auto; margin-top: 2%; width: 80%; text-align: center; border-bottom: 1px solid #897365; padding-bottom: 2%; padding-top: 2%; font-size: 1.1vw;}
+        
+        /*편의시설 2번 3배열*/
+        .Services_2{position: relative; width: 100%; margin: 0; padding: 0;}
+        .Services_2::after{content: ''; display: block; clear: both;}
+        .Services_2 > div{float: left; width: 33.33%;}
+        .Services_2 > div > img{vertical-align: bottom;}
+        .Services_2_1{position: relative; width: 100%;}
+        .Services_2_2{position: relative; width: 100%;}
+        .Services_2_2BL{position: relative; width: 100%; background: #eee;}
+        .Services_2_3{position: relative; width: 100%;}
+        .Services_2Txt{position:absolute;; color: #f9f9f9f9; z-index: 1; width: 100%;}
+        .Services_2TxtBL{position:absolute; z-index: 1; width: 100%;}
+        .Services_2Txt >h4{font-size: 1vw; margin-top: 15%; margin-left: 15%;}
+        .Services_2TxtBL >h4{font-size: 1vw; margin-top: 15%; margin-left: 15%;}
+        .Services_2Txt > p{margin-top: 5%; margin-right: 5%;  font-size: 0.9vw; text-align: right;}
+        .Services_2TxtBL > p{margin-top: 5%; margin-right: 5%;  font-size: 0.9vw; text-align: right;}
+        .Services2_box{height: 1px; background: #fff; position: absolute; width: 85%; margin: 0 auto; left: 15%; top: 75%;}
+        .Services2_boxBL{height: 1px; background: #000; position: absolute; width: 85%; margin: 0 auto; left: 15%; top: 75%;}
+        .Services2_Subbox{width: 10%; height: 5px; background: #fff; position: absolute; top: -2px; }
+        .Services2_SubboxBL{width: 10%; height: 5px; background: #000; position: absolute; top: -2px; }
+        .Services_2_SubTxt{width: 67%; margin: 0 28%; font-size: 0.9vw; margin-top: 30%; text-align: right; line-height: 1.3vw;}
+        .Services_MainBox_2{position: absolute; z-index: 1;}
+        
+        /*편의시설 3번 5:5배열*/
+        .Services_3{position: relative; width: 100%;}
+        .Services_3::after{content: ''; display: block; clear: both;}
+        .Services_3 > div{float: left; width: 50%; background: #897365;}
+        .Services_3  div  img{vertical-align: bottom;}
+        .Services_MainBox_3{position: absolute; z-index: 1; width: 50%;}
+        .Services_bg3{position: relative;}
+        .Services_nav_3{color: #f9f9f9; font-size: 1.1vw; position: relative; width: 90%; margin: 10% 0% 0% 10%;}
+        .Services_nav_3 .Services_box_3{width: 100%; height: 1px; background: #f9f9f9; position: relative; top: 10px;}
+        .Services_nav_3 .Services_borderBox_3{width: 10%; height: 6px; background: #f9f9f9; position: absolute; top: -3px;}
+        .Services_MainTxtbox_3 h4{margin-top: 5%; color: #fff; font-size: 2vw; margin-left: 10%;}
+        .Services_MainTxtbox_3 .Services_SubTxt_3{margin-top: 5%; font-size: 1vw; line-height: 1.5vw; width: 56%; margin-left: 10%; color: #fff;}
+        .Services_MainTxtbox_3 .Services_Subbutton_3{margin-top: 5%; font-size: 0.9vw; width: 70%; margin-left: 10%;  color: #fff;}
+
+        
+        /*미디어쿼리*/
+       
+      
+        @media all and (min-width:740px) and (max-width:1023px){ 
+            .Services_MainTxtbox .Services_List li{margin: 0 auto; margin-top: 0.5%; padding-bottom: 0.5%; padding-top: 0.5%; font-size: 2vw;transition: 0.5s;}
+            .Services_MainTxtbox h4{margin-top: 10%; color: #897365; font-size: 1.6vw;transition: 0.5s;}
+            .Services_2Txt > p{margin-top: 5%; display: none;transition: 0.5s;}
+            .Services_2TxtBL > p{margin-top: 5%; display: none;transition: 0.5s;}
+            .Services2_box{top: 110%;transition: 0.5s;}
+            .Services2_boxBL{top: 110%;transition: 0.5s;}
+            .Services_2Txt >h4{font-size: 2vw;transition: 0.5s;}
+            .Services_2TxtBL >h4{font-size: 2vw;transition: 0.5s;}
+            .Services_2_SubTxt{width: 70%; margin: 0 25%; font-size: 1.3vw; margin-top: 30%; letter-spacing: 0.1px;transition: 0.5s;}
+            .Services_MainTxtbox_3 .Services_SubTxt_3{margin-top: 5%; font-size: 1.4vw; width: 58%;transition: 0.5s;}
+            .Services_MainTxtbox_3 .Services_Subbutton_3{margin-top: 5%; font-size: 1.4vw; width: 100%;transition: 0.5s;}
+        }
+        @media all and (max-width:739px){
+            .Services_2{display: none;}
+            #Preview_keyimage{background-position: 0 0;}
+             h2.Preview_ment1 {font-size: 45px;transition: 0.5s;}
+            .Services_MainTxtbox .Services_SubTxt {display: none;transition: 0.5s;}
+            .Services_MainTxtbox_3 .Services_SubTxt_3 {display: none;transition: 0.5s;}
+            .Services_MainTxtbox_3 .Services_Subbutton_3 {display: none;transition: 0.5s;}
+            .Services_2Txt > p{margin-top: 5%; display: none;transition: 0.5s;}
+            .Services_2TxtBL > p{margin-top: 5%; display: none;transition: 0.5s;}
+            .Services_2_SubTxt {opacity: 0;transition: 0.5s;}
+            
+            .Services_nav {margin: 5% 0 0 10%;transition: 0.5s;}
+            .Services_nav .Services_borderBox {width: 30%;transition: 0.5s;}
+            .Services_nav .Services_box {top: 5px;transition: 0.5s;}
+            .Services_MainTxtbox .Services_ListTit {font-size: 16px;transition: 0.5s;}
+            .Services2_Subbox{width: 20%; height: 3px; background: #fff; position: absolute; top: -1px; }
+            .Services2_SubboxBL{width: 20%; height: 3px; background: #000; position: absolute; top: -1px; }
+            .Services_nav_3 .Services_borderBox_3{width: 30%; height: 5px; background: #f9f9f9; position: absolute; top: -2.5px;}
+            
+             .Services_MainTxtbox .Services_List li{margin: 0 auto; margin-top: 1%; padding-bottom: 1%; padding-top: 1%; font-size: 2vw;transition: 0.5s;}
+            .Services_MainTxtbox h4{margin-top: 10%; color: #897365; font-size: 1.6vw;transition: 0.5s;}
+            .Services2_box{top: 110%;transition: 0.5s;}
+            .Services2_boxBL{top: 110%;transition: 0.5s;}
+            .Services_2Txt >h4{font-size: 2vw;transition: 0.5s;}
+            .Services_2TxtBL >h4{font-size: 2vw;transition: 0.5s;}
+            .Services_MainTxtbox_3 h4 {margin-top: 10%; font-size: 2.3vw; transition: 0.5s;}
+
+        }
+
+        
+    </style>
+    <script>
+        $(function() {      
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+            
+            $(window).scroll(function(e){
+                e.preventDefault();
+                var i = 30;  
+                var st = $(window).scrollTop()/10+i;
+                $(".Preview_keytitle").css({top: st+"%"});
+                console.log($(window).scrollTop());
+            });  
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">       
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!-- KeyImage구역 -->
+        <div id="Preview_keyimage">  
+            <div class="Preview_keytitle">
+                <div class="Preview_line"></div>
+                <h2 class="Preview_ment1">CONVENIENCE</h2>
+                <p class="Preview_ment2">편의시설</p>
+                <p class="Preview_ment3">HOME > PREVIEW > CONVENIENCE</p>
+            </div>
+        </div>
+        <h3 class="Services_maintit">SERVICES</h3>
+        <p class="Services_subtit">Sustainable Luxury</p>
+        <div class="Services_1">
+            <div class="Services_MainImag"><img src="images/Preview/convenience/image1.png" alt="편의시설이미지1" width="100%"></div>
+            
+            <div class="Services_MainTxtbox">
+                <div class="Services_nav"><p>FOOD SERVICE</p>
+                <div class="Services_box"><div class="Services_borderBox"></div></div>
+                </div>
+                <h4>BEST FOOD FOR YOU</h4>
+                <p class="Services_SubTxt">RITZ HOTEL에서 개발한 건강조식을 무료로 제공하고 있습니다.</p>
+                <h5 class="Services_ListTit">SERVICE LIST</h5>
+                <ul  class="Services_List">
+                    <li>RESTAURENT &amp; BAR</li>
+                    <li>BBQ GARDEN</li>
+                    <li>BBQ GRILL BAR</li>
+                    <li>BRUNCH</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Services_2">
+            <div class="Services_2_1">
+               <div class="Services_2Txt">
+                  <h4>FOOD SERVICE</h4>
+                   <div class="Services2_box">
+                       <div class="Services2_Subbox"></div>
+                   </div>
+                   <p>A LOOKING GOOD PLATING</p>
+               </div>
+                <img src="images/Preview/convenience/image2.png" alt="편의시설이미지2" width="100%"  style="filter: brightness(50%)">
+            </div>
+            <div class="Services_2_2">
+               <div class="Services_2Txt">
+                  <h4>FOOD SERVICE</h4>
+                   <div class="Services2_box">
+                       <div class="Services2_Subbox"></div>
+                   </div>
+                   <p>A COCKTAIL CONTAINING THE SPIRIT OF THE CRAFTSMAN</p>
+               </div>
+                <img src="images/Preview/convenience/image3.png" alt="편의시설이미지2" width="100%"  style="filter: brightness(50%)">
+            </div>
+            <div class="Services_2_3">
+                <img src="images/Preview/convenience/image4.png" alt="편의시설이미지2" width="100%">
+            </div>
+        </div>
+        <div class="Services_1">            
+            <div class="Services_MainTxtbox">
+                <div class="Services_nav"><p>INFINITY POOL</p>
+                <div class="Services_box"><div class="Services_borderBox"></div></div>
+                </div>
+                <h4>A SCENIC VIEW OF THE INFINITY POOL</h4>
+                <p class="Services_SubTxt">사계절 인피티니 풀로 365일 날씨에 맞게 적절한 온도의 온수풀과 야외 핀란드식 사우나가 함께 운영됩니다.</p>
+                <h5 class="Services_ListTit">SERVICE LIST</h5>
+                <ul  class="Services_List">
+                    <li>KIDS &amp; PARTY POOL</li>
+                    <li>LOCKER &amp; SHOWER ROOM</li>
+                    <li>REST ROOM</li>
+                    <li>SAUNA</li>
+                    <li>CABANA</li>
+                </ul>
+            </div>
+            <div class="Services_MainImag"><img src="images/Preview/convenience/image5.png" alt="편의시설이미지1" width="100%"></div>
+        </div>
+        <div class="Services_2">
+            <div class="Services_2_1">
+               <div class="Services_2Txt">
+                  <h4>FITNESS CLUB</h4>
+                   <div class="Services2_box">
+                       <div class="Services2_Subbox"></div>
+                   </div>
+                   <p>WE'LL RESTORE THE ENERGY OF YOUR HARD LIFE.</p>
+               </div>
+                <img src="images/Preview/convenience/image6.png" alt="편의시설이미지2" width="100%"  style="filter: brightness(50%)">
+            </div>
+            <div class="Services_2_2BL">
+               <div class="Services_MainBox_2">
+                   <div class="Services_2TxtBL">
+                      <h4>SPECIAL SERVICE</h4>
+                       <div class="Services2_boxBL">
+                           <div class="Services2_SubboxBL"></div>
+                       </div>
+                       <p>IT'S A SPECIAL SERVICE ONLY FOR RITZ HOTEL.</p>
+                   </div>
+                    <p class="Services_2_SubTxt">RITZ HOTEL에서는 스위트에 묵는 투숙객들에게 아침마다 
+                        고객취향에 맞는 럭셔리 향수들을 큐레이션해서 버틀러가 직접 가지고 옵니다.</p>
+               </div>
+                    <img src="images/Preview/convenience/image10.png" alt="편의시설이미지2" width="100%" class="Services_bg3">
+            </div>
+            <div class="Services_2_3">
+               <div class="Services_2Txt">
+                  <h4>MASSAGE</h4>
+                   <div class="Services2_box">
+                       <div class="Services2_Subbox"></div>
+                   </div>
+                   <p>RELAX YOUR STRESS AND FATIGUE.</p>
+               </div>
+                <img src="images/Preview/convenience/image7.png" alt="편의시설이미지2" width="100%" style="filter: brightness(50%)">
+            </div>
+        </div>
+        <div class="Services_3">
+            <div class="Services_MainTxtbox_3">
+                <div class="Services_MainBox_3">
+                   <div class="Services_nav_3"><p>ROOM SERVICE</p>
+                    <div class="Services_box_3"><div class="Services_borderBox_3"></div></div>
+                    </div>
+                    <h4>YOUR PREMIUM DINING IN THE ROOM</h4>
+                    <p class="Services_SubTxt_3">내 방에 있는 듯한 편안함과 섬세한 서비스를 제공합니다. 당신만을 위한 이곳에서 프리미엄 다이닝을 즐겨보세요.</p>    
+                    <p class="Services_Subbutton_3">- 자세한 사항은 인포메이션 데스크에 문의주세요.</p>
+                    </div>        
+                <img src="images/Preview/convenience/image9.png" alt="편의시설이미지3" width="100%" class="Services_bg3">
+            </div>
+            <div><img src="images/Preview/convenience/image8.png" alt="편의시설이미지3" width="100%"></div>
+        </div>
+        
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+</body></html>

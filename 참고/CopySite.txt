@@ -1,0 +1,38 @@
+https://www.lottechem.com/kor/main/index.do
+http://www.ksoe.co.kr/
+https://www.walkerhill.com/
+https://www.p-city.com/front
+
+참조
+
+footer 롯데케미칼, 워커힐
+quick  파라다이스시티
+slide 넘어가는 이미지 fade in out
+
+
+room
+content 1 참고사이트 https://www.walkerhill.com/Stay
+좌우에서 날라오는 텍스트 사진 (wow/js) 
+텍스트 클릭시 이미지 변경(attr) 바로가기 클릭animation
+-태블릿 : 비유ㅜㄹ줄이기
+-모바일 : 왼쪽하단사진 사라지고 오른쪽 상단사진이 그자리로오고 그 밑으로
+텍스트들이 들어온다.
+content 1 ,2 클릭 애니메이션 동일
+event
+content 2 배경 흑백사진 가운데 리스트 있는 슬라이드가
+매트한 메인컬러 w60% 참고 https://www.walkerhill.com/kr/
+-태블릿: li 100% 참고사이트 태블릿정도로 줄이고 버튼을 글씨의 중간정도로
+-모바일: 사진위에 텍스트 , 화살표 , 버튼 모든게 다 
+
+cs
+content 3 참고사이트 https://www.lottechem.com/kor/main/index.do
+major -> guide
+products -> information  
+디자인은 명함디자인
+
+
+
+
+모바일 아이폰6/7/8 + 아이폰6/7/8 plus ~  max 739
+중간사이즈 - 아이패드  max 1023 ~  min 740
+기본사이즈 1920 * 1080 (max width*1920) ~ 1024

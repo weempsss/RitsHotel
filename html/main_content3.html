@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL main_content3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main_content3.css">
+    <script src="js/aos.js"></script>
+
+
+
+    <style> </style>
+    <script>
+        $(function(){
+ 
+            $(".box_hover1").hide();
+            $(".box1").mouseenter(function(e){
+                e.preventDefault();
+                $(".box_hover1").stop().fadeIn();
+                $(".tit1").stop().css("background", "rgba(0,0,0,0.0)");
+                $(".txt1").stop().css("font-weight", "bold"); 
+            });
+            $(".box1").mouseleave(function(e){
+                $(".box_hover1").stop().fadeOut();
+                $(".tit1").stop().css("background", "rgba(0,0,0,0.4)");
+                $(".txt1").stop().css("font-weight", "normal");
+            });
+            $(".ad1").hide();
+            $(".box1").mouseenter(function(e){
+                e.preventDefault();
+                $(".ad1").stop().fadeIn();
+            });
+            $(".box1").mouseleave(function(e){
+                $(".ad1").stop().fadeOut();
+            });
+            
+            
+            $(".box_hover2").stop().hide();
+            $(".box2").mouseenter(function(e){
+                e.preventDefault();
+                $(".box_hover2").stop().fadeIn();
+                $(".tit2").stop().css("background", "rgba(0,0,0,0.0)");
+                $(".txt2").stop().css("font-weight", "bold");
+            });
+            $(".box2").mouseleave(function(e){
+                $(".box_hover2").stop().fadeOut();
+                $(".tit2").stop().css("background", "rgba(0,0,0,0.4)");
+                $(".txt2").stop().css("font-weight", "normal");
+            });
+            $(".ad2").stop().hide();
+            $(".box2").mouseenter(function(e){
+                e.preventDefault();
+                $(".ad2").stop().fadeIn();
+            });
+            $(".box2").mouseleave(function(e){
+                $(".ad2").stop().fadeOut();
+            });
+            
+            
+            $(".box_hover3").stop().hide();
+            $(".box3").mouseenter(function(e){
+                e.preventDefault();
+                $(".box_hover3").stop().fadeIn();
+                $(".tit3").stop().css("background", "rgba(0,0,0,0.0)");
+                $(".txt3").stop().css("font-weight", "bold");
+            });
+            $(".box3").mouseleave(function(e){
+                $(".box_hover3").stop().fadeOut();
+                $(".tit3").stop().css("background", "rgba(0,0,0,0.4)");
+                $(".txt3").stop().css("font-weight", "normal");
+            });
+            $(".ad3").stop().hide();
+            $(".box3").mouseenter(function(e){
+                e.preventDefault();
+                $(".ad3").stop().fadeIn();
+            });
+            $(".box3").mouseleave(function(e){
+                $(".ad3").stop().fadeOut();
+            });
+            
+            
+            $(".box_hover4").stop().hide();
+            $(".box4").mouseenter(function(e){
+                e.preventDefault();
+                $(".box_hover4").stop().fadeIn();
+                $(".tit4").stop().css("background", "rgba(0,0,0,0.0)");
+                $(".txt4").stop().css("font-weight", "bold");
+            });
+            $(".box4").mouseleave(function(e){
+                $(".box_hover4").stop().fadeOut();
+                $(".tit4").stop().css("background", "rgba(0,0,0,0.4)");
+                $(".txt4").stop().css("font-weight", "normal");
+            });
+            $(".ad4").stop().hide();
+            $(".box4").mouseenter(function(e){
+                e.preventDefault();
+                $(".ad4").stop().fadeIn();
+            });
+            $(".box4").mouseleave(function(e){
+                $(".ad4").stop().fadeOut();
+            });
+        });
+    </script>
+    <script>
+        $(function(){
+ 
+            AOS.init({
+            easing: 'ease-in-out-sine',
+            offset: 0,
+            duration: 700,
+            
+                
+            });
+        });
+    </script>
+</head>
+
+<body style="overflow-x: hidden">
+<div class="maincon" style="top: 90px">
+    <div class="conarea">
+        <div class="txtimg">
+            <p class="txtimg1" data-aos="slide-right">
+                <img src="images/main_content3/GUIDE.png" alt="Guide_image">
+            </p>
+            <p class="txtimg2" data-aos="slide-left">
+                <img src="images/main_content3/INFORMATION.png" alt="Guide_image">
+            </p>
+        </div>
+        <div class="boxarea">
+                <div class="box box1" data-aos="fade-up" data-aos-delay="200">
+                   <div class="box_hover1"></div>
+                    <a href="guide_information.html">
+                        <h1 class="tit tit1">THE RITZ HOTEL 명동</h1>
+                        <p class="tit_ad ad1">서울특별시 중구 명동 삼일대로 362 <br>
+                    02-6112-1000</p>
+                    </a>
+                    <p class="txt1">MYEONG DONG</p>
+                </div>
+            
+            <div class="box box2" data-aos="fade-up" data-aos-delay="400">
+                <div class="box_hover2"></div>
+                <a href="guide_information.html">
+                    <h1 class="tit tit2">THE RITZ HOTEL 인천
+                    </h1>
+                    <p class="tit_ad ad2">인천광역시 중구 은하수로 29번길 36 <br>
+                    032-752-5996</p>
+                </a>
+                <p class="txt2">IN CHEON</p>
+            </div>
+            <div class="box box3" data-aos="fade-up" data-aos-delay="600">
+                <div class="box_hover3"></div>
+                <a href="guide_information.html">
+                    <h1 class="tit tit3">THE RITZ HOTEL 강릉
+                    </h1>
+                    <p class="tit_ad ad3">강원도 강릉시 초당동 해안로 406번길 2 <br>
+                    033-650-7000</p>
+                </a>
+                <p class="txt3">GANG NEUNG</p>
+            </div>
+            <div class="box box4" data-aos="fade-up" data-aos-delay="800">
+                <div class="box_hover4"></div>
+                <a href="guide_information.html">
+                    <h1 class="tit tit4">THE RITZ HOTEL 부산
+                    </h1>
+                    <p class="tit_ad ad4">부산광역시 해운대구 중동 해운대 해변로 296 <br>
+                    051-742-2121</p>
+                </a>
+                <p class="txt4">PUSAN</p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+
+</body>
+</html>

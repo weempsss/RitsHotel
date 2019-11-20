@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > GUIDE > INFORMATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />  
+
+    <style>
+        /*기본 레이아웃 구성*/      
+        #wrap{width: 100%; height: 100%; position: relative; font-family: "NanumSquare"} 
+        footer{z-index: 8; position: relative;}
+        header{z-index: 9;}
+        
+        #company_keyimage{
+            position: relative; 
+            background: url(images/Guide/Review_bg.jpg) no-repeat;
+
+            background-position: bottom;
+            background-attachment: fixed;
+            height: 500px; 
+            overflow: hidden;
+        }
+        .company_keytitle{
+            position: relative; width: 100%; top: 10px; transition: 1s; 
+        }
+        .company_line{
+            width: 1px;
+            height: 40px;
+            background: white;
+            margin-top: 150px;
+            position: absolute;
+            left: 50%;
+            
+        }
+        h2.company_ment1{
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 215px;
+            text-align: center;
+            font-size: 50px;
+            font-family:'NanumSquareEB'; 
+        }
+        p.company_ment2{
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 215px;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family:'NanumSquareB'; 
+        }
+        p.company_ment3{
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 245px;
+            width: 243px;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-family:'NanumSquareB';
+            opacity: 0.8;
+        }
+        
+        .review_c1{width: 100%; position: relative; margin: 0 auto;}
+        .review_c1>div{float: left; width: 50%;}
+        .review_c1::after{content: ''; display: block; clear: both;}
+        .review_txt{width: 100%; position: relative; padding-top: 10%; padding-left: 5%;}
+        .review_txt h3{font-size: 20px; line-height: 80px; color: #897365}
+        .review_txt .review_txt1{font-size: 22px; width: 66%; font-weight: bold; letter-spacing: 2px; line-height: 30px}
+        .review_txt h4{font-size: 18px; line-height: 100px;}
+        .review_txt .review_txt2{font-size: 16px; width: 100%; line-height: 30px;}
+        .review_list{margin-top: 30px;}
+        .review_list li{font-size: 12px;line-height: 30px; list-style: disc; text-indent: 15px;}
+        .review_img img{vertical-align: bottom;}        
+        .review_img{position: relative; width: 100%; text-align: center}
+        .review_img_txt{position: absolute; width: 100%; top: 40%;}
+        .review_img_txt h3{font-size: 40px; width: 70%; text-align: center;padding-left: 30%; color: #f9f9f9; text-shadow: 3px 3px 10px #897365;}
+        .review_img_txt a{ width: 40%; background: #897365; margin: 0 auto; margin-top: 50px; line-height: 50px; color: #f9f9f9; font-weight: bold; letter-spacing: 1px; cursor: pointer; display: block; font-size: 16px;}
+        
+        @media screen and (max-width:1390px) and (min-width: 1099px){
+            .review_list{margin-top: 10px;}
+            .review_txt h3{line-height: 60px;}
+            .review_txt h4{line-height: 50px}
+            .review_txt{padding-left: 2%; padding-top: 0%; padding-right: 1%;}
+        }
+         @media screen and (max-width:1100px){
+             .review_c1>div{width: 100%;}
+             .review_txt .review_txt1{width: 100%;}
+             .review_txt{padding-right: 5%;}
+        }
+    </style>
+    <script>
+         $(function() {      
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html"); 
+
+        $(window).scroll(function(e){
+                e.preventDefault();
+                var i = 10;  
+                var st = $(window).scrollTop()+i;
+                $(".company_keytitle").css({top: st});
+                console.log($(window).scrollTop());
+            });  
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+       
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+
+        <!-- 콘텐츠구역 -->
+        <div id="company_keyimage">
+            <div class="company_keytitle">
+                <div class="company_line"></div>
+                <h2 class="company_ment1">REVIEW</h2>
+                <p class="company_ment2">호텔리뷰</p>
+                <p class="company_ment3">HOME > GUIDE > REVIEW</p>
+            </div>
+        </div>
+        <div class="review_c1">
+           <div class="review_txt">
+          <h3>MEMBERSHIP</h3>
+           <p class="review_txt1">클럽 RITZ는 RITZHOTEL 전 지점에서 포인트 적립 및 멤버 전용 혜택을 누리실 수 있는 무료<br>멤버십입니다. 멤버 등급에 따라 객실 업그레이드, 체크아웃 시간 연장 등 다양한 특전이 제공됩니다.</p>
+           <h4>Points</h4>
+           <p class="review_txt2">전국 RITZHOTEL에서 예약한 객실 이용 금액의 3~5%를 포인트로 적립해 드립니다.<br> 1포인트는 현금 1원과 동일한 가치를 가지며 1만점 단위로 현금처럼 사용 가능합니다.<br> 포인트는 객실 이용 금액 결제 시 현금처럼 사용 가능합니다.<br> 누적이용 금액에 따라 멤버십 등급이 세 단계로 나뉘어지며 1년 단위로 등급이 조정됩니다.</p>
+           <ul class="review_list">
+               <li>식음 및 기타 부대시설 이용 금액/여행사 요금/단체 할인 요금/일부 특가상품/세금 및 봉사료는 적립 대상에서 제외됩니다.</li>
+               <li>미사용 포인트는 최초 발생일 기준 5년 이후 자동 소멸됩니다.</li>
+               <li>식음 업장 및 부대시설은 포인트 결제 대상에서 제외됩니다.</li>
+           </ul>
+            </div>
+            <div class="review_img">
+               <div class="review_img_txt">
+                   <h3>Exclusive privileges of CLUB RITZ</h3>               
+                   <a href="join.html">Join</a>
+               </div>
+                <img src="images/Guide/review_bg1.jpg" alt="">
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <style>
+section {position: relative; width: 100%; margin-top: 50px;}
+
+#help3 {position: relative; width: 100%; margin: 0 auto; max-width: 1600px;}
+	
+#help3 .searchbox {width: 100%; margin: 0 auto; text-align: center; margin-bottom: 1%; margin-top: 2%;}
+#help3 .searchbox .selectbox {padding-left: 1.5%; padding-right: 2%; border: 0; font-size: 14px;height: 30px; border-bottom: 1px solid #251e1e;}
+#help3 .searchbox .text {width: 40%; border: 0; font-size: 14px;  color: black; border-bottom: 1px solid #251e1e; height: 27px; margin-left: 1%; text-indent: 14px;}
+#help3 .searchbox .text::placeholder {color: black;}
+.searcharea .fa-search{cursor: pointer; font-size: 18px; margin-left: -1.5%;}
+
+
+#help3 .news {width: 100%;}
+#help3 .news thead {border-top: 5px solid #897365; border-bottom: 2px solid grey;}
+
+#help3 .news thead tr td {font-weight: bold; font-size: 14px; padding-top: 1.2%; padding-bottom: 1.2%; padding-right: 1%; padding-left: 1%; text-align: center;}
+#help3 .news thead tr td.hnumber {width: 20%; }
+#help3 .news thead tr td.hname {width: 80%;}
+#help3 .news thead tr td.hdate {width: 20%;}
+#help3 .news tbody {margin: 0; padding: 0;}
+        
+#help3 .news tbody tr td {padding-top: 1.2%; padding-bottom: 1.2%;}
+#help3 .news tbody tr td.number {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 16px;}
+#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 16px; font-weight: bold;}
+#help3 .news tbody tr td.date {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 14px;}
+
+#help3 .page_num {width: 100%; text-align: center; margin: 0 auto; display: inline-block; position: relative; margin-top: 2%; margin-bottom: 5%;}
+#help3 .page_num .front {display: inline-block; width: 36px; height: 35px; padding-top: 5px; background: url(images/front.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+#help3 .page_num .prev {display: inline-block; width: 36px; height: 35px; background: url(images/prev.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+#help3 .page_num .num_1 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_2 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_3 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_4 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .num_5 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
+#help3 .page_num .next {display: inline-block; width: 36px; height: 35px; background: url(images/next.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
+#help3 .page_num .back {display: inline-block; width: 36px; height: 35px; background: url(images/back.png); position: relative; top: 10px; background-size: cover;}
+.onClick{border: 1px solid black; font-weight: bold;}
+            .review_title{font-size: 24px; text-align: center; margin-top: 100px;}
+
+
+
+@media screen and (min-width:1200px) and (max-width:1399px){
+    #help3 .news {width: 90%; margin: 0 auto;}
+    #help3 .news thead {border-top: 3px solid black; border-bottom: 1px solid grey;}
+	#help3 .news thead tr td {font-weight: bold; font-size: 16px; padding-top: 1%; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+	#help3 .news thead tr td.hnumber {width: 15%;}
+	#help3 .news thead tr td.hname {width: 70%;}
+	#help3 .news thead tr td.hdate {width: 15%;}
+	#help3 .news tbody {margin: 0; padding: 0;}
+	#help3 .news tbody tr td {padding-top: 1.5%; padding-bottom: 1.5%;}
+	#help3 .news tbody tr td.number {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1.14px;}
+	#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 1.14px;}
+	#help3 .news tbody tr td.date {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 1.14px;} 
+}
+@media screen and (min-width:800px) and (max-width:1199px){
+
+	
+
+	#help3 .news {width: 90%; margin: 0 auto;}
+	#help3 .news thead {border-top: 3px solid black; border-bottom: 1px solid grey;}
+	
+	#help3 .news thead tr td {font-weight: bold; font-size: 16px; padding-top: 1%; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+	#help3 .news thead tr td.hnumber {width: 15%;}
+	#help3 .news thead tr td.hname {width: 70%;}
+	#help3 .news thead tr td.hdate {width: 15%;}
+	#help3 .news tbody {margin: 0; padding: 0;}
+
+	#help3 .news tbody tr td {padding-top: 1.5%; padding-bottom: 1.5%;}
+	#help3 .news tbody tr td.number {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 16px;}
+	#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 16px;}
+	#help3 .news tbody tr td.date {width: 15%; text-align: center; border-bottom: 1px solid grey; font-size: 16px;}
+    
+    #help3 .page_num .front {display: inline-block; width: 25px; height: 24px; padding-top: 5px; background: url(images/front.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .prev {display: inline-block; width: 25px; height: 24px; background: url(images/prev.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .num_1 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+
+    
+    #help3 .page_num .num_2 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_3 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_4 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_5 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .next {display: inline-block; width: 25px; height: 24px; background: url(images/next.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
+    
+    #help3 .page_num .back {display: inline-block; width: 25px; height: 24px; background: url(images/back.png); position: relative; top: 10px; background-size: cover;}
+    
+    
+
+
+}
+@media all and (min-width:401px) and (max-width:800px){
+
+	
+	#help3 .news {width: 100%; margin: 0 auto;}
+	#help3 .news thead {border-top: 3px solid black; border-bottom: 1px solid grey;}
+
+	#help3 .news thead tr td {font-weight: bold; font-size: 16px; padding-bottom: 1%; padding-right: 1%; padding-left: 1%; text-align: center;}
+	#help3 .news thead tr td.hnumber {width: 10%;}
+	#help3 .news thead tr td.hname {width: 70%;}
+	#help3 .news thead tr td.hdate {width: 20%;}
+	#help3 .news tbody {margin: 0; padding: 0;}
+    
+    #help3 .searchbox .selectbox{font-size: 16px;}
+    #help3 .searchbox .text{font-size: 16px; width: 60%;}
+    .searcharea .fa-search{ font-size: 16px;}
+
+	#help3 .news tbody tr td {padding-top: 5%; padding-bottom: 5%;}
+	#help3 .news tbody tr td.number {width: 10%; text-align: center; border-bottom: 1px solid grey; font-size: 11px;}
+	#help3 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%; border-bottom: 1px solid grey; font-size: 11px;}
+	#help3 .news tbody tr td.date {width: 20%; text-align: center; border-bottom: 1px solid grey; font-size: 11px;}
+    
+    #help3 .page_num .front {display: inline-block; width: 25px; height: 24px; padding-top: 5px; background: url(images/front.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .prev {display: inline-block; width: 25px; height: 24px; background: url(images/prev.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
+    
+    #help3 .page_num .num_1 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_2 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_3 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_4 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .num_5 {display: inline-block; width: 25px; height: 24px; line-height: 24px; margin-right: 1%; position: relative; top: 2px; font-size: 12px;}
+    
+    #help3 .page_num .next {display: inline-block; width: 25px; height: 24px; background: url(images/next.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
+    
+    #help3 .page_num .back {display: inline-block; width: 25px; height: 24px; background: url(images/back.png); position: relative; top: 10px; background-size: cover;}
+	
+}
+    </style>    
+        <script>
+    $(function(){
+        var i=0;
+        $(".n1").show();
+        $(".num_1").addClass("onClick");
+        $(".num_2").removeClass("onClick");
+        $(".num_3").removeClass("onClick");
+        $(".num_4").removeClass("onClick");
+        $(".num_5").removeClass("onClick");
+        $(".n2").hide();
+        $(".n3").hide();
+        $(".n4").hide();
+        $(".n5").hide();
+        
+        $(".front").click(function(e){
+            i = 0;
+            e.preventDefault();
+            $(".n1").show();
+            $(".num_1").addClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        
+        $(".prev").click(function(e){
+            e.preventDefault();
+            switch(i){
+                case 1:
+                    i = 0;
+                    $(".n1").show();
+                    $(".num_1").addClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 2:
+                    i = 1;
+                    $(".n2").show();
+                    $(".num_2").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 3:
+                    i = 2;
+                    $(".n3").show();
+                    $(".num_3").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 4:
+                    i = 3;
+                    $(".n4").show();
+                    $(".num_4").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n5").hide();
+                    break;
+            }
+                    
+        });
+        
+        $(".num_1").click(function(e){
+            e.preventDefault();
+            i = 0;
+            $(".n1").show();
+            $(".num_1").addClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        $(".num_2").click(function(e){
+            e.preventDefault();
+            i = 1;
+            $(".n2").show();
+            $(".num_2").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n1").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        $(".num_3").click(function(e){
+            e.preventDefault();
+            i = 2;
+            $(".n3").show();
+            $(".num_3").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n4").hide();
+            $(".n5").hide();
+        });
+        $(".num_4").click(function(e){
+            e.preventDefault();
+            i = 3;
+            $(".n4").show();
+            $(".num_4").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_5").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n5").hide();
+        });
+        $(".num_5").click(function(e){
+            e.preventDefault();
+            i = 4;
+            $(".n5").show();
+            $(".num_5").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+        });
+        
+        $(".next").click(function(e){
+            e.preventDefault();
+            switch(i){
+                case 0:
+                    i = 1;
+                    $(".n2").show();
+                    $(".num_2").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 1:
+                    i = 2;
+                    $(".n3").show();
+                    $(".num_3").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n4").hide();
+                    $(".n5").hide();
+                    break;
+                case 2:
+                    i = 3;
+                    $(".n4").show();
+                    $(".num_4").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_5").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n5").hide();
+                    break;
+                case 3:
+                    i = 4;
+                    $(".n5").show();
+                    $(".num_5").addClass("onClick");
+                    $(".num_1").removeClass("onClick");
+                    $(".num_2").removeClass("onClick");
+                    $(".num_3").removeClass("onClick");
+                    $(".num_4").removeClass("onClick");
+                    $(".n1").hide();
+                    $(".n2").hide();
+                    $(".n3").hide();
+                    $(".n4").hide();
+                    break;
+            }
+                    
+        });
+        
+        $(".back").click(function(e){
+            i = 4;
+            e.preventDefault();
+            $(".n5").show();
+            $(".num_5").addClass("onClick");
+            $(".num_1").removeClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".num_4").removeClass("onClick");
+            $(".n1").hide();
+            $(".n2").hide();
+            $(".n3").hide();
+            $(".n4").hide();
+        });
+    });
+        
+    </script>
+       
+        <div class="review_title">
+    		    <h3>REVIEW</h3>
+    		    <p>Review summary</p>
+    		</div>
+       
+        <section>		
+    		<div id="help3">
+    			<table class="news n1">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">50</td>
+    						<td class="name">완벽한 호캉스</td>
+    						<td class="date">2019 - 10 - 11</td>
+    					</tr>
+    					<tr>
+    						<td class="number">49</td>
+    						<td class="name">우정여행</td>
+    						<td class="date">2019 - 10 - 10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">48</td>
+    						<td class="name">모든것이 완벽한 최고의 호텔이었습니다.</td>
+    						<td class="date">2019 - 10 - 9</td>
+    					</tr>
+    					<tr>
+    						<td class="number">47</td>
+    						<td class="name">정감있는 호텔</td>
+    						<td class="date">2019 - 10 - 8</td>
+    					</tr>
+    					<tr>
+    						<td class="number">46</td>
+    						<td class="name">비즈니스로 완벽한 호텔</td>
+    						<td class="date">2019 - 10 - 7</td>
+    					</tr>
+    					<tr>
+    						<td class="number">45</td>
+    						<td class="name">잊지못할 추억....</td>
+    						<td class="date">2019 - 10 - 6</td>
+    					</tr>
+    					<tr>
+    						<td class="number">44</td>
+    						<td class="name">커플여행</td>
+    						<td class="date">2019 - 10 - 5</td>
+    					</tr>
+    					<tr>
+    						<td class="number">43</td>
+    						<td class="name">다시 한번 방문하고 싶은 호텔</td>
+    						<td class="date">2019 - 10 - 4</td>
+    					</tr>
+    					<tr>
+    						<td class="number">42</td>
+    						<td class="name">아늑하고 만족스러웠던 호텔</td>
+    						<td class="date">2019 - 10 - 3</td>
+    					</tr>
+    					<tr>
+    						<td class="number">41</td>
+    						<td class="name">클럽라운지 이용후기</td>
+    						<td class="date">2019 - 10 - 2</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n2">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">40</td>
+    						<td class="name">부산에서 서울까지</td>
+    						<td class="date">2019 - 10 - 11</td>
+    					</tr>
+    					<tr>
+    						<td class="number">39</td>
+    						<td class="name">친절한 서비스</td>
+    						<td class="date">2019 - 10 - 10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">38</td>
+    						<td class="name">RITZHOTEL은 언제나 감동입니다.</td>
+    						<td class="date">2019 - 10 - 9</td>
+    					</tr>
+    					<tr>
+    						<td class="number">37</td>
+    						<td class="name">친구들과 함께한 완벽한 여행, 완벽한 숙소!</td>
+    						<td class="date">2019 - 10 - 8</td>
+    					</tr>
+    					<tr>
+    						<td class="number">36</td>
+    						<td class="name">아이와 매달가는 최고의 호텔</td>
+    						<td class="date">2019 - 10 - 7</td>
+    					</tr>
+    					<tr>
+    						<td class="number">35</td>
+    						<td class="name">역시 서비스면에서 초특급!</td>
+    						<td class="date">2019 - 10 - 6</td>
+    					</tr>
+    					<tr>
+    						<td class="number">34</td>
+    						<td class="name">만족 200% RITZ HOTEL</td>
+    						<td class="date">2019 - 10 - 5</td>
+    					</tr>
+    					<tr>
+    						<td class="number">33</td>
+    						<td class="name">친절과 편리</td>
+    						<td class="date">2019 - 10 - 4</td>
+    					</tr>
+    					<tr>
+    						<td class="number">32</td>
+    						<td class="name">편안한 숙박</td>
+    						<td class="date">2019 - 10 - 3</td>
+    					</tr>
+    					<tr>
+    						<td class="number">31</td>
+    						<td class="name">가족 서울 여행</td>
+    						<td class="date">2019 - 10 - 2</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n3">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">30</td>
+    						<td class="name">탁원할 선택</td>
+    						<td class="date">2019 - 10 - 1</td>
+    					</tr>
+    					<tr>
+    						<td class="number">29</td>
+    						<td class="name">직원의 친절함과 볼거리 많은 RITZ</td>
+    						<td class="date">2019 - 9 - 30</td>
+    					</tr>
+    					<tr>
+    						<td class="number">28</td>
+    						<td class="name">서비스에 언제나 만족스러운 호텔</td>
+    						<td class="date">2019 - 9 - 29</td>
+    					</tr>
+    					<tr>
+    						<td class="number">27</td>
+    						<td class="name">기분좋고 편안한 호캉스</td>
+    						<td class="date">2019 - 9 - 28</td>
+    					</tr>
+    					<tr>
+    						<td class="number">26</td>
+    						<td class="name">청결 및 조식, 모든 서비스 만족</td>
+    						<td class="date">2019 - 9 - 27</td>
+    					</tr>
+    					<tr>
+    						<td class="number">25</td>
+    						<td class="name">가족과 함께 즐거운 호캉스</td>
+    						<td class="date">2019 - 9 - 26</td>
+    					</tr>
+    					<tr>
+    						<td class="number">24</td>
+    						<td class="name">공항에서 가까운 편안한 숙소</td>
+    						<td class="date">2019 - 9 - 25</td>
+    					</tr>
+    					<tr>
+    						<td class="number">23</td>
+    						<td class="name">전망 좋은 객실</td>
+    						<td class="date">2019 - 9 - 24</td>
+    					</tr>
+    					<tr>
+    						<td class="number">22</td>
+    						<td class="name">가족들과 아름다운밤</td>
+    						<td class="date">2019 - 9 - 23</td>
+    					</tr>
+    					<tr>
+    						<td class="number">21</td>
+    						<td class="name">공항 접근성 최고와 전망 좋은 곳</td>
+    						<td class="date">2019 - 9 - 22</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n4">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">20</td>
+    						<td class="name">서울 최고의 호텔</td>
+    						<td class="date">2019 - 9 - 21</td>
+    					</tr>
+    					<tr>
+    						<td class="number">19</td>
+    						<td class="name">비즈니스 여행으로 안성맞춤</td>
+    						<td class="date">2019 - 9 - 20</td>
+    					</tr>
+    					<tr>
+    						<td class="number">18</td>
+    						<td class="name">비즈니스 트립</td>
+    						<td class="date">2019 - 9 - 19</td>
+    					</tr>
+    					<tr>
+    						<td class="number">17</td>
+    						<td class="name">야경이 아름다운 RITZHOTEL</td>
+    						<td class="date">2019 - 9 - 18</td>
+    					</tr>
+    					<tr>
+    						<td class="number">16</td>
+    						<td class="name">쾌적하고 넓은 파티룸</td>
+    						<td class="date">2019 - 9 - 17</td>
+    					</tr>
+    					<tr>
+    						<td class="number">15</td>
+    						<td class="name">도심속의 힐링공간</td>
+    						<td class="date">2019 - 9 - 16</td>
+    					</tr>
+    					<tr>
+    						<td class="number">14</td>
+    						<td class="name">전반적으로 만족스러운 호텔</td>
+    						<td class="date">2019 - 9 - 15</td>
+    					</tr>
+    					<tr>
+    						<td class="number">13</td>
+    						<td class="name">아이와 가기 좋은 곳</td>
+    						<td class="date">2019 - 9 - 14</td>
+    					</tr>
+    					<tr>
+    						<td class="number">12</td>
+    						<td class="name">다시가고 싶은 호텔 TOP 1</td>
+    						<td class="date">2019 - 9 - 13</td>
+    					</tr>
+    					<tr>
+    						<td class="number">11</td>
+    						<td class="name">가족과 연인에게 강추</td>
+    						<td class="date">2019 - 9 - 12</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n5">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">NO</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">작성일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">10</td>
+    						<td class="name">멋진 바다와 어울리는 최고의 호텔</td>
+    						<td class="date">2019 - 9 - 11</td>
+    					</tr>
+    					<tr>
+    						<td class="number">9</td>
+    						<td class="name">만족스러운 투숙</td>
+    						<td class="date">2019 - 9 - 10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">8</td>
+    						<td class="name">럭셔리 비즈니스 호텔</td>
+    						<td class="date">2019 - 9 - 9</td>
+    					</tr>
+    					<tr>
+    						<td class="number">7</td>
+    						<td class="name">훌룡한 숙소 만족스러운 서비스</td>
+    						<td class="date">2019 - 9 - 8</td>
+    					</tr>
+    					<tr>
+    						<td class="number">6</td>
+    						<td class="name">좋은 추억을 만들어준 RITZ</td>
+    						<td class="date">2019 - 9 - 7</td>
+    					</tr>
+    					<tr>
+    						<td class="number">5</td>
+    						<td class="name">직원모두의 친절함</td>
+    						<td class="date">2019 - 9 - 6</td>
+    					</tr>
+    					<tr>
+    						<td class="number">4</td>
+    						<td class="name">멋진 야경과 훌룡한 서비스</td>
+    						<td class="date">2019 - 9 - 5</td>
+    					</tr>
+    					<tr>
+    						<td class="number">3</td>
+    						<td class="name">최고의 서비스 최고의 전망</td>
+    						<td class="date">2019 - 9 - 4</td>
+    					</tr>
+    					<tr>
+    						<td class="number">2</td>
+    						<td class="name">내 마음속에 저장 RITZ HOTEL</td>
+    						<td class="date">2019 - 9 - 3</td>
+    					</tr>
+    					<tr>
+    						<td class="number">1</td>
+    						<td class="name">한국인에게 안성맞춤</td>
+    						<td class="date">2019 - 9 - 2</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<div class="searchbox">
+    				<form action="post" class="searcharea">
+    					<fieldset>
+    						<legend>게시물검색</legend>
+    						<select name="select1" id="select1" class="selectbox">
+    							<option value>전체</option>
+    							<option value="1">제목</option>
+    							<option value="2">내용</option>
+    						</select>
+    						<input type="text" class="text" title="검색어" placeholder="검색어를 입력하세요.">
+    						<i class="fa fa-search"></i>
+    					</fieldset>
+    				</form>
+    			</div>
+    			
+    			
+    			
+    			<div class="page_num">
+    				<a href="#" class="front">
+    				</a>
+    				<a href="#" class="prev">
+    				</a>
+    				<a href="#" class="num_1">1</a>
+    				<a href="#" class="num_2">2</a>
+    				<a href="#" class="num_3">3</a>
+    				<a href="#" class="num_4">4</a>
+    				<a href="#" class="num_5">5</a>
+    				<a href="#" class="next">
+    				</a>
+    				<a href="#" class="back">
+    				</a>
+    			</div>
+    		</div>
+    	</section>
+      
+       
+        
+            
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+</body></html>

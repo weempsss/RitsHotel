@@ -1,0 +1,356 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(main.css);
+
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    color: #f9f9f9;
+}
+header:hover {
+    height: 280px;
+    transition: all 0.5s;
+    background: #f9f9f9;
+    color: #213859;
+}
+#line {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    height: 1px;
+    background: #d6d6d6;
+    display: none;
+}
+header > #main_menu {
+    width: 100%;
+    height: inherit;
+    position: fixed;
+}
+
+header > #main_menu > #left_logo {
+    width: 130px;
+    margin: 0.5% 2%;
+    float: left;
+}
+header > #main_menu > #right_menu {
+    width: 60%;
+    float: right;
+    margin-right: 22%;
+}
+header > #main_menu > #right_menu > ul {
+    width: 90%;
+    position: relative;
+}
+header > #main_menu > #right_menu > ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+header > #main_menu > #right_menu > ul > li {
+    width: 25%;
+    float: left;
+    line-height: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    z-index: 100;
+    letter-spacing: 1px;
+}
+header > #main_menu > #right_menu > ul > li > a {
+    display: block;
+    font-size: 19px;
+    text-align: center;
+}
+header > #main_menu > #right_menu > ul > li > .sub_menu {
+    width: 100%;
+    height: 200px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+header > #main_menu > #right_menu > ul > li > .sub_menu > li {
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+}
+header > #main_menu > #right_menu > ul > li > .sub_menu > li:hover {
+    font-weight: bold;
+    color: #213859;
+}
+header > #main_menu > #right_menu > .right_mini_menu {
+    float: right;
+    width: 12%;
+    position: absolute;
+    right: 13%;
+    top: 35px;
+    font-size: 15px;
+}
+header > #main_menu > #right_menu > .right_mini_menu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#mobile_menu {
+    display: none;
+}
+
+
+
+
+
+/*미디어쿼리*/
+@media all and (max-width:739px) {
+    
+   header {
+        display: none;
+    }
+    
+    #mobile_menu {
+        display: block;
+        width: 100%;
+        height: 75px;
+        background: #f9f9f9;
+        position: fixed;
+        z-index: 999;
+    }
+    #mobile_menu:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    #mobile_menu > #m_logo {
+        width: 120px;
+        margin: 1% 2%;
+        float: left;
+        position: relative;
+        z-index: 999;
+    }
+    
+    .nav_menu {
+        width: 100%;
+        position: absolute;
+        top: 21%;
+        right: 0;
+    }
+    .nav_menu > #m_login {
+        width: 25px;
+        position: absolute;
+        top: 8px;
+        right: 130px;
+    }
+    .nav_menu > #m_search {
+        width: 100%;
+        margin-top: 59px;
+        position: absolute;
+        z-index: 10;
+    }
+    .nav_menu > #m_search > img {
+        width: 25px;
+        position: absolute;
+        top: -52px;
+        right: 80px;
+        cursor: pointer;
+    }
+    .nav_menu > #m_search > .search_form {
+        width: 100%;
+        margin: 0 auto;
+        line-height: 95px;
+        text-align: center;
+        position: relative;
+        height: 90px;
+        background: #213859;
+        display: none;
+    }
+    .nav_menu > #m_search > .search_form > form > input[type="text"] {
+        width: 70%;
+        height: 35px;
+        border: 0;
+        padding-left: 10px;
+        margin-right: 5px;
+    }
+    .nav_menu > #m_search > .search_form > form > input[type="button"] {
+        width: 50px;
+        height: 37px;
+        border: 0;
+        background: #897365;
+        color: #f9f9f9;
+        line-height: 0px;
+    }
+    .nav_menu > #mobile_main_menu {
+        width: 100%;
+        margin-top: 59px;
+        position: relative;
+        background: #f9f9f9;
+        border-top: 1px solid #d6d6d6;
+        height: 1000px;
+        display: none;
+    }
+    .nav_menu > #mobile_main_menu > #m_lang {
+        margin: 3% 5%;
+    }
+    .nav_menu > #mobile_main_menu > #m_lang > span {
+        margin-right: 30px;
+        font-size: 15px;
+    }
+    .nav_menu > #mobile_main_menu > #m_lang > span.on {
+        color: #897365;
+        font-weight: bold;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu {
+        width: 100%;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul {
+        width: 100%;
+        position: relative;
+        border-top: 1px solid #d6d6d6;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul > li {
+        width: 95%;
+        float: right;
+        line-height: 55px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #213859;
+        background: url(../images/m_menu_down.png) 93% 16px no-repeat;
+        background-size: 25px;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul > li > a {
+        display: block;
+        border-bottom: 1px solid #d6d6d6;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub {
+        display: none;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub > li {
+        font-weight: normal;
+        font-size: 16px;
+        margin-left: 5%;
+        width: 95%;
+        border-bottom: 1px solid #d6d6d6;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub > li:hover {
+        font-weight: bold;
+        color: #897365;
+    }
+    .nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub > li > a {
+        display: block;
+    }
+    
+    
+/*    햄버거메뉴 선*/
+    .nav_menu > .row {
+        width: 20px;
+        float: right;
+        margin-top: 3px;
+        margin-right: 30px;
+    }
+    .nav_menu > .row:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .hamburger > .line{
+      width: 28px;
+      height: 3px;
+      background-color: #213859;
+      display: block;
+      margin: 6px 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger:hover{
+      cursor: pointer;
+    }
+
+    #hamburger-1.is-active .line:nth-child(2){
+      opacity: 0;
+    }
+
+    #hamburger-1.is-active .line:nth-child(1){
+      -webkit-transform: translateY(9px) rotate(45deg);
+      -ms-transform: translateY(9px) rotate(45deg);
+      -o-transform: translateY(9px) rotate(45deg);
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    #hamburger-1.is-active .line:nth-child(3){
+      -webkit-transform: translateY(-9px) rotate(-45deg);
+      -ms-transform: translateY(-9px) rotate(-45deg);
+      -o-transform: translateY(-9px) rotate(-45deg);
+      transform: translateY(-9px) rotate(-45deg);
+    }
+/*    햄버거메뉴 선 끝*/
+    .nav_menu > .mobile_main_menu {
+        left: 100%;
+        transition: 0.5s;
+    }
+    .nav_menu > .mobile_main_menu.click{left: 0; transition: 0.5s}
+    
+    
+    
+}
+
+@media all and (min-width:740px) and (max-width:1023px) {
+    
+    header {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+    }
+    header > #main_menu {
+        width: 100%;
+        height: inherit;
+        position: fixed;
+    }
+
+    header > #main_menu > #left_logo {
+        width: 130px;
+        margin: 0.7% 2%;
+        float: left;
+    }
+    header > #main_menu > #right_menu {
+        width: 61%;
+        float: right;
+        margin-right: 16.5%;
+    }
+    header > #main_menu > #right_menu > ul {
+        width: 100%;
+    }
+    header > #main_menu > #right_menu > ul:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    header > #main_menu > #right_menu > ul > li {
+        width: 25%;
+        float: left;
+        line-height: 50px;
+    }
+    header > #main_menu > #right_menu > ul > li > a {
+        display: block;
+        font-size: 19px;
+        text-align: center;
+    }
+    header > #main_menu > #right_menu > ul > li > .sub_menu {
+        width: 100%;
+    }
+    header > #main_menu > #right_menu > ul > li > .sub_menu > li {
+        text-align: center;
+        font-size: 17px;
+    }
+    header > #main_menu > #right_menu > .right_mini_menu {
+        display: none;
+    }
+    
+    #mobile_menu {
+        display: none;
+    }
+
+}

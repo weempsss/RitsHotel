@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quick_menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{width: 100%; overflow-x: hidden;}
+        .Quick {
+            position: fixed;
+            right: -7.5%;
+            width: 10%;
+            font-size: 1.3vw;
+            height: 100%;
+            overflow: hidden;
+            background: rgba(255,255,255,0.8);
+            display: block;
+        }
+
+        .Quick_box {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
+            text-indent: 0.3vw;
+            ;
+        }
+
+        .Quick_title {
+            background: #213859;
+            color: #f9f9f9;
+            height: 280px;
+            overflow: hidden;
+            padding-top: 45%;
+            transition: 0.5s;
+            
+        }
+
+        .Quick_close {
+            writing-mode: vertical-lr;
+            position: absolute;
+            left: 6%;            
+            font-size: 1.1vw;}
+        .Quick_title>span{position: absolute; right: -100%; line-height: 2vw; z-index: 99; margin-top: -2px;}
+        .Quick_main{overflow: hidden; height: auto; width: 100%; right: -100%;}
+
+        .menu_title {
+            font-size: 0.9vw;
+            font-weight: bold;
+            padding-left: 3%;
+        }
+
+        .Quick_menu li {
+            position: relative;
+            padding-top: 15%;padding-bottom: 15%;
+            color: #375e95;
+            z-index: 99;
+            
+        }
+        .Quick_menu li:hover{box-shadow: 0px 0px 1000px #897365 inset; border-right: 10px solid #6a594f; color: aliceblue !important; transition: 0.5s;}
+        .TB_menu li:hover{background: #2f505d; color: aliceblue; transition: 0.5s;}
+
+        .Quick_menu { 
+            position: absolute;
+            width: 100%;
+        }
+        .menu_title{position: absolute; width: 100%; margin-top: 1.5%;}
+        .TB_menu{display: none;border-bottom: 1PX SOLID #5252; transition: 0.5s; position: relative;}
+        .TB_menu li{padding-top: 10%; padding-bottom: 10%; padding-left: 3%; color: #897365;}
+        
+        .Top_btn{position: absolute; bottom: 10%; font-size: 0.8vw; z-index: 999; opacity: 0; color: #2f505d; width: 100%; padding-left: 17%; padding-top: 5%; padding-bottom: 5%; cursor: pointer;}
+        .Top_btn:hover{background: #2f505d; color: aliceblue; border-right: 10px solid #375e95; transition: 0.3s;}
+        .Top_title{font-size: 1vw; text-indent: 1vw; display: inline-block; opacity: 0; font-weight: bold;}
+        .slide-top{animation:slide-top 1.5s cubic-bezier(.25,.46,.45,.94) infinite alternate both}
+        @keyframes slide-top{0%{transform:translateY(5px)}100%{transform:translateY(-5px)}}
+        
+        /*이벤트*/
+        .Quick_title{cursor: pointer;}
+        
+        @media screen and (max-width:1023px) and (min-width: 740px){
+            .Quick{width: 12%; font-size: 2.5vw; transition: 0.3s;}
+            .Quick_box{text-indent: 0.4vw; transition: 0.3s;}
+            .Quick_title{height: 200px; padding-left: 2.5%; padding-top: 30%; transition: 0.3s;}
+            .Quick_close{left: 10%; font-size: 2vw; top: 20%; transition: 0.3s;}
+            .menu_title{display: none; transition: 0.3s;}
+            .TB_menu{display: block; transition: 0.3s;}
+            ul.Quick_menu {opacity: 0;}
+            
+            
+        }
+        @media screen and (max-width:739px){
+            .Quick{width: 10%; transition: 0.3s; height: 6%; right: 0; background: none; display: none;}
+            .Quick_box{text-indent: 0.4vw; transition: 0.3s; display: none;}
+            .Quick_title{height: 200px; padding-left: 2.5%; padding-top: 30%; transition: 0.3s;}
+            .Quick_close{opacity: 0; transition: 0.5s;}
+            .menu_title{opacity: 0; transition: 0.5s;}
+            .Quick_menu{opacity: 0; transition: 0.5s;}
+            .TB_menu{opacity: 0; transition: 0.5s;}
+            .Top_btn{display: none; }
+            
+        }
+        
+
+    </style>
+    <script>
+        $(function() {
+            
+            $(window).on("scroll", function() {
+            var ht = $(window).height();
+            var scroll = $(window).scrollTop()+10;	
+                
+            for(var i=0; i<4; i++){
+              if(scroll>=ht*i && scroll< ht*(i+1)){
+                  console.log(i);
+                  if(i == 0){
+                     $(".Quick_title").css({"color":"#f9f9f9","background":"#213859"});
+                    $(".Preview").css({"color":"#375e95","background":"none"});
+                    $(".Event").css({"color":"#375e95","background":"none"});
+                    $(".imfomation").css({"color":"#375e95","background":"none"}); 
+                  }
+                  else if(i == 1){
+                     $(".Quick_title").css({"color":"#f9f9f9","background":"#375e95"});
+                        $(".Preview").css({"color":"#f9f9f9","background":"#897365"});
+                        $(".Event").css({"color":"#375e95","background":"none"});
+                        $(".imfomation").css({"color":"#375e95","background":"none"}); 
+                  }
+                  else if(i == 2){
+                     $(".Quick_title").css({"color":"#f9f9f9","background":"#375e95"});
+                    $(".Event").css({"color":"#f9f9f9","background":"#897365"});
+                    $(".Preview").css({"color":"#375e95","background":"none"});
+                    $(".imfomation").css({"color":"#375e95","background":"none"}); 
+                  }
+                  else if(i == 3){
+                     $(".Quick_title").css({"color":"#f9f9f9","background":"#375e95"});
+                    $(".imfomation").css({"color":"#f9f9f9","background":"#897365"});
+                    $(".Event").css({"color":"#375e95","background":"none"});
+                    $(".Preview").css({"color":"#375e95","background":"none"}); 
+                  }
+
+              };
+            }
+            });
+            
+            $(".Quick_title").click(function(e){
+                e.preventDefault();
+                $("html, body").stop().animate({"scrollTop":0},1600);
+                $(".Quick_title").css({"color":"#f9f9f9","background":"#213859"});
+                $(".Preview").css({"color":"#375e95","background":"none"});
+                $(".Event").css({"color":"#375e95","background":"none"});
+                $(".imfomation").css({"color":"#375e95","background":"none"});
+
+            });
+            $(".Top_btn").click(function(e){
+                e.preventDefault();
+                $("html, body").stop().animate({"scrollTop":0},1600);                
+            });
+            $(".Preview").click(function(e){
+                e.preventDefault();
+                var ht = $("#content1").offset().top;
+
+                $("html, body").stop().animate({"scrollTop":ht},1600);
+                $(".Quick_title").css({"color":"#f9f9f9","background":"#375e95"});
+                $(".Preview").css({"color":"#f9f9f9","background":"#897365"});
+                $(".Event").css({"color":"#375e95","background":"none"});
+                $(".imfomation").css({"color":"#375e95","background":"none"});
+            });
+            $(".Event").click(function(e){
+                e.preventDefault();
+                var ht = $("#content2").offset().top;
+
+                $("html, body").stop().animate({"scrollTop":ht},1600);
+                $(".Quick_title").css({"color":"#f9f9f9","background":"#375e95"});
+                $(".Event").css({"color":"#f9f9f9","background":"#897365"});
+                $(".Preview").css({"color":"#375e95","background":"none"});
+                $(".imfomation").css({"color":"#375e95","background":"none"});
+            });
+            $(".imfomation").click(function(e){
+                e.preventDefault();
+                var ht = $("#content3").offset().top;
+    
+                $("html, body").stop().animate({"scrollTop":ht+10},1600);
+                $(".Quick_title").css({"color":"#f9f9f9","background":"#375e95"});
+                $(".imfomation").css({"color":"#f9f9f9","background":"#897365"});
+                $(".Event").css({"color":"#375e95","background":"none"});
+                $(".Preview").css({"color":"#375e95","background":"none"});
+            });
+            
+            
+       
+            
+            
+            if($(window).width() > 1024) {            
+                    $(".Quick").mouseenter(function(){
+                        if($(window).width() < 1024){
+                            return false;    
+                        }
+                        $(".Quick").stop().animate({right:"0"});
+                        $(".menu_title").stop().animate({right:"-20%"});
+                        $(".Quick_title > span").stop().animate({right:"10%"});
+                        $(".Quick_close").stop().fadeOut(500);
+                        $(".Top_btn").animate({"opacity":"1"});
+                        $(".Top_title").animate({"opacity":"1"});
+                        
+                    });
+                    $(".Quick").mouseleave(function(){
+                        if($(window).width() < 1024){
+                            return false;    
+                        }
+                        $(".Quick").stop().animate({right:"-7.5%"});
+                        $(".menu_title").stop().animate({right:"-100%"});
+                        $(".Quick_title > span").stop().animate({right:"-100%"});
+                        $(".Quick_close").stop().fadeIn(500); 
+                        $(".Top_btn").animate({"opacity":"0"});
+                        $(".Top_title").animate({"opacity":"0"});
+                    });
+                } 
+                return false;
+            $(window).resize(function(){
+                if($(window).width() > 1024) {            
+                    $(".Quick").mouseenter(function(){
+                        if($(window).width() < 1024){
+                            return false;    
+                        }
+                        $(".Quick").stop().animate({right:"0"});
+                        $(".menu_title").stop().animate({right:"-20%"});
+                        $(".Quick_title > span").stop().animate({right:"0%"});
+                        $(".Quick_close").stop().fadeOut(500);
+                        
+                    });
+                    $(".Quick").mouseleave(function(){
+                        if($(window).width() < 1024){
+                            return false;    
+                        }
+                        $(".Quick").stop().animate({right:"-7.5%"});
+                        $(".menu_title").stop().animate({right:"-100%"});
+                        $(".Quick_title > span").stop().animate({right:"-100%"});
+                        $(".Quick_close").stop().fadeIn(500);                
+                    });
+                } 
+                return false;
+            });
+        });
+
+
+    </script>
+    
+
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <div class="Quick">
+        <div class="Quick_box">
+            <div class="Quick_main">
+                <h3 class="Quick_title Qnum"><i class="fa fa-h-square"></i>
+                    <p class="Quick_close">Ritz Hotel</p>
+                    <span>Welcome<br>
+                    Ritz Hotel</span>
+                    <h4></h4>
+                </h3>
+            </div>
+            
+            <ul class="TB_menu">
+                <li><a href="../login.html"><i class="fa fa-user-plus"></i></a></li>
+                <li><i class="fa fa-globe"></i></li>
+                <li><i class="fa fa-search"></i></li>
+            </ul>
+            <ul class="Quick_menu">
+                <li class="Preview Qnum">
+                    <i class="fa fa-hotel"></i>
+                    <span class="menu_title"><a href="#">Preview Rooms</a></span>
+                </li>
+                <li class="Event Qnum">
+                    <i class="fa fa-coffee"></i>
+                    <span class="menu_title"><a href="#">Show Event</a></span>
+                </li>
+                <li class="imfomation Qnum">
+                    <i class="fa fa-car"></i>
+                    <span class="menu_title"><a href="#">Find A Ritz</a></span>
+                </li>
+            </ul>
+        </div>
+        <div class="Top_btn"><i class="fa fa-chevron-up slide-top"></i><span class="Top_title">TOP</span></div>
+    </div>
+
+
+
+
+
+</body>
+</html>

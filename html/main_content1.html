@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL main_content1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/main_content1.css">
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+
+    
+    <style>
+        @font-face {
+            font-family: 'NanumSquare';
+            src: local('font/NanumSquare'),
+                url('../font/NanumSquareR.ttf'),
+                url('../font/NanumSquareR.eot'),
+                url('../font/NanumSquareR.woff');
+        }
+        @font-face {
+            font-family: 'NanumSquareL';
+            src: url('../font/NanumSquareL.ttf'),
+                url('../font/NanumSquareL.eot'),
+                url('../font/NanumSquareL.woff');
+        }
+        @font-face {
+            font-family: 'NanumSquareB';
+            src: url('../font/NanumSquareB.ttf'),
+                url('../font/NanumSquareB.eot'),
+                url('../font/NanumSquareB.woff');
+        }
+        @font-face {
+            font-family: 'NanumSquareEB';
+            src: url('../font/NanumSquareEB.ttf'),
+                url('../font/NanumSquareEB.eot'),
+                url('../font/NanumSquareEB.woff');
+        }
+
+        body,html {
+            font-family: 'NanumSquare' !important;
+            width: 100%;
+            height: 100%;
+            font-size: 1vw;
+            color: #1c1c1b;
+        }
+	</style>
+    <script>
+        $(function(){
+            
+            $(".leftimg0").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+            $(".rightimg0").stop().delay(500).animate({"right":"0%", opacity:"1"},1000,"swing");
+            $(".RNum1").css({background:"#897365",color:"#f9f9f9"})
+            
+			$(".roomname1").click(function(e){
+               e.preventDefault(); $(".leftimg0").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+                $(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");                           
+                $(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum1").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");
+                $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");
+                $(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+			});
+			
+			$(".roomname2").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");	$(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum2").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");			$(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+			});
+			
+			$(".roomname3").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".leftimg2").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum3").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 			$(".rightimg2").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");
+				$(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				$(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				$(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				$(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				
+			});
+			
+			$(".roomname4").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum4").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 			$(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");	$(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");
+				$(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				$(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				$(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				
+			});
+			
+			$(".roomname5").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum5").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 			$(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg4").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");	$(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");
+				$(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				$(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				
+			});
+			
+			$(".roomname6").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum6").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 			$(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg5").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");	$(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");
+				$(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				
+			});
+			
+			$(".roomname7").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");		$(".leftimg7").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".RNum7").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+                $(".RNum8").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 			$(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg6").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");	$(".rightimg7").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 
+				
+			});
+			
+			$(".roomname8").click(function(e){
+                e.preventDefault();
+            	$(".leftimg0").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg1").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+                $(".leftimg2").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg3").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg4").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg5").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg6").stop().animate({"left":"-100%", opacity:"0"},1000,"swing");
+				$(".leftimg7").stop().delay(500).animate({"left":"0%", opacity:"1"},1000,"swing");
+                $(".RNum8").css({background:"#897365",color:"#f9f9f9"});
+                $(".RNum2").css({background:"none",color:"#897365"});
+                $(".RNum3").css({background:"none",color:"#897365"});
+                $(".RNum4").css({background:"none",color:"#897365"});
+                $(".RNum5").css({background:"none",color:"#897365"});
+                $(".RNum6").css({background:"none",color:"#897365"});
+                $(".RNum7").css({background:"none",color:"#897365"});
+                $(".RNum1").css({background:"none",color:"#897365"});
+				
+				
+				$(".rightimg0").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); $(".rightimg1").stop().animate({"right":"-100%", opacity:"0"},1000,"swing"); 			$(".rightimg2").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg3").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg4").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg5").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");	$(".rightimg6").stop().animate({"right":"-100%", opacity:"0"},1000,"swing");
+				$(".rightimg7").stop().delay(500).animate({"right":"0%",opacity:"1"},1000,"swing");
+			});
+		});
+    </script>
+
+
+</head>
+
+<body style="overflow: hidden">
+ 	<section>
+ 		<div id="section1">
+ 				<div class="left">
+ 					<div class="lefttop">
+ 						<div class="namebox">
+							<ul class="namesidebox1">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class="namesidebox2">
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="nametxt">
+							<h3>완벽한 객실에서<br>최상의 휴식을 경험</h3>
+						</div>
+						
+						<div class="nametxt_subtxt">
+							<p>Ritz Hotel의 격이 다른 객실과 함께 여유로운 시간 보내세요.</p>
+						</div>
+						
+						
+						<div class="cBtn1"><a href="">MORE</a></div>
+ 					</div>
+ 					<div class="leftbottom">
+ 						<div class="section_1_leftbottom">
+						<img src="images/main_content1/room1-1.jpg" alt="RoomImage" class="leftimg0" >
+						<img src="images/main_content1/room2-1.jpg" alt="RoomImage" class="leftimg1">
+						<img src="images/main_content1/room3-1.jpg" alt="RoomImage" class="leftimg2">
+						<img src="images/main_content1/room4-1.jpg" alt="RoomImage" class="leftimg3">
+						<img src="images/main_content1/room5-1.jpg" alt="RoomImage" class="leftimg4">
+						<img src="images/main_content1/room6-1.jpg" alt="RoomImage" class="leftimg5">
+						<img src="images/main_content1/room7-1.jpg" alt="RoomImage" class="leftimg6">
+						<img src="images/main_content1/room8-1.jpg" alt="RoomImage" class="leftimg7">
+					</div>
+ 					</div>
+ 				</div>
+ 				<div class="right">
+ 					<div class="righttop">
+ 						<div class="topimage">
+							<img src="images/main_content1/room1.jpg" alt="RoomImage" class="rightimg0">
+							<img src="images/main_content1/room2.jpg" alt="RoomImage" class="rightimg1">
+							<img src="images/main_content1/room3.jpg" alt="RoomImage" class="rightimg2">
+							<img src="images/main_content1/room4.jpg" alt="RoomImage" class="rightimg3">
+							<img src="images/main_content1/room5.jpg" alt="RoomImage" class="rightimg4">
+							<img src="images/main_content1/room6.jpg" alt="RoomImage" class="rightimg5">
+							<img src="images/main_content1/room7.jpg" alt="RoomImage" class="rightimg6">
+							<img src="images/main_content1/room8.jpg" alt="RoomImage" class="rightimg7">
+						</div>
+ 					</div>
+ 					<div class="rightbottom">
+ 						<p>ROOM TYPE</p>
+						<ul class="room4">
+							<li class="RNum1"><a href="#" class="roomname1">Deluxe</a></li>
+							<li class="RNum2"><a href="#" class="roomname2">Premium</a></li>
+							<li class="RNum3"><a href="#" class="roomname3">Suite</a></li>
+							<li class="RNum4"><a href="#" class="roomname4">Standard</a></li>
+						</ul>
+						<ul class="room8">
+							<li class="RNum5"><a href="#" class="roomname5">Business</a></li>
+							<li class="RNum6"><a href="#" class="roomname6">Family</a></li>
+							<li class="RNum7"><a href="#" class="roomname7">Residence</a></li>
+							<li class="RNum8"><a href="#" class="roomname8">OceanView</a></li>
+						</ul>
+ 					</div>
+ 				</div>
+ 		</div>
+ 		<div class="c1Box"></div>
+ 	</section>
+ 	
+</body>
+</html>

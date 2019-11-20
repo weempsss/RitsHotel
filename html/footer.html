@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL FOOTER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style> 
+/*        body, html{width: 100%; height: 100%;}*/
+        footer{width: 100%; height: auto; background: #3c3c3c; position: relative; bottom: 0; color: #ccc;}
+        .footer_logo{position: absolute; left: 18%; width:50%; top: 25%;  transition: 0.3s;}
+        .footer_logo img{width:25%;}
+        .footer_txt{position: relative; left: 50%; width: 50%; padding-top: 2%; padding-bottom: 2%;}
+        .footer_parthner{position: relative; bottom: 0; width: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #aaaa; background: #252525; line-height: 4vw;}
+        .footer_parthner img{margin-left: 3%; margin-right: 3%; padding-top: 3%;}
+        .footer_list li{float: left; width: 25%; padding-top: 1%; font-size: 16px;}
+        .footer_list li:hover{color: #f9f9f9;}
+        .footer_list {width: 100%; position: relative;  border-bottom: 1px solid #aaaa; padding-bottom: 3%; border-radius: 1px;}
+        .footer_list::after{content: ''; display: block; clear: both;}
+        .footer_address{position: relative; margin-top: 3%;}
+        .footer_address p span{font-size: 0.8vw; color: #9d9d9d;}
+        .footer_address p{font-size: 0.95vw; color: #f9f9f9; padding-top: 1%;}
+        .footer_address address{font-size: 0.9vw; color: #9d9d9d; }
+        
+        .QLINK{position: absolute; right: 10%; bottom: 53%; color: #8e8e8e;}
+        .QLINK>li>a{ border-bottom: 1px solid #8e8e8e; line-height: 2vw;}
+        .QLINK li a:hover{color: #f9f9f9;}
+        .QlinkList{position: absolute; text-align: right; width: 80%;line-height: 2vw; display: none;}
+        .QlinkList li:hover{color: #f9f9f9;}
+        
+        @media screen and (max-width:1023px) and (min-width: 740px){
+            .footer_list li{font-size: 14px;}
+            .footer_logo{left: 16%; transition: 0.3s;}
+            .footer_logo img{width: 35%; transition: 0.3s;}
+            .footer_list li{width: 30%; text-align: center; transition: 0.3s;}
+        }
+        @media screen and (max-width:739px){
+            .footer_list li{font-size: 10px;}
+            .QLINK{display: none;}
+            .footer_logo{left: 8%; width: 40%; top: 35%; transition: 0.3s;}
+            .footer_txt{width: 60%; left: 40%; transition: 0.3s;}
+            .footer_logo img{width: 60%; transition: 0.3s;}
+            .footer_list li{width: 50%; text-align: center; transition: 0.3s;}
+            .footer_address p{font-size: 10px;}
+            .footer_address p span{font-size: 8px;}
+            .footer_address address{font-size: 8px;}
+            
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".QLINK .QUICK_BTN").click(function(e){
+                e.preventDefault();
+                $(".QlinkList").slideToggle();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+   <footer>
+       <div class="footer_logo"><img src="images/footer/footer_logo.png" alt="footer_logo" style="opacity: 0.5"></div>
+       <div class="footer_txt">
+       <ul class="footer_list">
+           <li><strong><a href="#">개인정보처리방침</a></strong></li>
+           <li><a href="#">이용약관</a></li>
+           <li><a href="#">사이트맵</a></li>
+           <li><a href="#">인재채용</a></li>
+           <li><a href="#">윤리경영</a></li>
+           <li><a href="#">제휴문의</a></li>
+       </ul>
+       <div class="footer_address">
+           <p>Ritz Hotel 객실예약 <a href="#">02-1234-5678</a></p>
+           <p>Ritz Hotel 고객센터 <a href="#">1234-5678</a></p>
+           <p>이메일 문의 <a href="mailto:hgh0328@naver.com">hgh0328@naver.com</a></p>
+           <p><span>IIBI(주) | 012345 서울특별시 영등포구 당산5가</span></p>
+           <p><span>대표이사 | 목윤희, 이동욱, 박신영, 홍정화, 이지원, 이소연, 이승현</span></p>
+           <p><span>사업자등록번호 123-45-678910 | 통신판매 신고번호 제2019-서울영등포-0101호</span></p>
+            <br>
+            <address>COPYRIGHT 2019 IIBI.CO.LTD.RITZHOTEL ALL RIGHTS RESERVED.</address>
+       </div>
+       <ul class="QLINK">
+           <li><a href="#" class="QUICK_BTN">QUICK LINK ▼</a>
+           <ul class="QlinkList">
+           <li><a href="About_company.html">About</a></li>
+           <li><a href="Preview_rooms.html">Preview</a></li>
+           <li><a href="Promotion_event.html">Promtion</a></li>
+           <li><a href="guide_information.html">Guide</a></li>
+           </ul></li>
+           
+       </ul>
+       </div>
+       <div class="footer_parthner">
+        <img src="images/footer/footer_part1.png" alt="footer_logo" width="3%" style="padding-bottom: 0.9%">
+        <img src="images/footer/footer_part2.png" alt="footer_logo" width="5%" style="padding-bottom: 0.8%">
+        <img src="images/footer/footer_part3.png" alt="footer_logo" width="5%" style="padding-bottom: 1.4%">
+        <img src="images/footer/footer_part4.png" alt="footer_logo" width="5%" style="padding-bottom: 1.4%">
+        <img src="images/footer/footer_part5.png" alt="footer_logo" width="5%" style="padding-bottom: 1.5%">
+        <img src="images/footer/footer_part6.png" alt="footer_logo" width="4%" style="padding-bottom: 1.7%">
+
+       </div>
+       
+   </footer>
+</body></html>

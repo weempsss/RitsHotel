@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome RITZ HOTEL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+     
+    <script src="js/aos.js"></script>
+    <link href="css/aos.css" rel="stylesheet">    
+    
+
+    <style>
+        /*기본 레이아웃 구성*/
+        
+        ::-webkit-scrollbar {display:none;}
+        #wrap{width: 100%; height: 100%; background: #eee; position: relative;}
+        #content1{width: 100%; height: 1080px; position: relative; overflow: hidden;}
+        #content2{width: 100%; height: 1080px; position: relative; }
+        #content3{width: 100%; height: 1080px; position: relative; overflow: hidden; margin-top: 10px;}
+        
+        footer{z-index: 999; position: relative;}
+        header{z-index: 9;}
+          
+    </style>
+    <script>
+        $(function() {            
+            
+            $("#slide").load("html/slide.html");
+            $("#header").load("html/header.html");
+            $("#content1").load("html/main_content1.html");
+            $("#content2").load("html/main_content2.html");            
+            $("#content3").load("html/main_content3.html");
+            $("#footer").load("html/footer.html");           
+            
+            
+            $(window).on("scroll", function() {
+            var ht = $(window).height();
+            var scroll = $(window).scrollTop();	
+                
+
+            $("#wrap .move_mouse").each(function() {
+              
+                $(this).on("mousewheel", function(e) {
+                
+                    e.preventDefault();
+                    var delta = 0;
+                    delta = e.originalEvent.wheelDelta / 120;
+                    var moveTop = null;
+                     if (delta >= 0) {  
+                 try{
+                    var prev = $(this).prev().offset().top;
+                 } catch(e){
+                     return false; 
+                 }
+                 $("html,body").stop().animate({"scrollTop":prev-1},1000,"swing");
+              }else if (delta <= 0) {  
+                try{
+                    var next = $(this).next().offset().top;
+                } catch(e){
+                    return false;
+                }
+                $("html,body").stop().animate({"scrollTop":next},1000,"swing");
+                  
+              }                    
+  
+                    });	
+	           });
+                        
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!--퀵메뉴-->
+        <div id="Quick_menu"></div>
+        
+        <!-- 메인슬라이드  -->
+        <div id="slide" class="move_mouse"></div>
+        <!-- 본문구역   -->
+       
+            <div id="content1" class="move_mouse"></div>
+            <div id="content2" class="move_mouse"></div>
+            <div id="content3" class="move_mouse"></div>
+        
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+
+
+</body></html>

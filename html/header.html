@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL HEADER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+        $(document).ready(function(){
+            $(".Quick_menu").load("html/Quick_menu.html");
+            
+            
+//            메인메뉴바 hover시 서브메뉴 나오게 하기
+            $(".sub_menu").hide();
+            $("header").mouseenter(function(){
+               $(".sub_menu").stop().slideDown(500);
+                $("#line").css({"display":"block"});
+               $("#main_menu>#left_logo>h1>a>img").attr("src","images/header_logo.png"); 
+                $("header").css({"height":"280px","transition":"0.5s","background":"#f9f9f9","color":"#213859"});
+                $(".sub_menu").css({"color":"#1c1c1b"});
+            
+                
+            });
+            $("header").mouseleave(function(){
+               $(".sub_menu").stop().slideUp(500);
+                $("#line").css({"display":"none"});
+               $("#main_menu>#left_logo>h1>a>img").attr("src","images/header_logo.png"); $("header").css({"height":"80px","transition":"0.5s"});
+                
+            });
+            
+//            서브메뉴 hover시 회색바탕, 갈색막대바
+            $("#main_menu>#right_menu>ul>li").mouseenter(function(){
+               var i = $(this).index();
+                $("#main_menu>#right_menu>ul>li>.sub_menu").eq(i).css({"background":"#efeeee","border-top":"4px solid #897365"});
+                
+            });
+            
+            $("#main_menu>#right_menu>ul>li").mouseleave(function(){
+                $("#main_menu>#right_menu>ul>li>.sub_menu").css({"background":"none","border-top":"none"});
+                
+            });
+            
+//            모바일화면일때 햄버거메뉴 클릭시 메뉴나오게 하기
+            $(".hamburger").click(function(){
+                $(".nav_menu > #mobile_main_menu").stop().slideToggle();    
+                $(this).toggleClass("is-active");
+                $(".nav_menu > .mobile_main_menu").toggleClass("click");
+            });
+
+            
+//            모바일화면일때 햄버거 메인메뉴 안에 서브메뉴 나오게 하기
+            var isOn=0;
+            var current=10;
+            $(".nav_menu > #mobile_main_menu > #m_menu > ul > li ").click(function(){
+                var i = $(this).index();
+                if (isOn == 1){
+                    current = 10;
+                }
+                if (current != i){
+                    $(".nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub").stop().slideUp(function(){
+                        $(".nav_menu > #mobile_main_menu > #m_menu > ul > li").css({"background":"url(images/m_menu_down.png) 93% 16px no-repeat", "background-size": "25px"});
+
+                    });
+
+                    $(".nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub").eq(i).stop().slideDown(function(){
+                        $(".nav_menu > #mobile_main_menu > #m_menu > ul > li").eq(i).css({"background":"url(images/m_menu_up.png) 93% 16px no-repeat", "background-size": "25px"});
+
+                        isOn = 2;
+                    });
+                } else {
+                     $(".nav_menu > #mobile_main_menu > #m_menu > ul > li > .m_sub").stop().slideUp(function(){
+                        $(".nav_menu > #mobile_main_menu > #m_menu > ul > li").css({"background":"url(images/m_menu_down.png) 93% 16px no-repeat", "background-size": "25px"});
+
+                         isOn= 1;
+                    });
+                }
+                current = i;
+            });    
+            
+            
+//            모바일 화면일때 검색버튼 열고 닫힘
+            $("#m_search>img").click(function(){
+                $(".nav_menu > #m_search > .search_form").stop().slideToggle();
+            });
+            
+            
+//            PC화면일때 스크롤 한칸내릴시 메뉴바 바뀜
+            $(window).scroll(function(){
+               if($(this).scrollTop() >=10) {
+                   $("#main_menu>#left_logo>h1>a>img").attr("src","images/header_logo.png"); 
+                $("header").css({"transition":"0.5s","background":"#f9f9f9","color":"#213859"});
+               } else {
+                   $("#main_menu>#left_logo>h1>a>img").attr("src","images/header_logo_white.png"); 
+                $("header").css({"transition":"0.5s","background":"none","color":"#f9f9f9"});
+               }
+            });
+            
+});
+    </script>
+    
+
+</head>
+
+<body>
+    <!-- 헤더구역    -->
+    <header style="z-index: 9">
+       <div id="line"></div>
+        <div id="main_menu">
+            <div id="left_logo">
+                <h1><a href="index.html"><img src="images/header_logo_white.png" alt="리츠호텔 로고"></a></h1>
+            </div>
+            <div id="right_menu">
+                <ul>
+                    <li><a href="About_company.html">About</a>
+                        <ul class="sub_menu">
+                            <li><a href="About_company.html">Company</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Preview_rooms.html">Preview</a>
+                        <ul class="sub_menu">
+                            <li><a href="Preview_rooms.html">Rooms</a></li>
+                            <li><a href="Preview_convenience.html">Convenience</a></li>
+                            <li><a href="Preview_reservation.html">Reservation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Promotion_event.html">Promotion</a>
+                        <ul class="sub_menu">
+                            <li><a href="Promotion_event.html">Event</a></li>
+                            <li><a href="Promotion_package.html">Package</a></li>
+                            <li><a href="Promotion_wedding.html">Wedding</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="guide_information.html">Guide</a>
+                        <ul class="sub_menu">
+                            <li><a href="guide_information.html">Information</a></li>
+                            <li><a href="guide_Review.html">Review</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="right_mini_menu">
+                    <a href="login.html">Login</a> | <a href="#ko">KOR</a> | <a href="#search"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div id="mobile_menu">
+       <div id="m_logo">
+           <h1><a href="index.html"><img src="images/header_logo.png" alt="리츠호텔 로고"></a></h1>
+       </div>
+       <div class="nav_menu">
+            <div class="row cf">
+              <div class="three col">
+                <div class="hamburger" id="hamburger-1">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div id="m_login">
+                <a href="login.html"><img src="images/m_login.png" alt="로그인"></a>
+            </div>
+            <div id="m_search">
+                <img src="images/m_search.png" alt="검색">
+                <div class="search_form">
+                    <form action="#">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <input type="button" value="Search">
+                    </form>
+                </div>
+            </div>
+            <div id="mobile_main_menu" class="mobile_main_menu">
+                <div id="m_lang">
+                    <span class="on"><a href="#">KOR</a></span> 
+                    <span><a href="#">ENG</a></span>
+                </div>
+                <div id="m_menu">
+                    <ul>
+                        <li>About
+                            <ul class="m_sub">
+                                <li><a href="About_company.html">Company</a></li>
+                            </ul>
+                        </li>
+                        <li>Preview
+                            <ul class="m_sub">
+                                <li><a href="Preview_rooms.html">Rooms</a></li>
+                                <li><a href="Preview_convenience.html">Convenience</a></li>
+                                <li><a href="Preview_reservation.html">Reservation</a></li>
+                            </ul>
+                        </li>
+                        <li>Promotion
+                            <ul class="m_sub">
+                                <li><a href="Promotion_event.html">Event</a></li>
+                                <li><a href="Promotion_package.html">Package</a></li>
+                                <li><a href="Promotion_wedding.html">Wedding</a></li>
+                            </ul>
+                        </li>
+                        <li>Guide
+                            <ul class="m_sub">
+                                <li><a href="guide_information.html">Information</a></li>
+                                <li><a href="guide_Review.html">Review</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Quick_menu" style="z-index: 99"></div>
+
+
+
+
+</body></html>

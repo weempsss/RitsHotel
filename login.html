@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/login.css">
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <style>
+        /*기본 레이아웃 구성*/
+        #wrap {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        footer {
+            z-index: 8;
+            position: relative;
+        }
+
+        header {
+            z-index: 9;
+        }
+
+        #Login_keyimage {
+            position: relative;
+            background: url(images/login/login.jpg) no-repeat center 0;
+            background-attachment: fixed;
+            height: 500px;
+        }
+        
+        .Login_keytitle {
+            position: relative;
+            width: 100%;
+            top: 10px;
+            transition: 1s;
+        }
+
+        .Login_line {
+            width: 1px;
+            height: 40px;
+            background: white;
+            margin-top: 150px;
+            position: absolute;
+            left: 50%;
+
+        }
+
+        h2.Login_ment1 {
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 215px;
+            text-align: center;
+            font-size: 50px;
+            font-family: 'NanumSquareEB';
+        }
+
+        p.Login_ment2 {
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 215px;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family: 'NanumSquareB';
+        }
+
+        p.Login_ment3 {
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            top: 245px;
+            width: 243px;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-family: 'NanumSquareB';
+            opacity: 0.8;
+        }
+
+        .fa-angle-down {
+            transition: 0.3s;
+        }
+
+        .fa-angle-down.on {
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+            
+            $(window).scroll(function(e) {
+                e.preventDefault();
+                var i = 10;
+                var st = $(window).scrollTop() + i;
+                $(".Login_keytitle").css({
+                    top: st
+                });
+                console.log($(window).scrollTop());
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+
+        <!-- 콘텐츠구역 -->
+        <div id="Login_keyimage">
+            <div class="Login_keytitle">
+                <div class="Login_line"></div>
+                <h2 class="Login_ment1">Login</h2>
+                <p class="Login_ment2">로그인</p>
+                <p class="Login_ment3">Home > Login</p>
+            </div>
+        </div>
+
+        <div class="Base">
+            <div class="content">
+
+                <div class="LoginSpace">
+                   <div class="simbol"><img src="images/login/header_logo.png" alt="리츠호텔 로고"></div>
+                    <ul>
+                        <li class="AlignSpace">
+                            <input type="text" name="id" vlaue="id" placeholder="아이디 또는 이메일">
+                        </li>
+                        <li class="AlignSpace">
+                            <input type="password" name="pw" value="pass" placeholder="비밀번호">
+                        </li>
+                        <li class="AlignSpace">
+                            <a href="index.html"><button class="LoginBtn">로그인</button></a>
+                        </li>
+                        <li class="AlignSpaceAnother">
+                            <span class="AnotherOne"><a href="">ID/PW 찾기</a></span>
+                            <span class="AnotherTwo"><a href="join.html">회원가입</a></span>
+                        </li>
+                        <li class="AlignSpaceAnother2">
+                            <ul>
+                                <a href="https://www.facebook.com/">
+                                <li class="AlignIcon1"><img src="images/login/data-design_facebook2.png" alt="snsIcon"></li></a>
+                                <a href="https://www.google.com">
+                                <li class="AlignIcon2"><img src="images/login/data_design_google2.png" alt="snsIcon"></li></a>
+                                <a href="https://www.naver.com/">
+                                <li class="AlignIcon3"><img src="images/login/data_design_naver2.png" alt="snsIcon"></li></a>
+                                <a href="https://www.kakaocorp.com/">
+                                <li class="AlignIcon4"><img src="images/login/data_design_kakao2.png" alt="snsIcon"></li></a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+        </div>
+        
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+
+
+</body></html>
+
+
+
+
+<!-- find: Second 이하 -->

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RITZ HOTEL > PREVIEW > ROOMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <style>
+        /*기본 레이아웃 구성*/      
+        #wrap{width: 100%; height: auto; background: #eee; position: relative;} 
+        footer{z-index: 8; position: relative;}
+        header{z-index: 9;}        
+        #Preview_keyimage{
+            position: relative; 
+            /*키이미지 설정*/
+            height: 550px;
+            overflow: hidden;
+            background: #000;
+        }
+        .Preview_keytitle{position: relative; width: 100%; top: 30%; transition: 1s; background: rgba(0,0,0,0.3); padding-top: 50px; padding-bottom: 50px;}
+        .Preview_line{
+            width: 1px;
+            height: 50px;
+            background: white;
+            position: relative;
+            left: 50%;
+            bottom: 20px;
+        }
+        h2.Preview_ment1{
+            color: white;
+            position: relative;
+            text-align: center;
+            font-size: 50px;
+            font-family:'NanumSquareEB'; 
+        }
+        p.Preview_ment2{
+            color: white;
+            position: relative;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family:'NanumSquareB'; 
+        }
+        p.Preview_ment3{
+            color: white;
+            position: relative;
+            top: 20px;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-family:'NanumSquareB';
+            opacity: 0.8;
+        }
+        
+        /*배경동영상*/
+        .dan_bg{position:absolute; width: 100%; bottom: -400px; height: 1590px;}
+        
+        /*객실 컨텐츠1*/
+        #Pre_Room_content1{position: relative; width: 100%; margin: 0 auto;}
+        
+        .Room_mainTxt{position: relative;  width: 60%; margin: 0 auto; margin-top: 80px;}
+        .Room_mainTxt h3{font-size: 30px; line-height: 50px}
+        .Room_mainTxt p{margin-top: 20px; font-size: 18px; line-height: 30px; width: 90%;}
+        .Room_check{width: 60%; margin: 0 auto; margin-top: 20px;}
+        .Room_check_list{width: 100%;}
+        .Room_check_list:after{content: ''; display: block; clear: both;}
+        .Room_check_list li{float: left; width: 30%; font-size: 16px; text-align: center;}
+        .Room_checkIn{border-right: 1px solid #8e8e8e; margin-right: 3.5%;}
+        .Room_checkTit{font-weight: bold; line-height: 30px; font-size: 20px;}
+        
+        .Room_list{width: 80%; margin: 0 auto; text-align: center; position: relative; margin-top: 80px;}
+        .Room_list li{float: left; width: 12.5%;  line-height: 35px; font-size: 18px;}
+        .Room_list::after{content: ''; display: block; clear: both;}
+        .Room_Box{width: 70%; height: 3px; background: #eee; margin: 0 auto; transition: 1s; box-shadow: 0px 0px 0px inset #eee; border-radius: 100px;}
+        .Room_list li:hover .Room_Box{box-shadow: 190px 0px 0px inset #897365 !important;}
+        .Room_list li:hover{font-weight: bold;}
+        
+        
+        .Room_Sublist{position: relative; width: 100%; margin: 0 auto; margin-top: 80px; overflow: hidden;}
+        .Room_Sublist::after{content: ''; display: block; clear: both;}
+        .Room_setting::after{content: ''; display: block; clear: both;}
+        .Room_Subimg{position: relative; width: 100%; height: auto;}
+        .Room_Subtxt{position: relative; top: 90px;}
+        .Room_setting .Room_Subimg{float: left; width: 65%;}
+        .Room_setting .Room_Subtxt{float: left; width: 35%;}
+        
+        /*객실소개 텍스트 설정*/
+        .Room_Subtxt_title{font-size: 48px; font-weight: bold; line-height: 70px; letter-spacing: 1px;}
+        .Room_Subtxt_txt{font-size: 16px; font-weight: bold; line-height: 30px;}
+        .Room_Detail{margin-top: 100px;}
+        .Room_Subtxt_detail_tit{font-size: 20px; font-weight: bold; line-height: 40px; width: 80%; text-align: center;}
+        .Room_Subtxt_detail_txt{font-size: 18px; margin-top: 10px; width: 80%; text-align: center;}
+        
+        /*객실소개 이미지 설정*/
+        .Room_Subimg{transition: 2s;}
+        .Room_Subimg img{vertical-align:bottom;}
+        .Room_Subimg img:nth-child(1){position: relative; top: 0; left: 0%; transition: 1s;opacity:1; animation: FadeRoom1 20s infinite;}
+        .Room_Subimg img:nth-child(2){position: absolute; top: 0; left: 0%; transition: 1s;opacity:0; animation: FadeRoom2 20s infinite;}
+        .Room_Subimg img:nth-child(3){position: absolute; top: 0; left: 0%; transition: 1s;opacity:0; animation: FadeRoom3 20s infinite;}
+        
+        @keyframes FadeRoom1{0% {opacity: 0}20%{opacity: 1}40%{opacity: 1}60%{opacity: 0}80%{opacity: 0}100%{opacity: 0}}
+        @keyframes FadeRoom2{0% {opacity: 0}20%{opacity: 0}40%{opacity: 0}60%{opacity: 1}80%{opacity: 1}100%{opacity: 0}}
+        @keyframes FadeRoom3{0% {opacity: 1}20%{opacity: 0}40%{opacity: 0}60%{opacity: 0}80%{opacity: 0}100%{opacity: 1}}
+        
+        /*객실소개 로딩바*/
+        .loadingBar{position: absolute; width: 74%; height: 5px;  bottom: 20px; left: 7%;}
+        .loadingBar div{float: left; width: 31.33%; height: 5px; background: rgba(134,115,101,0.8); margin: 0% 1% 0% 1%; border-radius: 10px;}
+        .loading1{animation: Loading1 20s infinite;}
+        .loading2{animation: Loading2 20s infinite;}
+        .loading3{animation: Loading3 20s infinite;}        
+        
+        
+        @keyframes Loading1{0% {box-shadow: 0px 0px 10px inset #897365;}20%{box-shadow: 288px 0px 10px inset rgba(255,255,255,0.9);}40%{box-shadow: 288px 0px 10px inset rgba(255,255,255,0.9);}60%{box-shadow: 0px 0px 10px inset #897365;}80%{box-shadow: 0px 0px 10px inset #897365;}100%{box-shadow: 0px 0px 10px inset #897365;}}
+        @keyframes Loading2{0% {box-shadow: 0px 0px 10px inset #897365;}20%{box-shadow: 0px 0px 10px inset #897365;}40%{box-shadow: 0px 0px 10px inset #897365;}60%{box-shadow: 288px 0px 10px inset rgba(255,255,255,0.9);}80%{box-shadow: 288px 0px 10px inset rgba(255,255,255,0.9);}100%{box-shadow: 0px 0px 10px inset #897365;}}
+        @keyframes Loading3{0% {box-shadow: 288px 0px 10px inset rgba(255,255,255,0.9);}20%{box-shadow: 0px 0px 10px inset #897365;}40%{box-shadow: 0px 0px 10px inset #897365;}60%{box-shadow: 0px 0px 10px inset #897365;}80%{box-shadow: 0px 0px 10px inset #897365;}100%{box-shadow: 288px 0px 10px inset rgba(255,255,255,0.9);}}
+        
+        /*객실소개 클릭 이벤트*/
+        .DELUXE .Room_Subimg{position: relative; top: 0; left: 0px;}
+        .PREMIUM .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        .SUITE .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        .STANDARD .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        .BUSINESS .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        .FAMILY .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        .RESIDENCE .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        .OCEANVIEW .Room_Subimg{position: absolute; top: 0px; left: -100%;}
+        
+        .DELUXE .Room_Subtxt{position: relative; right: 0;}        
+        .PREMIUM .Room_Subtxt{position: absolute; right: 0;} 
+        .SUITE .Room_Subtxt{position: absolute; right: 0;} 
+        .STANDARD .Room_Subtxt{position: absolute; right: 0;} 
+        .BUSINESS .Room_Subtxt{position: absolute; right: 0;} 
+        .FAMILY .Room_Subtxt{position: absolute; right: 0;} 
+        .RESIDENCE .Room_Subtxt{position: absolute; right: 0;} 
+        .OCEANVIEW .Room_Subtxt{position: absolute; right: 0;}
+        
+        /*두번째단락*/
+        #Pre_Room_content2 {position: relative; width: 100%; margin: 0 auto; background: #213859; color: #f9f9f9; padding-bottom: 5%; padding-top: 5%;} 
+        .guest_txt {position: relative; width: 80%; margin: 0 auto;}
+        .Guest_Title{position: relative; width: 100%;}
+        .guest_txt h2 {float:left; width: 50%; font-size: 32px; line-height: 40px;}
+        .guest_txt .Guest_subtxt {float:left; font-size: 20px; line-height: 40px; width: 50%;}
+        .Guest_Title::after {content:""; display: block; clear: both;}
+        .guest_txt .Guest_list{position: relative;width: 100%; margin-top: 50px;}
+        .guest_txt .Guest_list > li {width: 50%; float:left; margin-top: 10px; height: 150px;}
+        .guest_txt .Guest_list li i {float:left; width: 5%; text-align: left; }
+        .guest_txt .Guest_list li::after{content: ""; display: block; clear: both;}
+        .guest_txt .Guest_list::after {content:""; display: block; clear: both;}
+        .guest_txt .Guest_list > li > h3 {font-size: 20px; line-height: 22px; text-indent: 10px;}
+        .guest_txt .Guest_list > li > p {line-height: 30px; width: 70%;  line-height: 20px; margin-top: 10px; margin-left: 40px; font-size: 16px; letter-spacing: 0.4px;}
+        .Guest_list i {font-size: 22px;}
+        
+        /*예약바로가기*/
+        .RESERVATION{position: relative; width: 100%; background: #897365; overflow: hidden;}
+        .RESERVATION:after{content: ''; display: block; clear: both;}
+        .RESERVATION_Box1{float: left; width: 50%; font-size: 1vw;}
+        .RESERVATION_Box1 p{color: #f9f9f9; position: relative; top: 50px; left: 18%;}
+        .RESERVATION_Box1 span{color: #f9f9f9; position: relative; top: 55px; left: 18%;}
+        .RESERVATION_Box2{float: left; width: 50%;position: relative; left: 18%;}
+        
+        /*버튼효과*/
+        button.slide_button{
+            color: #f9f9f9;
+            border: 2px solid #f9f9f9;
+            width: 200px;
+            font-size: 18px;
+            height: 50px;
+            background: none;  
+            margin-top: 40px;
+            margin-bottom: 50px;
+            font-family: 'NanumSquareB';
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 2px;
+            background: none;
+            box-shadow: inset 0 0 0 0 #5a4538;
+            transition: all 1.5s;
+            -webkit-transition:all 1.5s;
+            -moz-transform:all 1.5s;
+            -ms-transform:all 1.5s;
+            -o-transform:all 1.5s;
+        }
+
+        button.slide_button:hover {
+          box-shadow: inset 100vmax 0 0 0 #5a4538;
+          border:none;
+          width: 200px;
+          height: 50px;
+          transition: all 3.5s;
+          -webkit-transition:all 3.5s;
+            -moz-transform:all 3.5s;
+            -ms-transform:all 3.5s;
+            -o-transform:all 3.5s;
+          color: #f9f9f9; 
+        }
+        
+        
+        /*미디어쿼리*/
+        @media all and (min-width:1025px) and (max-width:1700px){
+            .Room_Subtxt {top: 50px;}
+            .Room_Subtxt_title {text-align: center;}
+            .Room_Subtxt_txt {text-align: center; font-size: 15px;}
+            .Room_Subtxt_detail_tit {width: 100%;}
+            .Room_Subtxt_detail_txt {width: 100%;}
+            .Room_Detail{margin-top: 10px; }
+        }
+       @media all and (min-width:1023px) and (max-width:1400px){
+            .Room_list li{width: 25%;}
+            .Room_Subtxt_title {font-size: 40px; line-height: 65px; }
+            .Room_Subtxt_txt{font-size: 15px; font-weight: bold; line-height: 25px;}
+            .Room_Detail{margin-top: 30px; }
+            .Room_Subtxt_detail_tit{font-size: 18px; font-weight: bold; line-height: 40px; width: 100%; text-align: center;}
+            .Room_Subtxt_detail_txt{font-size: 16px; margin-top: 10px; width: 100%; text-align: center;}
+           
+        
+        }
+        @media all and (min-width:740px) and (max-width:1023px){
+            .Preview_keytitle{top: 150px !important;}
+            #Preview_keyimage{height: 500px; background: #000;}
+            .dan_bg{height: 600px; width: 100%; bottom: -90px;}
+            .Room_mainTxt{margin-top: 40px;}
+            .Preview_keytitle{padding-bottom: 30px; padding-top: 30px;}
+            
+            .Room_mainTxt {width: 80%;}
+            .Room_mainTxt h3{font-size: 22px; line-height: 40px;}
+            .Room_mainTxt p {margin-top: 15px; font-size: 16px; line-height: 30px;}
+            .Room_check_list li {width: 20%; font-size: 14px;}
+            .Room_checkIn {margin-right: 2.5%;}
+            .Room_checkTit {font-size: 16px;}
+            
+            .Room_list li{width: 25%;}            
+            .Room_Subtxt {top: 0px;}
+            .Room_Subtxt_title {text-align: center; font-size: 24px; line-height: 30px}
+            .Room_Subtxt_txt {text-align: center; font-size: 14px; line-height: 22px}
+            .Room_Subtxt_detail_tit {width: 100%; font-size: 14px;}
+            .Room_Subtxt_detail_txt {width: 100%; font-size: 14px;}
+            .Room_Detail{margin-top: 0px; }.Room_list {width: 90%;}
+            
+            .loadingBar{width: 100%; left: 0;}
+            
+            .guest_txt {width: 90%;}
+            .guest_txt h2 {font-size: 28px;  width: 30%;}
+            .guest_txt .Guest_subtxt {font-size: 18px;  width: 70%;}
+            .guest_txt .Guest_list > li > h3 {font-size: 18px; line-height: 22px; text-indent: 20px;}
+            .guest_txt .Guest_list > li > p { width: 85%;  font-size: 16px; letter-spacing: 0.2px;}
+            
+            .RESERVATION_Box1{width: 50%; font-size: 1.5vw;}
+            .RESERVATION_Box1 p{top: 55px; left: 18%;}
+            .RESERVATION_Box1 span{top: 65px; left: 18%;}
+            .RESERVATION_Box2{width: 50%; left: 18%;}
+
+            
+        }
+        @media all and (max-width:739px){
+            #content1 {height: 900px;}
+             .Preview_keytitle{top: 75px !important; padding-top: 0px; padding-bottom: 0px;  background: none; }
+             #Preview_keyimage{height: 300px; background: none;}
+             .dan_bg{height: 400px; width: 100%; bottom: -87px;}
+              h2.Preview_ment1{font-size: 45px;}
+             .Room_mainTxt{margin-top: 40px; display: none;}
+            
+            .Room_Subtxt {margin-top: 1%s; top: 0;}
+            .Room_Subtxt_title {text-align: center; font-size: 18px; line-height: 20px; padding-top: 10px;}
+            .Room_Subtxt_txt {display: none;}
+            .Room_Subtxt_detail_tit {width: 100%; font-size: 14px; display: block; margin-left: 0%; line-height: 14px; }
+            .Room_Subtxt_detail_txt {width: 100%; font-size: 14px; display: block; margin-left: 0%; line-height: 14px; padding-bottom: 10px;}
+            .Room_Detail{margin-top: 10px;}
+            
+             .Room_list {width: 100%; margin-top: 40px;}
+             .Room_list li{width: 33.33%; font-size: 14px;}
+             .Room_Sublist{margin-top: 10px;  overflow: hidden;}
+             .Room_Box{width: 90%;}
+             .Room_mainTxt {width: 90%;}
+             .Room_mainTxt h3{font-size: 16px; line-height: 30px;}
+             .Room_check {margin-left:5%;}
+             .Room_mainTxt p {margin-top: 10px; font-size: 14px; line-height: 25px;}
+             .Room_check_list li {width: 40%; font-size: 12px; text-align: left;}
+             .Room_checkIn {margin-right: 10.5%;}
+             .Room_checkTit {font-size: 16px;}
+             .Room_setting .Room_Subimg{float: none; width: 100%; }
+             .Room_setting .Room_Subtxt{float: none; width: 100%;}
+             .DELUXE .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9}
+             .PREMIUM .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9; } 
+             .SUITE .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9 } 
+             .STANDARD .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9 } 
+             .BUSINESS .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9 } 
+             .FAMILY .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9 } 
+             .RESIDENCE .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9 } 
+             .OCEANVIEW .Room_Subtxt{position: absolute; right: 0; top: 0%; 
+                 background: rgba(0,0,0,0.7); color: #f9f9f9 }
+            
+            .loadingBar{width: 100%; left: 0;}
+            
+            .guest_txt {width: 100%;}
+            .guest_txt h2 {font-size: 18px;  width: 100%; text-align: center}
+            .guest_txt .Guest_subtxt {font-size: 10px;  width: 100%; text-align: center; line-height: 30px;}
+            .guest_txt .Guest_list{width: 90%; margin: 0 auto; padding-bottom: 20px; _margin-left: 2%;}
+            .guest_txt .Guest_list > li{height: 25px; width: 50%; }
+            .guest_txt .Guest_list > li > h3 {font-size: 10px; line-height: 14px; text-indent: 15px;}
+            .guest_txt .Guest_list > li > p { width: 90%;  font-size: 11px; letter-spacing: 0.2px; margin-left: 5px; display: none;}
+            .guest_txt .Guest_list > li > i {font-size: 14px;}
+            
+            .RESERVATION_Box1{width: 40%; font-size: 1.5vw;}
+            .RESERVATION_Box1 p{top: 35px; left: 30%; font-size: 13px; }
+            .RESERVATION_Box1 span{top: 40px; left: 30%; font-size: 10px;}
+            .RESERVATION_Box2{width: 60%; left: 15%;}
+             
+            button.slide_button{
+            width: 100px;
+            font-size: 12px;
+            height: 30px;
+            margin-top: 55px;
+        }
+
+
+
+        }
+
+        
+    </style>
+    <script>
+        $(function() {      
+            $("#header").load("html/sub_header.html");
+            $("#footer").load("html/footer.html");
+            
+            $(window).scroll(function(e){
+                e.preventDefault();
+                var i = 30;  
+                var st = $(window).scrollTop()/10+i;
+                $(".Preview_keytitle").css({top: st+"%"});
+                console.log($(window).scrollTop());
+            });
+            
+            /*객실소개 클릭 이벤트*/ 
+                $(".DELUXE .Room_Subtxt").show();
+                $(".PREMIUM .Room_Subtxt").hide();
+                $(".SUITE .Room_Subtxt").hide();
+                $(".STANDARD .Room_Subtxt").hide();
+                $(".BUSINESS .Room_Subtxt").hide();
+                $(".FAMILY .Room_Subtxt").hide();
+                $(".RESIDENCE .Room_Subtxt").hide();
+                $(".OCEANVIEW .Room_Subtxt").hide();
+            
+                $(".DELUXE .Room_Subimg").css({"left":"0%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+            
+            $(".DELUXE_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+            $(".DELUXE").animate({left:"0%"});
+            
+            $(".DELUXE_BT").click(function(e){
+                e.preventDefault();
+                $(".DELUXE .Room_Subtxt").fadeIn(2000);
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".DELUXE .Room_Subimg").css({left:"0%"});
+                
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".PREMIUM_BT").click(function(e){
+                e.preventDefault();
+                $(".PREMIUM .Room_Subtxt").fadeIn(2000);
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".PREMIUM .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".SUITE_BT").click(function(e){
+                e.preventDefault();
+                $(".SUITE .Room_Subtxt").fadeIn(2000);
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".SUITE .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".STANDARD_BT").click(function(e){
+                e.preventDefault();
+                $(".STANDARD .Room_Subtxt").fadeIn(2000);
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".STANDARD .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".BUSINESS_BT").click(function(e){
+                e.preventDefault();
+                $(".BUSINESS .Room_Subtxt").fadeIn(2000);
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".BUSINESS .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".FAMILY_BT").click(function(e){
+                e.preventDefault();
+                $(".FAMILY .Room_Subtxt").fadeIn(2000);
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".FAMILY .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".RESIDENCE_BT").click(function(e){
+                e.preventDefault();
+                $(".RESIDENCE .Room_Subtxt").fadeIn(2000);
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".RESIDENCE .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".OCEANVIEW .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".OCEANVIEW .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            $(".OCEANVIEW_BT").click(function(e){
+                e.preventDefault();
+                $(".OCEANVIEW .Room_Subtxt").fadeIn(2000);
+                $(".OCEANVIEW_BT>.Room_Box").css({"box-shadow": "190px 0px 0px inset #897365"});
+                $(".OCEANVIEW .Room_Subimg").css({left:"0%"});
+                
+                $(".DELUXE .Room_Subimg").css({"left":"-100%"});
+                $(".PREMIUM .Room_Subimg").css({"left":"-100%"});
+                $(".SUITE .Room_Subimg").css({"left":"-100%"});
+                $(".BUSINESS .Room_Subimg").css({"left":"-100%"});
+                $(".STANDARD .Room_Subimg").css({"left":"-100%"});
+                $(".FAMILY .Room_Subimg").css({"left":"-100%"});
+                $(".RESIDENCE .Room_Subimg").css({"left":"-100%"});
+                
+                $(".DELUXE .Room_Subtxt").fadeOut(1500);
+                $(".PREMIUM .Room_Subtxt").fadeOut(1500);
+                $(".SUITE .Room_Subtxt").fadeOut(1500);
+                $(".BUSINESS .Room_Subtxt").fadeOut(1500);
+                $(".STANDARD .Room_Subtxt").fadeOut(1500);
+                $(".FAMILY .Room_Subtxt").fadeOut(1500);
+                $(".RESIDENCE .Room_Subtxt").fadeOut(1500);
+                
+                $(".DELUXE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".PREMIUM_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".SUITE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".BUSINESS_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".STANDARD_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".FAMILY_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                $(".RESIDENCE_BT>.Room_Box").css({"box-shadow": "0px 0px 0px inset #897365"});
+                
+            });
+            
+            
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">       
+        <!-- 헤더구역    -->
+        <div id="header"></div>
+        <!-- KeyImage구역 -->
+        <div id="Preview_keyimage">  
+               <video autoplay="autoplay" loop="loop" muted width="100%" height="100%" class="dan_bg">
+                <source type="video/mp4" src="images/Preview/Preview_rooms_vfx.mp4">
+                </video>
+            <div class="Preview_keytitle">
+                <div class="Preview_line"></div>
+                <h2 class="Preview_ment1">ROOMS</h2>
+                <p class="Preview_ment2">객실소개</p>
+                <p class="Preview_ment3">HOME > PREVIEW > ROOMS</p>
+            </div>
+        </div>
+        <div id="Pre_Room_content1">
+               <div class="Room_mainTxt">
+                   <h3>Ritz Hotel은 땅과 하늘의 기운을 담은 최고의명당입니다.<br>최고의 기운을 받아가실 수 있도록 음양의 조화로 설계되었습니다.</h3>
+                   <p>Ritz Hotel은 바다뷰를 조망하고 있으며 침실의 종류로 여덟가지 타입이 있습니다. 코끼리 바위와 일몰,월출이 보이는 탁트인 바다뷰와 높고 둥근 천정에서 아늑함을 느껴보시기 바랍니다. 기준인원 외 추가 인원이 있을 시 한분당 20,000원의 추가 비용이 있습니다. 머무시는 동안 조식은 무료로 제공해드립니다.</p>
+               </div>
+               <div class="Room_check">
+                   <ul class="Room_check_list">
+                       <li class="Room_checkIn"><span class="Room_checkTit">Check in</span><br><span>3 : 00 <strong>PM</strong></span></li>
+                       <li><span class="Room_checkTit">Check out</span><br><span>11 : 00 <strong>AM</strong></span></li>
+                   </ul>
+               </div>
+                <ul class="Room_list">
+                    <li class="DELUXE_BT">DELUXE<div class="Room_Box"></div></li>
+                    <li class="PREMIUM_BT">PREMIUM<div class="Room_Box"></div></li>
+                    <li class="SUITE_BT">SUITE<div class="Room_Box"></div></li>
+                    <li class="STANDARD_BT">STANDARD<div class="Room_Box"></div></li>
+                    <li class="BUSINESS_BT">BUSINESS<div class="Room_Box"></div></li>
+                    <li class="FAMILY_BT">FAMILY<div class="Room_Box"></div></li>
+                    <li class="RESIDENCE_BT">RESIDENCE<div class="Room_Box"></div></li>
+                    <li class="OCEANVIEW_BT">OCEANVIEW<div class="Room_Box"></div></li>
+                </ul>
+                <ul class="Room_Sublist">
+                    <li class="DELUXE Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/deluxe/deluxe1-1.png" alt="roomimage">
+                        <img src="images/Preview/deluxe/deluxe1-2.png" alt="roomimage">
+                        <img src="images/Preview/deluxe/deluxe1-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">DELUXE ROOM</p>
+                        <p class="Room_Subtxt_txt">화이트 톤의 인테리어와 창 밖으로 펼쳐지는 푸른 빛이 산뜻한 조화를 이루는<br>디럭스 룸은 아늑하고 편안한 휴식을 선사합니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">2인 (최대 2인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 1, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">23.1㎡ (7평)</p>
+                    </div>
+                    </li>
+                    
+                    
+                 <li class="PREMIUM Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/premium/premium2-1.png" alt="roomimage">
+                        <img src="images/Preview/premium/premium2-2.png" alt="roomimage">
+                        <img src="images/Preview/premium/premium2-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">PREMIUM ROOM</p>
+                        <p class="Room_Subtxt_txt">품격이 느껴지는 프리미엄 디럭스룸은 라이트 우드 벽면을 활용한<br>간접 조명이 밝고 아늑한 분위기를 연출합니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">2인 (최대 3인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 2, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">46.3㎡ (14평)</p>
+                    </div>
+                    </li>
+                    
+                    <li class="SUITE Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/suite/suite3-1.png" alt="roomimage">
+                        <img src="images/Preview/suite/suite3-2.png" alt="roomimage">
+                        <img src="images/Preview/suite/suite3-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">Suite ROOM</p>
+                        <p class="Room_Subtxt_txt">거실과 침실이 분리되어 있어 공간활용도가 높으며, 세심하게 구성된<br> 어메니티와 아늑한 분위기로 최상의 휴식을 선사합니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">2인 (최대 3인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 2, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">66.1㎡ (20평)</p>
+                    </div>
+                    </li>
+                    
+                    <li class="STANDARD Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/standard/standard4-1.png" alt="roomimage">
+                        <img src="images/Preview/standard/standard4-2.png" alt="roomimage">
+                        <img src="images/Preview/standard/standard4-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">STANDARD ROOM</p>
+                        <p class="Room_Subtxt_txt">모던한 인테리어로 연출한 편안하고 아늑한 분위기의 잠자리,<br>  TV와 소파가 있는 휴식공간을 분리하여 공간 활용을 최적화하였습니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">2인 (최대 3인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 1, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">59.5㎡ (18평)</p>
+                    </div>
+                    </li>
+                    
+                    <li class="BUSINESS Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/business/business5-1.png" alt="roomimage">
+                        <img src="images/Preview/business/business5-2.png" alt="roomimage">
+                        <img src="images/Preview/business/business5-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">BUSINESS ROOM</p>
+                        <p class="Room_Subtxt_txt">깨끗하고 아늑한 분위기의 3인용 객실로서 합리적인 방 구조로<br> Ritz Hotel에 머물고 계시는 동안에도 최고의 편안함을 드립니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">3인 (최대 4인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 3, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">79.3㎡ (24평)</p>
+                    </div>
+                    </li>
+                    
+                    <li class="FAMILY Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/family/family6-1.png" alt="roomimage">
+                        <img src="images/Preview/family/family6-2.png" alt="roomimage">
+                        <img src="images/Preview/family/family6-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">FAMILY ROOM</p>
+                        <p class="Room_Subtxt_txt">가족, 지인들과 함께 넓고 쾌적한 공간에서 즐거운 시간을 함께 보내며<br> 패밀리 룸은 3인이 투숙하기 편리하며 고급 호텔의 품격을 갖추고 있습니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">3인 (최대 4인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 3, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">89.2㎡ (27평)</p>
+                    </div>
+                    </li>
+                    
+                    <li class="RESIDENCE Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/residence/residence7-1.png" alt="roomimage">
+                        <img src="images/Preview/residence/residence7-2.png" alt="roomimage">
+                        <img src="images/Preview/residence/residence7-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">RESIDENCE ROOM</p>
+                        <p class="Room_Subtxt_txt">고급 호텔의 품격과 편리한 콘도형 기능으로 이루어진<br> 레지던스 룸은 객실 내 간단한 취사가 가능한 주방기기가 비치되어 있습니다.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">1인 (최대 2인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 1, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">33.1㎡ (10평)</p>
+                    </div>
+                    </li>
+                    
+                    <li class="OCEANVIEW Room_setting">
+                    <div class="Room_Subimg">
+                        <img src="images/Preview/oceanview/oceanview8-1.png" alt="roomimage">
+                        <img src="images/Preview/oceanview/oceanview8-2.png" alt="roomimage">
+                        <img src="images/Preview/oceanview/oceanview8-3.png" alt="roomimage">
+                        <div class="loadingBar">
+                            <div class="loading1"></div>
+                            <div class="loading2"></div>
+                            <div class="loading3"></div>
+                        </div>
+                    </div>
+                    <div class="Room_Subtxt">
+                        <p class="Room_Subtxt_title">OCEANVIEW ROOM</p>
+                        <p class="Room_Subtxt_txt">전용 베란다에서 태평양의 파도와 아름다운 정원,<br> 눈앞에 길게 펼쳐지는 해안선의 파노라마 전망을 감상해 보세요.</p>
+                        <p class="Room_Subtxt_detail_tit Room_Detail">Capacity</p>
+                        <p class="Room_Subtxt_detail_txt">2인 (최대 3인)</p>
+                        <p class="Room_Subtxt_detail_tit">Rooms</p>
+                        <p class="Room_Subtxt_detail_txt">침실 2, 욕실 1, 화장실 1</p>
+                        <p class="Room_Subtxt_detail_tit">Size</p>
+                        <p class="Room_Subtxt_detail_txt">72.7㎡ (22평)</p>
+                    </div>
+                    </li>  
+
+
+                </ul>
+ 
+        </div>
+        
+        <div id="Pre_Room_content2">
+            <div class="guest_txt">
+                <div class="Guest_Title">
+                    <h2>FOR ALL GUESTS</h2>
+                    <p class="Guest_subtxt">차별화된 투숙 경험을 제공하기 위해 다양한 서비스가 준비되어 있습니다.</p>
+                </div>
+                    <ul class="Guest_list">
+                        <li>
+                            <i class="fas fa-cloud-sun"></i>
+                            <h3>SKYARD</h3>
+                            <p>RITZ HOTEL 의 시그니처 보타닉 가든인 SKYARD에서 자연과 하나되는 놀라운 감동을 선사합니다.</p>
+                        </li>
+                        <li>
+                            <i class="fab fa-servicestack"></i>
+                            <h3>NUGU SERVICE</h3>
+                            <p>객실마다 비치된 인공지능 음성인식 디바이스, NUGU를 연결하시고 음악 감상, 날씨 확인, 간단한 정보 검색 등 다양한 재미를 누려보십시오.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-hiking"></i>
+                            <h3>WELLNESS CLUB</h3>
+                            <p>최신식 시설을 갖춘 피트니스 센터와 최고의 뷰를 자랑하는 실내 수영장에서 삶의 활력을 되찾으시기 바랍니다.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-concierge-bell"></i>
+                            <h3>IN-ROOM DIGITAL REQUEST SERVICE</h3>
+                            <p>객실에 비치된 태블릿을 통해 호텔 이용 안내, 인룸 오더, 필요하신 물품에 대한 빠른 요청 등 편리한 기능이 제공됩니다.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-wifi"></i>
+                            <h3>FREE WIFI</h3>
+                            <p>호텔 내 유/무선 초고속 인터넷 서비스가 무료로 제공됩니다.자유롭게 무료로 인터넷을 즐겨보시기 바랍니다.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-film"></i>
+                            <h3>DIGITAL MEDIA WORLD</h3>
+                            <p>로비 층에 위치한 올리브 나무 미디어 아트인공지능 거울 미디어 가상 세계 체험관 'Art Zone' 등에서 색다른 즐거움을 경험해보시기 바랍니다.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-shuttle-van"></i>
+                            <h3>TRANSPORTATION</h3>
+                            <p>투숙 기간 중 RITZ HOTEL 셔틀 및 주차장을 무료 이용하실 수 있습니다. 또한 고객님의 편리한 이동을 돕기 위해 공항 픽업 및 발렛 등의 유료 서비스를 제공하고 있습니다</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-baby-carriage"></i>
+                            <h3>FOR BABY GUESTS</h3>
+                            <p>어린 자녀분들의 편안한 투숙을 위해 유아용 침대를 비롯하여 유아용 가운 &amp;
+                    슬리퍼, 유아 목욕 용품과 욕조, 유아 식탁 &amp; 의자 등 다양한 유아용 물품을 제공하고
+                    있습니다. 수량이 한정되어 있는 관계로 사전에 요청 주시면 가능 여부에 따라
+                    객실에 비치해 드립니다.</p>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="RESERVATION">
+        <div class="RESERVATION_Box1">
+            <p>Create moments beyond your exectation</p>
+            <span>@ Ritz Hotel Seoul</span>
+        </div>
+        <div class="RESERVATION_Box2">
+            <button class="slide_button"><a href="Preview_reservation.html">예약바로가기</a></button>
+        </div>
+        </div>     
+
+        <!-- 하단구역  -->
+        <footer id="footer" class="move_mouse"></footer>
+    </div>
+
+</body></html>
